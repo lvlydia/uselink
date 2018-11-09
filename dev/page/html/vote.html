@@ -1,0 +1,134 @@
+{%include "head_top.html"%}
+{%include "head_link.html"%}
+    <link rel="stylesheet" href="../common/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vote.min.css">
+    <link rel="stylesheet" href="../common/css/font.min.css">
+    <script src="../common/js/qrcode.min.js"></script>
+    <script src="../js/vote.min.js"></script>
+
+<style>
+
+</style>
+{%include "head_bottom.html"%}
+
+
+<div style="height:60px;"></div>
+
+<section id="app-vote">
+    <!-- trace:dev/page/html/vote.html -->
+    <div class="body">
+
+        <!-- ################## -->
+        <div role="main" class="main">
+            <!-- 全屏展示 -->
+            <section class="container-fluid m-0 p-0 bgbox">
+                <div class="container con-bgbox">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title">{|vote.summary|}</div>
+                        </div>
+                    </div>
+
+                    <div class="row step-row">
+                        <div class="step-box col-md-6">
+                            <div class="step">
+                                <div class="steps">
+                                    <h5 class="bold number">
+                                        <div class="square">
+                                            <span>1</span>
+                                        </div>
+                                        {|vote.step.one|}
+                                    </h5>
+                                    <div class="step-img one">
+                                        <img class="ones" src="../img/voted-step1_{|common.lang|}.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-box col-md-6">
+                            <div class="step">
+                                <div class="steps">
+                                    <h5 class="bold number">
+                                        <div class="square">
+                                            <span>2</span>
+                                        </div>
+                                        {|vote.step.two|}
+                                    </h5>
+                                    <div class="step-img two">
+                                        <img src="../img/voted-step2_{|common.lang|}.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-box col-md-6">
+                            <div class="step">
+                                <div class="steps">
+                                    <h5 class="bold number">
+                                        <div class="square">
+                                            <span>3</span>
+                                        </div>
+                                        {|vote.step.three|}
+                                    </h5>
+                                    <div class="step-img three">
+                                        <img src="../img/voted-step3_{|common.lang|}.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-box col-md-6">
+                            <div class="step">
+                                <div class="steps">
+                                    <h5 class="bold number">
+                                        <div class="square">
+                                            <span>4</span>
+                                        </div>
+                                        {|vote.step.four|}
+                                    </h5>
+                                    <div class="step-img four">
+                                        <img src="../img/voted-step4_{|common.lang|}.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--搜索框-->
+                    <div class="row input-row">
+                        <div class="col-md-12">
+                            <input class="inputs" type="text" placeholder=" {|vote.input|}" id="search_node_input">
+                        </div>
+                    </div>
+
+
+                    <!--二维码-->
+                    <div class="row qr-row" id="vote_box"></div>
+
+                    <div class="row paging">
+                        <div class="pagesbox">
+                            <div class="first_page left"><</div>
+
+                            <div class="other_page"></div>
+
+                            <div class="last_page right">></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="win">
+                    <canvas id='canvas' style="opacity: 1"></canvas>
+
+                    <div id="fake_canvas_box" style="opacity: 0;"></div>
+                </div>
+
+            </section>
+        </div>
+        <!-- ################## -->
+
+
+    </div>
+</section>
+
+{%include "footer.html"%}

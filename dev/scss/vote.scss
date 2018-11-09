@@ -1,0 +1,438 @@
+@import "scss_color_m";
+
+#app-vote {
+  .bgbox {
+    width: 100%;
+
+    .con-bgbox {
+      padding-top: 900px;
+      .title {
+        margin: 0 auto;
+        width: 600px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+      }
+      .step-row {
+        margin-top: 80px;
+        .step-box {
+          //background: #0c5460;
+          //margin: 0 auto;
+          .step {
+            //background: #0c5460;
+            margin: 0 auto;
+            color: #fff;
+            font-weight: 200;
+            .steps {
+              margin: 0 auto;
+              .number {
+                margin: 0 auto;
+                text-align: center;
+              }
+              .step-img {
+                //background: #6c757d;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                text-align: center;
+              }
+              .one {
+                margin-left: 160px;
+              }
+            }
+            .square {
+              width: 50px;
+              height: 50px;
+              display: inline-block;
+              margin-right: 30px;
+              background: linear-gradient(45deg, #7750FF, #99B2F9);
+              transform: rotate(45deg);
+              text-align: center;
+              line-height: 50px;
+              vertical-align: middle;
+              user-select: none;
+              span {
+                display: inline-block;
+                transform: rotate(-45deg);
+                color: white;
+                font-size: 30px;
+                font-weight: 200;
+              }
+            }
+          }
+
+          .step-img {
+            margin-top: 30px;
+          }
+        }
+      }
+      .input-row {
+        margin: 20px auto;
+        text-align: center;
+        border: none;
+        .inputs {
+          width: 300px;
+          height: 50px;
+          opacity: 0.4;
+          padding-left: 10px;
+
+        }
+      }
+
+      //二维码
+      .qr-row {
+        padding: 50px 0;
+
+        & > div {
+          margin-bottom: 50px;
+        }
+
+        .circle {
+          width: 140px;
+          height: 140px;
+          background: #fff;
+          margin: 0 auto;
+          position: relative;
+          padding: 10px;
+          text-align: center;
+
+          div {
+            width: 120px;
+            height: 120px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .super_icon {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: -12.5px;
+            top: -12.5px;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #fff, #ff8c00);
+          }
+          .star {
+            color: coral;
+            margin-left: 4px;
+            margin-top: 3px;
+            position: absolute;
+            top: -4px;
+            right: 4px;
+          }
+        }
+
+        .text {
+          padding-top: 10px;
+          width: 100%;
+          height: auto;
+          clear: both;
+          color: white;
+
+          p {
+            font-size: 16px;
+            line-height: 16px;
+            margin-bottom: 15px;
+            height: 16px;
+          }
+        }
+
+        .vote_btn {
+          font-size: 20px;
+          color: white;
+          height: 35px;
+          line-height: 35px;
+          //float: left;
+          margin: 20px auto;
+          padding: 0 30px;
+
+        }
+      }
+
+      .paging {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 50px 0;
+        text-align: center;
+        padding-bottom: 200px;
+        .pagesbox {
+          text-align: center;
+          margin: 0 auto;
+          max-width: 400px;
+        }
+        .left, .right {
+          color: #fff;
+          font-weight: bold;
+          font-size: 18px;
+          box-shadow: 1px 1px 1px $purple;
+        }
+        .other_page {
+          width: 270px;
+
+          div {
+            padding: 0 12px;
+            margin-left: 10px;
+            margin-right: 5px;
+            float: left;
+            background-color: #fff;
+            color: $purple;
+          }
+
+          .active {
+            background-color: $purple;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .win {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 6;
+      background-color: rgba(0, 0, 0, .8);
+
+      canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 600px;
+        z-index: -100;
+        opacity: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 600px;
+      }
+    }
+  }
+  @media (min-width: 599px) and (max-width: 1024px) {
+    .bgbox {
+      width: 100%;
+      position: relative;
+      color: pink;
+      .con-bgbox {
+        padding-top: 500px;
+        .title {
+          margin: 0 auto;
+          width: 400px;
+          text-align: center;
+          font-size: 14px;
+          color: #fff;
+          font-weight: 200;
+        }
+        .step-row {
+          margin-top: 80px;
+          .step-box {
+            .step {
+              margin: 0 auto;
+              color: #fff;
+              font-weight: 200;
+              .steps {
+                margin: 0 auto;
+                .number {
+                  margin: 0 auto;
+                  text-align: center;
+                }
+                .step-img {
+                  margin-top: 40px;
+                  margin-bottom: 20px;
+                  text-align: center;
+                }
+                .one {
+                  margin-left: 70px;
+                  .ones {
+                    width: 300px;
+                  }
+                }
+              }
+              .square {
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin-right: 30px;
+                background: linear-gradient(45deg, #7750FF, #99B2F9);
+                transform: rotate(45deg);
+                text-align: center;
+                line-height: 30px;
+                vertical-align: middle;
+                user-select: none;
+                span {
+                  display: inline-block;
+                  transform: rotate(-45deg);
+                  color: white;
+                  font-size: 20px;
+                  font-weight: 200;
+                }
+              }
+            }
+
+            .step-img {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 599px) {
+    .bgbox {
+      width: 100%;
+      color: pink;
+
+      .con-bgbox {
+        padding-top: 80vw;
+        .title {
+          display: none;
+          margin: 0 auto;
+          width: 300px;
+          text-align: center;
+          font-size: 12px;
+          color: #fff;
+          font-weight: 200;
+        }
+        .step-row {
+          display: none;
+        }
+        .input-row {
+          margin: 100px auto 0;
+          text-align: center;
+          border: none;
+          .inputs {
+            width: 200px;
+            height: 40px;
+            opacity: 0.4;
+            padding-left: 10px;
+
+          }
+        }
+        //.qr-row {
+        //  margin-top: 50px;
+        //  //background:pink;
+        //  .circle {
+        //    width: 100px;
+        //    height: 100px;
+        //    background: white;
+        //    margin: 20px auto;
+        //  }
+        //}
+        //二维码
+        .qr-row {
+          padding: 50px 0;
+
+          & > div {
+            margin-bottom: 50px;
+          }
+
+          .circle {
+            width: 140px;
+            height: 140px;
+            background: #fff;
+            margin: 0 auto;
+            position: relative;
+            //float: left;
+            text-align: center;
+
+            .QRcode {
+              width: 100%;
+              height: 100%;
+            }
+
+            .super_icon {
+              width: 25px;
+              height: 25px;
+              position: absolute;
+              right: -12.5px;
+              top: -12.5px;
+              border-radius: 25px;
+              background: linear-gradient(90deg, #fff, #ff8c00);
+            }
+            .star {
+              color: coral;
+              margin-left: 4px;
+              margin-top: 3px;
+              position: absolute;
+              top: -3px;
+              right: 4px;
+            }
+          }
+
+          .text {
+            padding-top: 10px;
+            width: 100%;
+            height: auto;
+            clear: both;
+            color: white;
+
+            p {
+              font-size: 16px;
+              line-height: 16px;
+              margin-bottom: 15px;
+              height: 16px;
+            }
+          }
+
+          .vote_btn {
+            font-size: 20px;
+            color: white;
+            height: 35px;
+            line-height: 35px;
+            //float: left;
+            margin: 20px auto;
+            padding: 0 30px;
+
+          }
+        }
+
+        .paging {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 50px 0;
+          text-align: center;
+          padding-bottom: 200px;
+          .pagesbox {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 400px;
+          }
+          .left, .right {
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 1px 1px 1px $purple;
+          }
+          .other_page {
+            width: 270px;
+
+            div {
+              padding: 0 12px;
+              margin-left: 10px;
+              margin-right: 5px;
+              float: left;
+              background-color: #fff;
+              color: $purple;
+            }
+
+            .active {
+              background-color: $purple;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

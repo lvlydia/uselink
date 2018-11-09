@@ -1,0 +1,69 @@
+title1: Personal Info
+title2: Withdraw History
+title3: Exit application
+
+confirm: confirm
+
+#个人资料
+id-info:
+  title: ID info
+  phone: phone number
+  status: verify status
+  status_val: unverified
+  why: Failure reason
+  password: password
+  btn-change: change
+  set-password: set new password   8-18 digits of number or letter
+  confrim: confirm new password
+  account: account
+  NoDelegateName: general user
+
+
+account-info:
+  title: Account info
+  delegname: delegateName
+  address: withdraw address
+  share: profit ratio
+  share-tip: for example, the ratio is 70% which means 70% of reward is for users
+  img-code: please type the characters
+  phone-code: please enter SMS code
+  send: send code
+  btn-info: save
+  btn-submit: Submit as a candidate node
+  bind_address: bind
+  bind_address_tip: Be sure to enter the address correctly！
+  submit_win_title: Application Information
+  bind_super_node_name: Bind the super node name
+
+#提币记录
+record:
+  address: withdraw address :
+  sum: unreleased amount:
+  time: time
+  vote: vote number
+  reward: reward
+  share: my income
+  isno: whether release reward
+  operation: operation
+
+
+#退出申请
+apply:
+  password: password
+  img-code: please type the characters
+  phone-code: please enter SMS code
+  send: send code
+  tip-up: Will be returned after application
+  tip-under: To the coin address
+  btn-submit: submit application
+
+
+#退出申请显示页面
+exit:
+  delegname: delegname
+  phone: phone
+  status: status
+  adress: withdraw address
+  num: Number of work
+  time: time
+  ID: Transaction ID

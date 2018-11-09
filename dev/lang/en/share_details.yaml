@@ -1,0 +1,10 @@
+vote: Total votes
+reward: reward
+share: Personal dividend
+
+table:
+  time: time
+  amount: Coin amount
+  number: Number of votes
+  poundage: Coin handling fee
+  status: Payment status

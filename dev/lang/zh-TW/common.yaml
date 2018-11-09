@@ -1,0 +1,46 @@
+lang: zh
+
+title: Uselink
+
+keyword: Uselink 超級節點
+
+description: Uselink Locked Address for Super Node Candidate
+
+author: DONOPO TEAM
+
+empty: 空
+
+# 导航
+header:
+ menu:
+   home: 主頁
+   voted: 投票
+   browser: 區塊鏈瀏覽器
+   book: 白皮書
+   new: 新聞公告
+   wallet: 錢包
+   login: 登錄
+
+change-btn: 繁体中文
+
+footer:
+ menu:
+   number: 關注公眾號:
+   num-info: Uselink公有鏈
+   qq: QQ交流群:
+   contact: 聯繫客服QQ:
+   email: 邮箱:
+   website: 官網:http://www.uselink.cc
+   contacts: 聯繫我們
+   support: 幫助
+   support-info: 問與答
+
+wallet:
+  app-down: App下載
+  pc-down: PC下載
+
+nav:
+  userinfo: 個人信息
+  logout: 退出登錄
+
+video_tip: 您的瀏覽器不支持HTML5視頻標記。 嘗試更新您的瀏覽器或使用其他瀏覽器。

@@ -1,0 +1,72 @@
+{%include "head_top.html"%}
+{%include "head_link.html"%}
+
+<link rel="stylesheet" href="../common/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/wallet.min.css">
+{%include "head_bottom.html"%}
+
+<div style="height:60px;"></div>
+<section id="app-wellet">
+    <!-- trace:dev/page/html/vote.html -->
+    <div class="body">
+
+        <!-- ################## -->
+        <div role="main" class="main">
+            <!-- 全屏展示 -->
+            <section  class="container-fluid m-0 p-0">
+                <div class="container-fluid">
+                  <div class="box">
+
+
+                      <div class="row app-row">
+                          <div class="app-wrap">
+
+                              <div class="left">
+                                  <img src="../img/download_mobile_{|common.lang|}.png">
+                              </div>
+
+
+                              <div class="right">
+                                  <div class="text">
+                                     {|common.wallet.app-down|}
+                                  </div>
+
+                                  <div class="img-box">
+                                      <img class="qr-img" src="../img/qr.png" alt="">
+                                  </div>
+
+                                  <a href="https://uselink.oss-cn-hongkong.aliyuncs.com/" target="_blank" class="btn-download">App</a>
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <!--=======================-->
+                      <div class="row pc-row">
+                          <div class="app-wrap">
+
+                              <div class="left">
+                                  <div class="text">
+                                      {|common.wallet.pc-down|}
+                                  </div>
+                                  <a href="https://uselink.oss-cn-hongkong.aliyuncs.com/files/USEWallet.zip" download="download" class="btn-download">PC</a>
+                              </div>
+
+                              <div class="right">
+                                  <img src="../img/download_pc_{|common.lang|}.png">
+                              </div>
+
+                          </div>
+                      </div>
+
+
+                  </div>
+
+                </div>
+            </section>
+        </div>
+        <!-- ################## -->
+
+    </div>
+</section>
+{%include "footer.html"%}

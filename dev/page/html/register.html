@@ -1,0 +1,107 @@
+{%include "head_top.html"%}
+{%include "head_link.html"%}
+    <link rel="stylesheet" href="../css/register.min.css">
+    <script src="../js/register.min.js"></script>
+{%include "head_bottom.html"%}
+
+<div style="height:60px;"></div>
+
+<section id="app-register">
+
+    <div class="body">
+        <div role="main" class="main">
+            <!-- 全屏展示 -->
+            <section class="container-fluid m-0 p-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6  m-0 p-0">
+                            <div class="bg"></div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="input-box">
+                                <h1>{|register.title|}</h1>
+                                <ul>
+                                    <li class="li">
+
+
+                                        <div class="item phone_div">
+                                            <div class="select_box">
+                                                <div class="select_default loading"
+                                                     title="{|register.default_select_text|}"
+                                                     data-num="{|register.default_select_num|}"
+                                                     data-id="{|register.default_select_id|}">
+                                                    <span>
+                                                        <img src="{|register.default_select_icon|}">
+                                                    </span>
+                                                    <span>+{|register.default_select_num|} {|register.default_select_text|}</span>
+
+                                                    <span class="loading_circle"></span>
+                                                </div>
+
+                                                <ul class="select_list"></ul>
+                                            </div>
+                                        </div>
+
+
+                                        <input id="phone_input" class="login-input" placeholder="{|register.phone|}">
+                                    </li>
+
+                                    <li class="li">
+                                        <input id="password_input" type="password" class="login-input"
+                                               placeholder="{|register.password|}">
+                                        <span class="password-tip">{|register.pwd-tip|}</span>
+                                    </li>
+
+                                    <li class="li">
+                                        <input id="password_again_input" type="password" class="login-input"
+                                               placeholder="{|register.confrim-pwd|}">
+                                    </li>
+
+                                    <li class="li">
+                                        <input id="graphic_code_input" class="login-input"
+                                               placeholder="{|register.img-code|}">
+                                        <span class="pic-code"></span>
+                                    </li>
+
+                                    <li class="li">
+                                        <input id="msg_code_input" class="login-input"
+                                               placeholder="{|register.phone-code|}">
+                                        <span id="send_msg" class="mes-code btn-download" data-text="{|register.send|}">{|register.send|}</span>
+                                    </li>
+
+                                    <li class="li">
+                                        <input id="address_input" class="login-input"
+                                               placeholder="{|register.address|}">
+                                    </li>
+
+                                    <li class="li">
+                                        <input id="delegate_name_input" class="login-input"
+                                               placeholder="{|register.delegname|}">
+                                        <span class="password-tip">* {|register.delegname-tip|}</span>
+                                    </li>
+
+                                    <li class="li">
+                                        <span id="tip"></span>
+                                        <span class="btn-login" id="register_submit">{|register.btn-register|}</span>
+                                    </li>
+
+                                    <li class="back-login" id="">
+                                        {|register.prompt|}<span class="login"><a href="login.html">{|register.link-register|}</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ################## -->
+
+    </div>
+</section>
+
+{%include "footer.html"%}

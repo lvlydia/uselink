@@ -1,0 +1,9 @@
+summary: Ordinary users can choose random node to vote, after selected super node getting reward for block producing, voter will receive a certain amount of profit according to vote ratio.
+
+step:
+  one: download mobile wallet
+  two: select “vote”
+  three:  scan or enter account
+  four:  vote now
+
+input: Search delegateName

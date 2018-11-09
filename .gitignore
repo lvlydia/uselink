@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+npm-debug.log*
+.idea
+.vscode
+run/css
+run/js
+run/en
+run/zh
+run/ko
+run/zh-TW
+run/fonts
+dist/

@@ -1,0 +1,216 @@
+{%include "head_top.html"%}
+<link rel="stylesheet" href="../css/index.min.css">
+<link rel="stylesheet" href="../common/css/amazeui.min.css">
+{%include "head_link.html"%}
+<script src="../js/index.min.js"></script>
+<script src="../js/banner.min.js"></script>
+{%include "head_bottom.html"%}
+
+<div class="banner_true">
+    <div class="banner_true_box">
+        <div class="am-slider am-slider-default" id="demo-slider-0">
+            <ul class="am-slides">
+                <li>
+                    <div style="cursor: pointer">
+                        <img class="fadeIn default_banner" src="../img/img_default_large.jpg"/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section id="index">
+    <div class="address">
+
+        <div class="banner_box">
+
+            <h1 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.banner.title|}</h1>
+
+            <div class="banner_box_address">
+                <img class="fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s" src="../img/index_qrcode.png"
+                     alt="Address QRcode">
+
+                <div class="right">
+                    <p class="address fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
+                        {|index.banner.address|}</p>
+                    <p class="text fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">{|index.banner.text|}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="line fadeInUp" data-wow-delay="0.5s" data-wow-duration=".8s"></div>
+
+        <div class="banner_box_video fadeInUp" data-wow-delay="0.6s" data-wow-duration=".8s">
+            <video controls preload="none" poster="../img/video_poster.png" data-setup="{}">
+                <source src="{|index.banner.video_url|}" type="video/mp4" />
+                {|common.video_tip|}
+            </video>
+        </div>
+
+    </div>
+
+    <div class="innovation">
+        <div class="box">
+            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s" data-lang="{|common.lang|}">
+                {|index.main.title1|}</h2>
+
+            <div class="innovation_bottom">
+                <div class="card fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <div class="card_top">
+                        <img src="../img/innovation_icon1.png" alt="">
+                    </div>
+
+                    <div class="card_bottom">
+                        <h3>{|index.main.delegateName|}</h3>
+
+
+                        <div class="text">
+                            <p>{|index.main.vote-onfo|}</p>
+
+                            <a href="javascript:void(0)" class="btn_bc more_btn" data-text="{|index.more.super_node|}">{|index.main.btn-more|}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
+                    <div class="card_top">
+                        <img src="../img/innovation_icon2.png" alt="">
+                    </div>
+
+                    <div class="card_bottom">
+                        <h3>{|index.main.performance|}</h3>
+
+
+                        <div class="text">
+                            <p>{|index.main.vote-onfo|}</p>
+
+                            <a href="vote.html" class="btn_bc">{|index.main.btn-voted|}</a>
+                            <a href="javascript:void(0)" class="btn_bd more_btn" data-text="{|index.more.vote_mine|}">{|index.main.btn-more|}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
+                    <div class="card_top">
+                        <img src="../img/innovation_icon3.png" alt="">
+                    </div>
+
+                    <div class="card_bottom">
+                        <h3>{|index.main.voted|}</h3>
+
+
+                        <div class="text">
+                            <p>{|index.main.perfor-info|}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block3">
+        <div class="box">
+            <p class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.download.instructions|}</p>
+
+            <a href="wallet.html" class="btn_white fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">{|index.download.btn-load|}</a>
+        </div>
+
+        <img src="../img/pc_index_download_bg_{|common.lang|}.png" class="fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
+    </div>
+
+    <div class="block4">
+        <div class="box">
+            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.mains.title2|}</h2>
+
+            <div class="block4_bottom">
+                <div class="card transition fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <img src="../img/pc_index_block4_icon1.png" alt="icon">
+
+                    <h3>{|index.mains.one|}</h3>
+
+                    <p>{|index.mains.one-info|}</p>
+                </div>
+
+                <div class="card transition fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
+                    <img src="../img/pc_index_block4_icon2.png" alt="icon">
+
+                    <h3>{|index.mains.two|}</h3>
+
+                    <p>{|index.mains.two-info|}</p>
+                </div>
+
+                <div class="card transition fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
+                    <img src="../img/pc_index_block4_icon3.png" alt="icon">
+
+                    <h3>{|index.mains.three|}</h3>
+
+                    <p>{|index.mains.three-info|}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block5">
+        <div class="box">
+            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.team|}</h2>
+
+            <div class="block5_bottom">
+
+                {|# index.team-list |}
+                <div class="item fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <div class="icon transition">
+                        <img src="../img/person/{|img|}" alt="Clare">
+                    </div>
+
+                    <h4>{|name|}</h4>
+                    <p>{|position|}</p>
+
+                    <div class="text">{|info|}</div>
+                </div>
+                {|/ index.team-list |}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="cooperation">
+        <div class="box">
+            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.cooperation|}</h2>
+
+            <div class="cooperation_bottom">
+                <div class="line1">
+                    <img class="line1_img fadeInUp" src="../img/cooperation/logo7.png" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <img class="line1_img fadeInUp" src="../img/cooperation/logo6.png" data-wow-delay="0.3s" data-wow-duration=".8s">
+                    <img class="line1_img fadeInUp" src="../img/cooperation/logo5.png" data-wow-delay="0.4s" data-wow-duration=".8s">
+                </div>
+
+                <div class="line2">
+                    <img class="fadeInUp" src="../img/cooperation/logo4.png" data-wow-delay="0.5s" data-wow-duration=".8s">
+                    <img class="fadeInUp" src="../img/cooperation/logo3.png" data-wow-delay="0.6s" data-wow-duration=".8s">
+                    <img class="fadeInUp" src="../img/cooperation/logo2.png" data-wow-delay="0.7s" data-wow-duration=".8s">
+                    <img class="fadeInUp" src="../img/cooperation/logo1.png" data-wow-delay="0.8s" data-wow-duration=".8s">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pop_win">
+    <div class="win">
+        <div class="close hover pop_win_close"></div>
+
+        <p>
+            empty
+        </p>
+    </div>
+
+    <div class="pop_win_bg"></div>
+</div>
+
+
+<script src="../common/js/wow.min.js"></script>
+<script src="../common/js/amazeui.min.js"></script>
+{%include "footer.html"%}

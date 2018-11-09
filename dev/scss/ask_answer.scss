@@ -1,0 +1,53 @@
+#ask_answer{
+  .con-wrap{
+    margin-top: 90px;
+    margin-bottom: 500px;
+    //background: antiquewhite;
+    //padding-left: 100px;
+  }
+  //搜索框
+  .input-wrap{
+    position: relative;
+  }
+  input{
+    border:1px solid #6464FF;
+    height:60px;
+    width:100%;
+    border-radius:30px;
+    margin-bottom:50px;
+    padding-left: 60px;
+  }
+  .big{
+    position: absolute;
+    top:20px;
+    left:23px;
+    font-size: 20px;
+    color:#6464FF;
+  }
+  .menu1{
+    background:linear-gradient(to right, #7B5BFE, #96AAF9);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align:left;
+    padding:8px 0;
+    font-weight:bold;
+    font-size: 24px;
+    height:60px;
+    line-height: 60px;
+  }
+  .box {
+    width:100%;
+  }
+  .title {
+    line-height:50px;
+    text-align:left;
+    color:#A0A0A0;
+    height:40px;
+    font-size:18px;
+  }
+  .one {
+    height:100px;
+    margin-left: 30px;
+  }
+
+}

@@ -1,0 +1,10 @@
+vote: 總票數
+reward: 本次獎勵
+share: 個人分紅
+
+table:
+  time: 時間
+  amount: 提币金额
+  number: 投票數
+  poundage: 提幣手續費
+  status: 打款狀態

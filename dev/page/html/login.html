@@ -1,0 +1,76 @@
+{%include "head_top.html"%}
+{%include "head_link.html"%}
+
+<link rel="stylesheet" href="../common/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/login.min.css">
+{%include "head_bottom.html"%}
+
+<div style="height:60px;"></div>
+<section id="app-login">
+    <!-- trace:dev/page/html/vote.html -->
+    <div class="body">
+
+        <!-- ################## -->
+        <div role="main" class="main">
+            <!-- 全屏展示 -->
+            <section  class="container-fluid m-0 p-0">
+                <div class="container-fluid">
+                   <div class="row">
+                       <div class="col-md-6  m-0 p-0">
+                           <div class="bg"></div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="input-box">
+                               <h1>{|login.title|}</h1>
+                               <ul>
+                                   <li>
+                                       <div class="item phone_div">
+                                           <div class="select_box">
+                                               <div class="select_default loading"
+                                                    title="{|register.default_select_text|}"
+                                                    data-num="{|register.default_select_num|}"
+                                                    data-id="{|register.default_select_id|}">
+                                                    <span>
+                                                        <img src="{|register.default_select_icon|}">
+                                                    </span>
+                                                   <span>+{|register.default_select_num|} {|register.default_select_text|}</span>
+
+                                                   <span class="loading_circle"></span>
+                                               </div>
+
+                                               <ul class="select_list"></ul>
+                                           </div>
+                                       </div>
+
+
+                                       <input class="login-input" id="user-number" placeholder="{|login.number|}" value="">
+                                   </li>
+                                   <li>
+                                       <input type="password" class="login-input"  id="user-password"  placeholder="{|login.password|}" value="">
+                                   </li>
+                                   <li>
+                                       <span id="tip"></span>
+                                       <span class="btn-login" id="btn-login" >{|login.btn-login|}</span>
+                                   </li>
+
+                                   <li class="clear">
+                                       <div class="forget left">
+                                           <a href="forgetpassword.html">{|login.link-pwd|}</a>
+                                       </div>
+                                       <div class="right">
+                                           {|login.prompt|}<span class="register"><a href="register.html">{|login.link-register|}</a></span>
+                                       </div>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </section>
+        </div>
+        <!-- ################## -->
+
+    </div>
+</section>
+<script src="../js/login.min.js"></script>
+{%include "footer.html"%}

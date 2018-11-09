@@ -1,0 +1,110 @@
+</head>
+<body>
+<nav class="nav">
+    <div class="main">
+        <img src="../img/logo_white.png" alt="Uselink Logo" class="logo hover" onclick="window.location.href='index.html'">
+
+        <img src="../img/logo_iphoneSE.png" alt="Uselink Logo" class="logo_iphoneSE hover hide" onclick="window.location.href='index.html'">
+
+        <nav class="main_right nav_pc">
+            <a href="index.html">{|common.header.menu.home|}</a>
+            <a href="vote.html">{|common.header.menu.voted|}</a>
+            <a href="http://block.uselink.cc" target="_blank">{|common.header.menu.browser|}</a>
+            <a href="JavaScript:void(0);" target="_blank" class="white_paper">{|common.header.menu.book|}</a>
+            <a href="news.html">{|common.header.menu.new|}</a>
+            <a href="wallet.html">{|common.header.menu.wallet|}</a>
+
+
+            <div class="change_language_btn">
+                <span>{|common.change-btn|}<i></i></span>
+
+                <ul class="pc_language_menu"></ul>
+            </div>
+
+            <div class="login_btn hide">
+                <a href="login.html" class="login">{|common.header.menu.login|}</a>
+            </div>
+
+            <div class="user_info_btn hide">
+                <span id="phone"><i></i></span>
+
+                <ul class="pc_userinfo_menu">
+                    <li>
+                        <a href="userinfo.html" class="user_info" data-val="${el.val}">{|common.nav.userinfo|}</a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" id="logout" data-val="${el.val}">{|common.nav.logout|}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <!--手机导航-->
+        <nav class="main_right nav_mobile">
+            <div class="nav_mobile_left">
+                <div class="change_language_btn">
+                    <span>{|common.change-btn|}<i></i></span>
+
+                    <ul class="pc_language_menu"></ul>
+
+                </div>
+            </div>
+
+            <div class="login_btn show">
+                <a href="login.html" class="login">{|common.header.menu.login|}</a>
+            </div>
+
+            <div class="user_info_btn hide">
+                <span id="mobile_phone"><i></i></span>
+
+                <ul class="pc_userinfo_menu">
+                    <li>
+                        <a href="userinfo.html" class="user_info" data-val="${el.val}">{|common.nav.userinfo|}</a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" id="mobile_logout" data-val="${el.val}">{|common.nav.logout|}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_mobile_right">
+                <div class="menu_btn">
+                    <span class="line"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="menu_box">
+            <ul>
+                <li>
+                    <a href="index.html">{|common.header.menu.home|}</a>
+                </li>
+
+                <li>
+                    <a href="vote.html">{|common.header.menu.voted|}</a>
+                </li>
+
+                <li>
+                    <a href="http://block.uselink.cc">{|common.header.menu.browser|}</a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="white_paper">{|common.header.menu.book|}</a>
+                </li>
+
+                <li>
+                    <a href="news.html">{|common.header.menu.new|}</a>
+                </li>
+
+                <li>
+                    <a href="wallet.html">{|common.header.menu.wallet|}</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

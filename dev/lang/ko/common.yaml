@@ -1,0 +1,47 @@
+lang: ko
+
+title: Uselink
+
+keyword: Uselink 슈퍼노드
+
+description: Uselink Locked Address for Super Node Candidate
+
+author: DONOPO TEAM
+
+empty: 비움
+
+# 导航
+header:
+  menu:
+    home: 홈페이지
+    voted: 투표
+    browser: 블록체인 브라우저
+    book: 백서
+    new: 뉴스공고
+    wallet: 지갑
+    login: 로그인
+
+change-btn: 중문
+
+footer:
+  menu:
+    number: 공식 계정 팔로우:
+    num-info: Uselink 공유체인:
+    qq: QQ커뮤니티:
+    contact: QQ고객센터:
+    email: 메일함:
+    website: 공식 사이트: http://www.uselink.cc
+    contacts: 고객센터
+    support: 도움말
+    support-info: 질의 응답
+
+wallet:
+  app-down: App다운로드
+  pc-down: PC다운로드
+
+
+nav:
+  userinfo: 개인 정보
+  logout: 로그 아웃
+
+video_tip: 브라우저가 HTML5 동영상 태그를 지원하지 않습니다. 브라우저를 업데이트하거나 다른 브라우저를 사용해보십시오.

@@ -1,0 +1,582 @@
+{%include "head_top.html"%}
+{%include "head_link.html"%}
+    <link rel="stylesheet" href="../css/useinfo.min.css">
+    <script src="../js/userinfo.min.js"></script>
+{%include "head_bottom.html"%}
+
+
+<section id="userInfo">
+
+    <div class="box">
+        <!--左边-->
+        <div class="left">
+            <ul>
+                <li class="tab active">{|userinfo.title1|}</li>
+
+                <li class="tab">{|userinfo.title2|}</li>
+
+                <li class="tab">{|userinfo.title3|}</li>
+            </ul>
+        </div>
+
+
+        <!--右边-->
+        <div class="right">
+
+            <!--个人资料-->
+            <div class="item page1 active">
+                <div class="userInfo_top">
+                    <div class="left">
+                        <!--用户图标-->
+                        <div class="user_icon">
+                            <img src="../img/user_icon_gray.png" alt="user icon" id="user_icon">
+                        </div>
+
+                        <!--用户节点名-->
+                        <div class="user_delegateName">{|userinfo.id-info.account|}:<span id="user_delegateName"></span></div>
+                        <!--用户无节点名时显示-->
+                        <div class="user_NoDelegateName">{|userinfo.id-info.NoDelegateName|}</span></div>
+                    </div>
+
+                    <div class="right">
+                        <div class="left">
+                            <!--用户手机号-->
+                            {|userinfo.id-info.phone|}：
+                            <span class="info_phone"></span>
+                        </div>
+
+                        <div class="right">
+                            <div class="left">{|userinfo.id-info.password|}:******</div>
+
+                            <!--修改密码按钮-->
+                            <!--TODO:添加点击显示修改密码弹窗-->
+                            <a class="change_pwd" href="javascript:void(0);">{|userinfo.id-info.btn-change|}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="userInfo_bottom">
+                    <!--标题与分割线-->
+                    <div class="title_box">
+                        <h3>
+                            <span>{|userinfo.id-info.userInfoBottomTitle|}</span>
+
+                            <span class="line"></span>
+
+                            <span class="unverified">{|userinfo.id-info.status_val|}</span>
+                        </h3>
+
+                        <hr>
+                    </div>
+
+                    <div class="userInfo_b_b">
+                        <!--未认证-->
+                        <div class="page saveAndSubmit">
+                            <!--转账提示文本-->
+                            <div class="tip_box">
+                                <p>{|userinfo.id-info.tipTitle|}</p>
+
+                                <p>{|userinfo.id-info.tipP1|}</p>
+                                <p>{|userinfo.id-info.tipP2|}</p>
+                                <p>{|userinfo.id-info.tipP3|}</p>
+                            </div>
+
+                            <!--第一步第二步显示-->
+                            <div class="change_step_box">
+                                <div class="left active">{|userinfo.id-info.step1|}</div>
+
+                                <div class="right">{|userinfo.id-info.step2|}</div>
+                            </div>
+
+                            <div class="saveAndSubmit_b">
+                                <!--第一步-->
+                                <div class="step1_box active">
+                                    <div class="tip">{|userinfo.id-info.step1Title|}</div>
+
+                                    <!--二维码-->
+                                    <div class="QRcode_box">
+                                        <img src="../img/index_qrcode.png" alt="QR code">
+                                    </div>
+
+                                    <!--转账地址-->
+                                    <div class="address">{|index.banner.address|}</div>
+
+                                    <!--下一步按钮-->
+                                    <a href="javascript:void(0);" class="next_step">{|userinfo.id-info.nextStep|}</a>
+                                </div>
+
+                                <!--第二步-->
+                                <div class="step2_box">
+                                    <ul class="form">
+                                        <!--超级节点名-->
+                                        <li class="noLine">
+                                            <div class="left">{|userinfo.account-info.delegname|}</div>
+
+                                            <div class="right">
+                                                <span class="info_delegateName"></span>
+                                                <input class="userInfoDelegateName" type="text"
+                                                       placeholder="{|userinfo.id-info.inputSuperNodeName|}">
+                                            </div>
+                                        </li>
+
+                                        <!--提币地址-->
+                                        <li>
+                                            <div class="left">{|userinfo.account-info.address|}</div>
+
+                                            <!--
+                                                address                 => 获取提币地址
+                                                hasWithDrawAddress      => 控制地址显示框与地址修改按钮
+                                                changeWithDrawAddress   => 修改按钮
+                                                userInfoAddress         => 获取地址val
+                                            -->
+
+                                            <div class="right">
+                                                <span   class="hasWithDrawAddress address"></span>
+                                                <a      class="hasWithDrawAddress changeWithDrawAddress" href="javascript:void(0);">{|userinfo.id-info.btn-change|}</a>
+
+                                                <input  class="userInfoAddress" type="text" placeholder="{|userinfo.id-info.inputAddress|}">
+                                            </div>
+                                        </li>
+
+                                        <!--分红比例-->
+                                        <li class="share">
+                                            <div class="left">{|userinfo.account-info.share|}</div>
+
+                                            <div class="right">
+                                                <div class="share_t">
+                                                    <a class="s_btn changeShareNumBtn" data-type="-1"
+                                                       href="javascript:void(0);"></a>
+
+                                                    <div class="share_t_m">
+                                                        <div class="left">
+                                                            <input class="shareNum" value="50" placeholder=""
+                                                                   type="text" maxlength="2"
+                                                                   onkeyup="this.value=this.value.replace(/\D/g,'').substring(0,2)">
+                                                        </div>
+
+                                                        <div class="right">%</div>
+                                                    </div>
+
+                                                    <a class="a_btn changeShareNumBtn" data-type="1"
+                                                       href="javascript:void(0);"></a>
+                                                </div>
+                                            </div>
+
+                                            <p class="shareTip">{|userinfo.account-info.share-tip|}</p>
+                                        </li>
+
+                                        <!--验证码-->
+                                        <li class="send">
+                                            <div class="left">{|userinfo.id-info.signCode|}</div>
+
+                                            <div class="right">
+                                                <input type="text" placeholder="{|userinfo.account-info.img-code|}">
+
+                                                <span class="pic-code hover"></span>
+                                            </div>
+                                        </li>
+
+                                        <!--短信验证-->
+                                        <li class="send">
+                                            <div class="left">{|userinfo.id-info.msgCode|}</div>
+
+                                            <div class="right">
+                                                <input class="input_userInfoMsg" type="text" placeholder="{|userinfo.account-info.phone-code|}">
+
+                                                <span class="mes-code btn-download hover"
+                                                      data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <!--提交按钮-->
+                                    <div class="tip"></div>
+                                    <a class="submit" id="submitForSuperNode" href="javascript:void(0);">{|userinfo.id-info.submit|}</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--审核中-->
+                        <div class="page review">审核中</div>
+
+                        <!--未通过-->
+                        <div class="page notPass">
+                            <h3>{|userinfo.id-info.auditFailed|}</h3>
+
+                            <div class="notPassReason">
+                                <span>{|userinfo.id-info.notPassReason|}：</span>
+                                <span id="notPassReason"></span>
+                            </div>
+
+                            <div class="tip">{|userinfo.id-info.problem|}：Uselink@protonmail.com</div>
+
+                            <a class="submitAgain" href="javascript:void(0);">{|userinfo.id-info.submitAgain|}</a>
+                        </div>
+
+                        <!--通过-->
+                        <div class="page submitted">
+                            <ul class="form">
+                                <!--提币地址-->
+                                <li>
+                                    <div class="left">{|userinfo.account-info.address|}</div>
+
+                                    <div class="right">
+                                        <input type="text" placeholder="{|userinfo.id-info.inputAddress|}">
+                                    </div>
+                                </li>
+
+                                <!--分红比例-->
+                                <li class="share">
+                                    <div class="left">{|userinfo.account-info.share|}</div>
+
+                                    <div class="right">
+                                        <div class="share_t">
+                                            <a class="s_btn changeShareNumBtn" data-type="-1"
+                                               href="javascript:void(0);"></a>
+
+                                            <div class="share_t_m">
+                                                <div class="left">
+                                                    <input class="shareNum" value="50" placeholder=""
+                                                           type="text" maxlength="2"
+                                                           onkeyup="this.value=this.value.replace(/\D/g,'').substring(0,2)">
+                                                </div>
+
+                                                <div class="right">%</div>
+                                            </div>
+
+                                            <a class="a_btn changeShareNumBtn" data-type="1"
+                                               href="javascript:void(0);"></a>
+                                        </div>
+                                    </div>
+
+                                    <p class="shareTip">{|userinfo.account-info.share-tip|}</p>
+                                </li>
+
+                                <!--验证码-->
+                                <li class="send">
+                                    <div class="left">{|userinfo.id-info.signCode|}</div>
+
+                                    <div class="right">
+                                        <input type="text" placeholder="{|userinfo.account-info.img-code|}">
+
+                                        <span class="pic-code hover"></span>
+                                    </div>
+                                </li>
+
+                                <!--短信验证-->
+                                <li class="send">
+                                    <div class="left">{|userinfo.id-info.msgCode|}</div>
+
+                                    <div class="right">
+                                        <input type="text" placeholder="{|userinfo.account-info.phone-code|}">
+
+                                        <span class="mes-code btn-download hover"
+                                              data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!--提交按钮-->
+                            <div class="tip"></div>
+                            <a class="submit" id="saveNewMsg" href="javascript:void(0);">{|userinfo.id-info.saveBtn|}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--提币记录-->
+            <div class="item page2">
+                <div class="record">
+                    <div class="record_t">
+                        <div class="left">
+                            <span>{|userinfo.account-info.address|}：</span>
+                            <span class="address"></span>
+                        </div>
+
+                        <div class="right">
+                            <span>{|userinfo.record.sum|}：</span>
+                            <span class="extract_token_num"></span>
+                        </div>
+                    </div>
+
+                    <div class="record_b">
+                        <div class="empty">
+                            <img src="../img/empty.png" alt="empty img">
+                            <p>{|userinfo.id-info.empty|}</p>
+                        </div>
+                        
+                        <div class="table">
+                            <ul class="th">
+                                <li>{|userinfo.record.time|}</li>
+
+                                <li>{|userinfo.record.vote|}</li>
+
+                                <li>{|userinfo.record.reward|}</li>
+
+                                <li>{|userinfo.record.share|}</li>
+
+                                <li>{|userinfo.record.isno|}</li>
+
+                                <li>{|userinfo.record.operation|}</li>
+                            </ul>
+
+                            <ul class="content">
+                                <li>
+                                    <div class="time">22</div>
+
+                                    <div class="vote">33</div>
+
+                                    <div class="reward">44</div>
+
+                                    <div class="share">55</div>
+
+                                    <div class="whether">66</div>
+
+                                    <div>
+                                        <a class="details" href="JavaScript:void(0);">{|userinfo.record.details|}</a>
+                                    </div>
+
+                                </li>
+                            </ul>
+
+                            <div class="row paging">
+                                <div class="pagesbox">
+                                    <div class="first_page left"><</div>
+
+                                    <div class="other_page"></div>
+
+                                    <div class="last_page right">></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<table class="am-table addtable pc-up-table">-->
+                    <!--<thead>-->
+                    <!--<tr class="tr">-->
+                        <!--<th class="changeth">-->
+                            <!--{|userinfo.record.address|}-->
+                            <!--<span class="address"></span>-->
+                        <!--</th>-->
+                        <!--<th class="changeth">-->
+                            <!--{|userinfo.record.sum|}-->
+                            <!--<span class="extract_token_num"></span>-->
+                        <!--</th>-->
+                    <!--</tr>-->
+
+                    <!--</thead>-->
+                <!--</table>-->
+
+                <!--<div>-->
+
+                    <!--<div class="recode">-->
+                        <!--<table class="am-table addtable" id="extract_token_bottom">-->
+                            <!--<thead>-->
+                            <!--<tr class="tr">-->
+                                <!--<th>{|userinfo.record.time|}</th>-->
+                                <!--<th>{|userinfo.record.vote|}</th>-->
+                                <!--<th>{|userinfo.record.reward|}</th>-->
+                                <!--<th>{|userinfo.record.share|}</th>-->
+                                <!--<th>{|userinfo.record.isno|}</th>-->
+                                <!--<th>{|userinfo.record.operation|}</th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+
+
+                            <!--<tbody id="extract_token_body"></tbody>-->
+                        <!--</table>-->
+
+                        <!--<div class="row paging">-->
+                            <!--<div class="pagesbox">-->
+                                <!--<div class="first_page left"><</div>-->
+
+                                <!--<div class="other_page"></div>-->
+
+                                <!--<div class="last_page right">></div>-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            </div>
+
+
+            <!--退出申请-->
+            <div class="item page1" style="display: none;">
+
+                <!--表-->
+                <div id="exit_form">
+                    <ul>
+                        <li class="clear">
+                            <label class="left">{|userinfo.id-info.phone|}</label>
+                            <div class="right info_phone"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.account-info.delegname|}</label>
+                            <div class="right info_delegateName"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.account-info.address|}</label>
+                            <div class="right address"></div>
+                        </li>
+
+                        <li>
+                            <div>
+                                <input type="password" class="modify-input"
+                                       id="password_input_exit" placeholder="请输入密码">
+                            </div>
+                        </li>
+
+                        <li>
+                            <div>
+                                <input class="modify-input code_input" id="signcode_input_exit"
+                                       placeholder="请输入图片验证码">
+                                <span class="pic-code send_apply" id="send_apply_exit"><img
+                                        src=""></span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div>
+                                <input class="modify-input code_input" id="smscode_input_exit"
+                                       placeholder="请输入短信验证码">
+                                <span class="mes-code btn-download" id="send_msg_exit"
+                                      data-text="发送验证码">发送验证码</span>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <!--退出申请-->
+                    <div class="btn-wrap">
+                        <div id="exit_tip"></div>
+                        <span class="btn-login"
+                              id="submit_exit_btn">{|userinfo.apply.btn-submit|}</span>
+                    </div>
+
+                </div>
+
+                <!--信息-->
+                <div id="exit_info" style="display: none">
+                    <ul>
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.delegname|}</label>
+                            <div class="right info_delegateName"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.phone|}</label>
+                            <div class="right info_phone"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.status|}</label>
+                            <div class="right" id="exit_status"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.adress|}</label>
+                            <div class="right address"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.num|}</label>
+                            <div class="right" id="rebackCount"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.time|}</label>
+                            <div class="right" id="createTime"></div>
+                        </li>
+
+                        <li class="clear">
+                            <label class="left">{|userinfo.exit.ID|}</label>
+                            <div class="right" id="rebackTrxId"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!--修改密码弹窗-->
+<div class="change_pwd_win">
+    <div class="card">
+        <div class="card_title">
+            <h3><span>{|userinfo.id-info.btn-change|}{|userinfo.id-info.password|}</span><span></span></h3>
+            <hr>
+        </div>
+
+        <div class="card_content">
+            <ul class="form">
+
+                <!--旧密码-->
+                <li>
+                    <div class="left">{|userinfo.id-info.inputOldPwd|}</div>
+
+                    <div class="right">
+                        <input type="password">
+                    </div>
+                </li>
+
+                <!--新密码-->
+                <li>
+                    <div class="left">{|userinfo.id-info.inputNewPwd|}</div>
+
+                    <div class="right">
+                        <input type="password">
+                    </div>
+                </li>
+
+                <!--手机号-->
+                <li class="phone">
+                    <div class="left">{|userinfo.id-info.phone|}</div>
+
+                    <div class="right">
+                        <span class="info_phone"></span>
+                    </div>
+                </li>
+
+                <!--验证码-->
+                <li class="send">
+                    <div class="left">{|userinfo.id-info.signCode|}</div>
+
+                    <div class="right">
+                        <input type="text" placeholder="{|userinfo.account-info.img-code|}">
+
+                        <span class="pic-code hover" id="send_apply"></span>
+                    </div>
+                </li>
+
+                <!--短信验证-->
+                <li class="send">
+                    <div class="left">{|userinfo.id-info.msgCode|}</div>
+
+                    <div class="right">
+                        <input type="text" placeholder="{|userinfo.account-info.phone-code|}">
+
+                        <span class="mes-code btn-download hover" id="send_msg"
+                              data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
+                    </div>
+                </li>
+            </ul>
+
+            <span class="tip"></span>
+            <a class="change_pwd_affirm" href="javascript:void(0);">{|userinfo.confirm|}</a>
+        </div>
+    </div>
+</div>
+
+
+{%include "footer.html"%}

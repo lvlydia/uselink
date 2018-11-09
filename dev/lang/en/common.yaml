@@ -1,0 +1,46 @@
+lang: en
+
+title: Uselink
+
+keyword: Uselink Super Node
+
+description: Uselink Locked Address for Super Node Candidate
+
+author: DONOPO TEAM
+
+empty: Empty
+
+# 导航
+header:
+  menu:
+    home: Home
+    voted: Vote
+    browser:  Block Explorer
+    book:  White Paper
+    new: News
+    wallet:  Wallet
+    login: Login
+
+change-btn: English
+
+footer:
+  menu:
+    number: Concerned about the public number:
+    num-info:  Uselink public chain
+    qq: QQ exchange group:
+    contact: Contact customer service QQ:
+    email: Email:
+    website: website:http://www.uselink.cc
+    contacts: contact us
+    support: Help
+    support-info: Q&A
+
+wallet:
+  app-down: App Download
+  pc-down: PC Download
+
+nav:
+  userinfo: user info
+  logout: logout
+
+video_tip: Your browser does not support the HTML5 video tag. Try updating your browser or using a different one.

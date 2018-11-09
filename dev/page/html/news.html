@@ -1,0 +1,47 @@
+{%include "head_top.html"%}
+<link rel="stylesheet" href="../css/news.min.css">
+<link rel="stylesheet" href="../common/css/amazeui.min.css">
+{%include "head_link.html"%}
+<script src="../js/news.min.js"></script>
+<script src="../js/banner.min.js"></script>
+{%include "head_bottom.html"%}
+<section id="app-news">
+    <div class="body">
+        <div role="main" class="main">
+
+            <!--轮播图-->
+            <div class="banner_true">
+                <div class="banner_true_box">
+                    <div class="am-slider am-slider-default" id="demo-slider-0">
+                        <ul class="am-slides">
+                            <li>
+                                <div style="cursor: pointer">
+                                    <img class="fadeIn default_banner" src="../img/img_default_large.jpg"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="container">
+
+
+                <div class="row  m-0 p-0 tab_box"></div>
+
+
+                <!--资讯-->
+                <div id="news" class="tab_content row"></div>
+
+
+                <!--活动-->
+                <div id="activity" class="tab_content row"></div>
+            </section>
+
+        </div>
+    </div>
+</section>
+
+<script src="../common/js/amazeui.min.js"></script>
+{%include "footer.html"%}

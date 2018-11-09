@@ -1,0 +1,67 @@
+title1: 개인정보
+title2: 코인 찾은 내역
+title3: 신청 나가기
+
+confirm: 확인
+
+#个人资料
+id-info:
+  title: 신분정보
+  phone: 휴대폰 번호
+  status: 인증 상태
+  status_val: 未认证
+  why: 미통과 원인
+  password: 비밀번호
+  btn-change: 수정
+  set-password: 새 비밀번호 설정
+  confrim: 새 비밀번호 확인
+  account: 계정
+  NoDelegateName: 보통 사용자
+
+
+account-info:
+  title: 계정 정보
+  delegname: 슈퍼노드 이름
+  address: 코인 찾을 주소
+  share: 배당 비례
+  share-tip: 예를 들면 비례를 70%로 설정하면 대표가 보너스의 70%를 사용자에게 나눠준다.
+  img-code: 그림 인증번호를 입력하세요.
+  phone-code: 메세지 인증번호를 입력하세요.
+  send: 인증번호 발송
+  btn-info: 메세지 저장
+  btn-submit: 후보 슈퍼노드로 제출하기
+  bind_address: 바인딩
+  bind_address_tip: 올바른 주소를 입력하십시오！
+
+
+#提币记录
+record:
+  address: 코인 찾을 주소:
+  sum: 미 배분 수량:
+  time: 시간
+  vote: 표수
+  reward: 보너스
+  share: 개인배당
+  isno: 보너스를 배분하겠습니까?
+  operation: 실행
+
+
+#退出申请
+apply:
+  password: 비밀번호를 입력하세요
+  img-code: 그림 인증번호를 입력하세요.
+  phone-code: 메세지 인증번호를 입력하세요.
+  send: 메세지 발송
+  tip-up: 신청후 나가기
+  tip-under: 코인 찾을 주소로 가기
+  btn-submit: 신청 제출
+
+#退出申请显示页面
+exit:
+  delegname: 수퍼 노드 이름
+  phone: 휴대 전화 번호
+  status: 감사 상태
+  adress: 반송 주소
+  num: 환급 횟수
+  time: 신청 시간
+  ID: 거래 ID
