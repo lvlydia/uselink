@@ -1,5 +1,13 @@
 @import "scss_color_m";
 //密码弹窗:6
+* {
+  user-select: none;
+}
+
+.address {
+  -webkit-user-select: text;
+  user-select: text;
+}
 
 #userInfo {
   background: #f6f6f6;
@@ -157,7 +165,8 @@
               }
 
               .change_pwd {
-                width: 48px;
+                width: auto;
+                padding: 0 20px;
                 height: 21px;
                 border: 1px solid $purple;
                 color: $purple;
@@ -374,6 +383,16 @@
                         font-size: 14px;
                         position: relative;
 
+                        .address {
+                          font-size: 12px;
+                        }
+
+                        .pic-code {
+                          img {
+                            cursor: pointer !important;
+                          }
+                        }
+
                         input {
                           width: 100%;
                           height: 20px;
@@ -389,26 +408,27 @@
                           }
                         }
 
-                        input[class$='userInfoAddress']{
+                        input[class^='userInfoAddress'] {
                           display: none;
                         }
 
-                        .changeWithDrawAddress{
+                        .changeWithDrawAddress {
                           position: absolute;
                           right: -80px;
-                          min-width: 60px;
+                          width: auto;
+                          padding: 0 20px;
                           height: 24px;
                           line-height: 24px;
-                          border:1px solid $purple;
+                          border: 1px solid $purple;
                           display: block;
                           color: $purple;
                           font-size: 12px;
                           text-align: center;
-                          top:50%;
+                          top: 50%;
                           border-radius: 24px;
-                          transform: translate(0,-50%);
+                          transform: translate(0, -50%);
 
-                          &:hover{
+                          &:hover {
                             background-color: $purple;
                             color: white;
                           }
@@ -553,7 +573,7 @@
                     }
                   }
 
-                  .tip{
+                  .tip {
                     margin-top: 20px;
                     height: 14px;
                     font-size: 14px;
@@ -599,14 +619,14 @@
                 text-align: center;
               }
 
-              .notPassReason{
+              .notPassReason {
                 margin-top: 40px;
                 font-size: 14px;
                 text-align: center;
                 color: $black;
               }
 
-              .tip{
+              .tip {
                 font-size: 14px;
                 color: $dark_dark_gray;
                 text-align: center;
@@ -615,7 +635,7 @@
                 margin-top: 80px;
               }
 
-              .submitAgain{
+              .submitAgain {
                 padding: 0 70px;
                 height: 44px;
                 line-height: 44px;
@@ -627,13 +647,14 @@
                 margin-top: 26px;
                 font-size: 18px;
 
-                &:hover{
+                &:hover {
                   background-image: linear-gradient(-90deg, #FFD985 4%, #FFB05F 100%);
                 }
               }
             }
 
-            .submitted{
+            //审核通过
+            .submitted {
 
               .form {
                 width: 400px;
@@ -645,6 +666,7 @@
                   min-height: 40px;
                   line-height: 40px;
                   margin-bottom: 12px;
+                  position: relative;
 
                   & > .left {
                     width: 100px;
@@ -658,6 +680,17 @@
                     height: 40px;
                     text-align: left;
                     font-size: 14px;
+                    //position: relative;
+
+                    .address {
+                      font-size: 12px;
+                    }
+
+                    .pic-code {
+                      img {
+                        cursor: pointer !important;
+                      }
+                    }
 
                     input {
                       width: 100%;
@@ -673,6 +706,40 @@
                         font-size: 14px;
                       }
                     }
+
+                    input[class^='userInfoAddress'] {
+                      display: none;
+                    }
+
+                    .changeWithDrawAddress {
+                      width: auto;
+                      float: right;
+                      padding: 0 20px;
+                      position: absolute;
+                      right: -80px;
+                      //min-width: 60px;
+                      height: 24px;
+                      line-height: 24px;
+                      border: 1px solid $purple;
+                      display: inline-block;
+                      color: $purple;
+                      font-size: 12px;
+                      text-align: center;
+                      top: 20px;
+                      border-radius: 24px;
+                      transform: translate(0, -50%);
+
+                      &:hover {
+                        background-color: $purple;
+                        color: white;
+                      }
+                    }
+                  }
+                }
+
+                .noLine {
+                  .right {
+                    border: none;
                   }
                 }
 
@@ -807,7 +874,7 @@
                 }
               }
 
-              .tip{
+              .tip {
                 margin-top: 20px;
                 height: 14px;
                 font-size: 14px;
@@ -818,20 +885,34 @@
 
               .submit {
                 display: inline-block;
+                width: 300px;
                 padding: 0 70px;
                 line-height: 44px;
                 font-size: 18px;
-                width: auto;
                 margin: 0 auto;
                 text-align: center;
                 border-radius: 44px;
                 color: white;
                 height: 44px;
-                background-image: linear-gradient(-90deg, #FFB05F 4%, #FFD985 100%);
+                background-image: linear-gradient(-90deg, #7B5BFE 0%, #96AAF9 100%);
 
                 &:hover {
-                  background-image: linear-gradient(-90deg, #FFD985 4%, #FFB05F 100%);
+                  background-image: linear-gradient(-90deg, #96AAF9 0%, #7B5BFE 100%);
                 }
+              }
+            }
+
+            //审核中
+            .review {
+              .reviewTitle {
+                margin-top: 130px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 20px;
+                min-height: 20px;
+                color: $yellow;
+                padding: 0 20px;
+                font-weight: bolder;
               }
             }
           }
@@ -897,8 +978,8 @@
             padding: 0 20px;
 
             .empty {
+              display: flex;
               height: 100%;
-              display: none;
               flex-flow: column wrap;
               align-items: center;
               justify-content: center;
@@ -921,14 +1002,18 @@
                 font-weight: bolder;
 
                 li {
-                  width: 16.4%;
-                  height: inherit;
-                  line-height: inherit;
+                  width: 15%;
+                  height: auto;
+                  line-height: normal;
                   float: left;
+                  display: flex;
+                  flex-flow: row wrap;
+                  align-items: flex-end;
+                  justify-content: center;
                 }
 
                 li:first-child {
-                  width: 18%;
+                  width: 25%;
                 }
               }
 
@@ -943,7 +1028,7 @@
 
                   & > div {
                     float: left;
-                    width: 16.4%;
+                    width: 15%;
                     height: inherit;
                     line-height: inherit;
 
@@ -964,53 +1049,337 @@
                   }
 
                   div:first-child {
-                    width: 18%;
+                    width: 25%;
 
                   }
                 }
               }
             }
+
+            .table_mobile {
+              display: none;
+            }
           }
         }
       }
 
-      //退出申请
-      .info-wrap {
-        input {
-          font-size: 14px;
-        }
-      }
+      //退出
+      .page3 {
+        //退出表单
+        #exit_form {
+          width: 100%;
+          min-height: 800px;
+          background-color: white;
+          border-radius: 4px;
+          padding: 30px 45px;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
 
-      //展示退出页面
-      .info-wraps {
-        box-sizing: border-box;
-        padding: 60px 80px 30px;
-        background: #fff;
-        border-radius: 5px;
-        overflow: hidden;
-        font-size: 14px;
-        color: #333;
-        font-weight: normal;
+          .exit_t {
+            overflow: hidden;
+            margin-bottom: 17px;
 
-        li {
-          list-style: none;
-          font-size: 14px;
-          height: 50px;
+            h3 {
+              height: 25px;
+              margin-bottom: 15px;
+
+              span {
+                display: block;
+                float: left;
+              }
+
+              span:first-child {
+                font-size: 18px;
+                height: 25px;
+                line-height: 25px;
+                color: $black;
+                margin-right: 10px;
+              }
+
+              span[class='line'] {
+                width: 4px;
+                height: 12px;
+                margin-top: 6.5px;
+                background-image: linear-gradient(0deg, #867AFC 0%, #96AAF9 100%);
+                margin-right: 12px;
+              }
+            }
+
+            hr {
+              color: $gray;
+            }
+          }
+
+          .exit_b {
+
+            .form {
+              width: 400px;
+              margin: 0 auto;
+              margin-bottom: 23px;
+
+              li {
+                width: 100%;
+                min-height: 40px;
+                line-height: 40px;
+                margin-bottom: 12px;
+
+                & > .left {
+                  width: 100px;
+                  text-align: right;
+                  font-size: 14px;
+                }
+
+                & > .right {
+                  width: calc(100% - 130px);
+                  border-bottom: 1px solid #ededed;
+                  height: 40px;
+                  text-align: left;
+                  font-size: 14px;
+                  position: relative;
+
+                  .address {
+                    font-size: 12px;
+                  }
+
+                  .exitSignCode {
+                    img {
+                      cursor: pointer !important;
+                    }
+                  }
+
+                  input {
+                    width: 100%;
+                    height: 20px;
+                    float: left;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: $black;
+
+                    &::placeholder {
+                      color: $gray;
+                      line-height: 20px;
+                      font-size: 14px;
+                    }
+                  }
+
+                  input[class^='userInfoAddress'] {
+                    display: none;
+                  }
+
+                  .changeWithDrawAddress {
+                    position: absolute;
+                    right: -80px;
+                    min-width: 60px;
+                    height: 24px;
+                    line-height: 24px;
+                    border: 1px solid $purple;
+                    display: block;
+                    color: $purple;
+                    font-size: 12px;
+                    text-align: center;
+                    top: 50%;
+                    border-radius: 24px;
+                    transform: translate(0, -50%);
+
+                    &:hover {
+                      background-color: $purple;
+                      color: white;
+                    }
+                  }
+                }
+              }
+
+              .noLine {
+                .right {
+                  border: none;
+                }
+              }
+
+              li[class='share'] {
+                overflow: hidden;
+
+                .left, .right {
+                  height: 27px;
+                }
+
+                .right {
+                  border: none;
+
+                  .share_t {
+                    width: 100%;
+                    height: 27px;
+                    padding-top: 14px;
+                    padding-right: 91px;
+
+                    a {
+                      display: inline-block;
+                      width: 25px;
+                      height: 13px;
+                      background-color: $gray;
+                      border-radius: 4px;
+                      position: relative;
+
+                      &::before {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-width: 5px 3px;
+                        border-style: solid;
+                        border-color: #fff transparent transparent transparent;
+                        top: 50%;
+                        left: 50%;
+                        display: block;
+                        content: " ";
+                      }
+
+                      &:hover {
+                        background-color: $purple;
+                      }
+                    }
+
+                    .s_btn {
+                      float: left;
+                      &::before {
+                        transform: translate(-90%, -50%) rotate(90deg);
+                      }
+                    }
+
+                    .a_btn {
+                      float: right;
+                      &::before {
+                        transform: translate(0, -50%) rotate(-90deg);
+                      }
+                    }
+
+                    .share_t_m {
+                      float: left;
+                      height: 13px;
+                      width: calc(100% - 50px);
+
+                      & > div {
+                        width: 50%;
+                        height: 13px;
+                      }
+
+                      .left {
+                        input {
+                          width: 100%;
+                          height: 13px;
+                          margin: 0;
+                          color: $black;
+                          text-align: right;
+                        }
+                      }
+
+                      .right {
+                        line-height: 13px;
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+
+                .shareTip {
+                  width: calc(100% - 130px);
+                  height: 13px;
+                  clear: both;
+                  color: $yellow;
+                  font-size: 12px;
+                  padding-top: 10px;
+                  box-sizing: content-box;
+                  line-height: 13px;
+                  float: right;
+                  text-align: left;
+                }
+              }
+
+              li[class='send'] {
+                .right {
+                  input {
+                    width: calc(100% - 120px);
+                  }
+
+                  span {
+                    float: right;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+
+                  .mes-code {
+                    min-width: 80px;
+                    height: 24px;
+                    margin-top: 8px;
+                    line-height: 24px;
+                    color: $purple;
+                    border: 1px solid $purple;
+                    font-size: 12px;
+                    border-radius: 24px;
+
+                    &:hover {
+                      background-color: $purple;
+                      color: white;
+                    }
+                  }
+                }
+              }
+            }
+
+            .exitTip {
+              margin-top: 20px;
+              height: 14px;
+              font-size: 14px;
+              text-align: center;
+              color: $red;
+              margin-bottom: 10px;
+            }
+
+            .submit {
+              display: inline-block;
+              width: 300px;
+              padding: 0 70px;
+              line-height: 44px;
+              font-size: 18px;
+              margin: 0 auto;
+              text-align: center;
+              border-radius: 44px;
+              color: white;
+              height: 44px;
+              background-image: linear-gradient(-90deg, #7B5BFE 0%, #96AAF9 100%);
+
+              &:hover {
+                background-image: linear-gradient(-90deg, #96AAF9 0%, #7B5BFE 100%);
+              }
+            }
+          }
         }
 
-        .clear::after {
-          content: '';
-          display: block;
-          height: 0;
-          bottom: 0;
-          clear: both;
-        }
-        .left {
-          float: left;
-          font-weight: normal;
-        }
-        .right {
-          float: right;
+        //退出信息
+        #exit_info {
+          width: 100%;
+          min-height: 800px;
+          background-color: white;
+          border-radius: 4px;
+          padding: 30px 45px;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+
+          ul {
+            width: 100%;
+            height: auto;
+
+            li {
+              overflow: hidden;
+              padding: 0 14px;
+              border-bottom: 1px solid $light_gray;
+              height: 60px;
+              line-height: 60px;
+              font-size: 14px;
+            }
+
+            li:last-child {
+              border: none;
+            }
+          }
         }
       }
 
@@ -1062,12 +1431,15 @@
     box-shadow: 1px 1px 1px $purple;
   }
   .other_page {
-    width: 270px;
+    max-width: 270px;
+    width: auto;
+    overflow: hidden;
+    float: left;
 
     div {
       padding: 0 12px;
       margin-left: 10px;
-      margin-right: 5px;
+      margin-right: 10px;
       float: left;
       background-color: #fff;
       color: $purple;
@@ -1088,7 +1460,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .6);
   z-index: 6;
 
   .card {
@@ -1101,6 +1472,19 @@
     background-color: white;
     border-radius: 4px;
     padding: 34px 41px 40px 41px;
+    position: relative;
+    z-index: 2;
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 8px;
+      width: 30px;
+      height: 30px;
+      background: url("../img/close_icon.svg") no-repeat center;
+      background-size: 100%;
+
+    }
 
     .card_title {
 
@@ -1133,7 +1517,7 @@
 
     .card_content {
       overflow: hidden;
-      padding: 0 90px;
+      padding: 0 50px;
 
       .form {
         margin-top: 20px;
@@ -1147,13 +1531,17 @@
           margin-bottom: 12px;
 
           & > .left {
-            width: 100px;
+            width: 150px;
             text-align: right;
             font-size: 14px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-end;
           }
 
           & > .right {
-            width: calc(100% - 110px);
+            width: calc(100% - 160px);
             border-bottom: 1px solid $gray;
             height: 40px;
             font-size: 14px;
@@ -1211,16 +1599,20 @@
             }
           }
         }
+
+        li[class='delegateName'] {
+          display: none;
+        }
       }
 
-      .tip {
+      .win_tip {
         max-width: 300px;
         width: 90%;
         font-size: 14px;
         height: 14px;
         line-height: 14px;
         color: $red;
-        text-align: left;
+        text-align: center;
         display: block;
         margin: 0 auto;
         margin-top: 23px;
@@ -1237,9 +1629,535 @@
         display: block;
         text-align: center;
         color: white;
-        background-color: $gray;
+        background-image: linear-gradient(90deg, #867AFC 0%, #96AAF9 100%);
+
         border-radius: 44px;
       }
     }
   }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1680px) {
+  //手机号与密码
+  #userInfo .box > .right .page1 .userInfo_top > .right > .left, #userInfo .box > .right .page1 .userInfo_top > .right > .right {
+    float: inherit !important;
+    clear: both;
+    height: 40%;
+    margin: 0;
+    min-width: 200px;
+    line-height: 50px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  //手机号
+  #userInfo .box > .right .page1 .userInfo_top > .right > .left {
+    margin-top: 12.5px;
+  }
+
+  //密码与修改密码按钮
+  #userInfo .box > .right .page1 .userInfo_top > .right > .right {
+    margin-bottom: 12.5px;
+  }
+
+  //密码
+  #userInfo .box > .right .page1 .userInfo_top > .right > .right .left {
+    height: 100%;
+    line-height: inherit;
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+  }
+
+  //修改密码按钮
+  #userInfo .box > .right .page1 .userInfo_top > .right > .right .change_pwd {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  //修改密码弹窗
+  .change_pwd_win .card {
+    width: calc(100% - 10vw);
+    height: auto;
+    max-height: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 25px;
+
+    .card_content {
+      padding: 0;
+    }
+  }
+
+  .change_pwd_win .card .card_content .form > li {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .change_pwd_win .card .card_content .form > li > .left {
+    float: inherit;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .change_pwd_win .card .card_content .form > li > .right {
+    float: inherit;
+    width: 100%;
+    text-align: left;
+
+  }
+
+  .change_pwd_win .card .card_content .form > li[class='phone'] {
+    .left {
+      float: left !important;
+      width: auto;
+    }
+    .right {
+      float: right !important;
+      width: auto;
+    }
+  }
+
+  //提币记录
+  #userInfo .box > .right .page2 .record .record_b {
+    margin-top: 0;
+  }
+
+  #userInfo .box > .right .page2 .record .record_b .table_mobile {
+    display: block;
+
+    .content {
+      li {
+        height: auto;
+
+        ul {
+          border-bottom: 4px solid $light_gray;
+
+          li {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+              color: $purple;
+            }
+          }
+        }
+      }
+
+      li:last-child ul {
+        border: none;
+      }
+    }
+  }
+
+  #userInfo .box > .right .page2 .record .record_b .table_pc {
+    display: none;
+  }
+
+  #userInfo .box {
+    min-width: 100%;
+  }
+
+  //tab
+  #userInfo .box > .left {
+    float: inherit !important;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  #userInfo .box > .left ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  #userInfo .box > .left ul li {
+    width: calc((100% - 16px) / 3);
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  //右侧内容
+  #userInfo .box > .right {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    float: inherit !important;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top {
+    padding: 0 20px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > .left .user_icon {
+    margin-right: 10px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > .left .user_icon img {
+    width: 60px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > .left .user_delegateName, #userInfo .box > .right .page1 .userInfo_top > .left .user_NoDelegateName {
+    font-size: 20px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b {
+    overflow: visible;
+  }
+
+  //个人资料保存表单
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form {
+    width: 100%;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li > .right .changeWithDrawAddress {
+    right: 0;
+  }
+
+  //提币记录 th
+  #userInfo .box > .right .page2 .record .record_b .table .th li {
+    word-wrap: break-word;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    line-height: normal;
+    font-size: 16px;
+  }
+
+  #userInfo .box > .right .page2 .record {
+    padding: 10px;
+  }
+
+  #userInfo .box > .right .page2 .record .record_t > div {
+    float: inherit !important;
+    line-height: 20px;
+    height: auto;
+    min-height: 20px;
+    margin: 20px 0;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 768px) {
+  //修改密码弹窗
+  .change_pwd_win .card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .change_pwd_win .card .card_content {
+    max-height: 100%;
+    overflow: scroll;
+  }
+
+  //个人资料上方按钮
+  #userInfo .box > .left ul li {
+    font-size: 12px;
+    word-wrap: break-word;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-right: 10px;
+  }
+
+  #userInfo .box > .left ul {
+    justify-content: normal;
+  }
+
+  #userInfo .box > .left ul li:last-child {
+    display: none;
+    margin-right: 0;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top {
+    height: auto;
+    overflow: hidden;
+
+    .right {
+      float: left !important;
+    }
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > div {
+    width: 100%;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > div:first-child {
+    border-bottom: 1px solid $gray;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > .right {
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  #userInfo .box > .right .page1 .userInfo_top > .right > .right .left {
+    width: auto;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom {
+    padding: 15px 20px;
+    padding-bottom: 100px;
+    min-height: auto;
+  }
+
+  //个人资料 保存 表单左侧
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li > .left {
+    white-space: nowrap;
+    float: inherit !important;
+    width: 100%;
+    text-align: left;
+  }
+
+  //个人资料 保存 表单右侧
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li > .right {
+    float: inherit !important;
+    width: 100%;
+  }
+
+  //个人资料 保存 修改提币地址按钮
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li > .right .address {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  //个人资料 保存 修改提币地址框
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li > .right input[class^='userInfoAddress'] {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  //个人资料 保存 分红
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li[class='share'] .right .share_t {
+    padding-right: 0;
+    height: 50px;
+    line-height: 50;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li[class='share'] .right .share_t a {
+    margin-top: 11px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li[class='share'] .right .share_t .share_t_m {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li[class='share'] .right .share_t .share_t_m > div {
+    height: 35px;
+    line-height: 35px !important;
+    font-size: 12px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li[class='share'] .right .share_t .share_t_m .left input {
+    font-size: 12px;
+    height: 35px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .form li[class='share'] .shareTip {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .submitted .submit {
+    min-width: 100%;
+    box-sizing: border-box;
+    width: auto;
+  }
+
+  //退出
+  #userInfo .box > .right .page3 #exit_form {
+    padding: 15px 20px;
+    padding-bottom: 100px;
+    min-height: auto;
+  }
+
+  //TODO:其他登陆后状态移动端适配
+  #userInfo .box > .right .page3 #exit_form .exit_b .form {
+    width: 100%;
+  }
+
+  #userInfo .box > .right .page3 #exit_form .exit_b .form li {
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  #userInfo .box > .right .page3 #exit_form .exit_b .form li > .left {
+    float: inherit;
+    width: 100%;
+    text-align: left;
+  }
+
+  #userInfo .box > .right .page3 #exit_form .exit_b .form li > .right {
+    float: inherit;
+    width: 100% !important;
+  }
+
+  #userInfo .box > .right .page3 #exit_form .exit_b .submit {
+    width: auto;
+  }
+
+  //退出页面基本资料
+  #userInfo .box > .right .page3 #exit_info {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  //未认证时的提交页面
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .change_step_box > div {
+    padding: 0 20px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step1_box .address {
+    word-wrap: break-word;
+    height: auto;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step1_box .next_step {
+    min-width: 100%;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form {
+    width: 100%;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li {
+    min-height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li > .left {
+    float: inherit;
+    width: 100%;
+    text-align: left;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li > .right {
+    float: inherit;
+    width: 100%;
+    position: initial;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li > .right .changeWithDrawAddress {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    transform: translate(0, -50%);
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li > .right input[class^='userInfoAddress'] {
+    font-size: 12px;
+  }
+
+  //提交分红
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .left {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .right {
+    padding: 0;
+    height: 35px;
+    line-height: 35px;
+
+    .share_t {
+      padding: 0;
+      height: 35px;
+      line-height: 35px;
+    }
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .right .share_t a {
+    margin-top: 11px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .right .share_t .share_t_m {
+    height: 35px;
+    line-height: 35px;
+
+    & > div {
+      height: 35px;
+      line-height: 35px;
+    }
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .right .share_t .share_t_m .left input {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .right .share_t .share_t_m .right {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .saveAndSubmit .saveAndSubmit_b .step2_box .form li[class='share'] .shareTip {
+    width: 100%;
+    text-align: center;
+  }
+
+  //审核中提示文本
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .review .reviewTitle {
+    padding: 0;
+    font-size: 16px;
+    margin-top: 100px;
+  }
+
+  //个人资料下方标题
+  #userInfo .box > .right .page1 .userInfo_bottom .title_box h3 {
+    height: auto;
+    overflow: hidden;
+  }
+
+  //申请被拒绝后的提示
+  #userInfo .box > .right .page1 .userInfo_bottom .userInfo_b_b .notPass .tip {
+    height: auto;
+    line-height: 15px;
+  }
+
+  //退出信息
+  #userInfo .box > .right .page3 #exit_info ul li {
+    height: auto;
+    padding: 0;
+
+    .address {
+      font-size: 12px;
+      width: 100%;
+      float: inherit;
+      text-align: left;
+    }
+  }
+
 }

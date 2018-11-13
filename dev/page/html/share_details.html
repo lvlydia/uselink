@@ -1,69 +1,44 @@
 {%include "head_top.html"%}
-<link rel="stylesheet" href="../common/css/amazeui.min.css">
 {%include "head_link.html"%}
-    <link rel="stylesheet" href="../css/share_details.min.css">
-    <script src="../js/share_details.min.js"></script>
+<link rel="stylesheet" href="../css/share_details.min.css">
+<script src="../js/share_details.min.js"></script>
 {%include "head_bottom.html"%}
 
 
-<div style="height:60px;"></div>
+<section id="share_details">
+    <div class="box">
+        <div class="detail_top">
+            <div>
+                <span>{|share_details.vote|}：</span>
+                <span id="voteNum"></span>
+            </div>
 
+            <div>
+                <span>{|share_details.reward|}：</span>
+                <span id="reward"></span>
+            </div>
 
-<section id="app-share_details">
-    <!-- trace:dev/page/html/vote.html -->
-    <div class="body">
-        <!-- ################## -->
-        <div role="main" class="main">
-            <section  class="container-fluid m-0 p-0 ">
-                <div class="container" >
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="item recode am-scrollable-horizontal " >
-                                <table class="am-table addtable  pc_up_table" >
-                                    <thead>
-                                    <tr class="tr" style="border-bottom: none;">
-                                        <th class="changeth">
-                                            {|share_details.vote|}：
-                                            <span id="voteNum"></span>
-                                        </th>
-
-                                        <th class="changeth">
-                                            {|share_details.reward|}：
-                                            <span id="reward"></span>
-                                        </th>
-
-                                        <th class="changeth">
-                                            {|share_details.share|}：
-                                            <span id="income"></span>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="item recode am-scrollable-horizontal am-text-nowrap" >
-                                <table class="am-table addtable">
-                                    <thead>
-                                        <tr class="tr">
-                                            <th>{|share_details.table.time|}</th>
-                                            <th>{|share_details.table.number|}</th>
-                                            <th>{|share_details.table.amount|}</th>
-                                            <th>{|share_details.table.poundage|}</th>
-                                            <th>{|share_details.table.status|}</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody id="body"></tbody>
-                                </table>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div>
+                <span>{|share_details.share|}：</span>
+                <span id="income"></span>
+            </div>
         </div>
-        <!-- ################## -->
+
+        <div class="detail_bottom">
+            <ul class="th">
+                <li>{|userinfo.record.time|}</li>
+
+                <li>{|userinfo.record.vote|}</li>
+
+                <li>{|userinfo.record.reward|}</li>
+
+                <li>{|userinfo.record.share|}</li>
+
+                <li>{|userinfo.record.isno|}</li>
+            </ul>
+
+            <ul class="content"></ul>
+        </div>
     </div>
 </section>
 

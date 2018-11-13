@@ -25,10 +25,9 @@ let dev_html = ['dev/page/html/*.html'];
 let dev_template = ['dev/page/template/*.html'];
 let dev_yaml_zh = ['dev/lang/zh/*.yaml'];
 let dev_yaml_en = ['dev/lang/en/*.yaml'];
+let dev_yaml_ko = ['dev/lang/ko/*.yaml'];
 
-let dev_image = ['run/img/*'];
 
-let run_image = 'dist/img';
 let run_css = 'run/css';
 let run_js = 'run/js';
 let run_html = 'run/';
@@ -70,7 +69,7 @@ gulp.task('Watch', function () {
     });
 
     //yaml template html
-    gulp.watch(dev_yaml_en.concat(dev_yaml_zh).concat(dev_template).concat(dev_html), function () {
+    gulp.watch(dev_yaml_en.concat(dev_yaml_zh).concat(dev_yaml_ko).concat(dev_template).concat(dev_html), function () {
         console.log('yaml or template or html has changed');
         gulp.src(dev_html)
             .pipe(render({

@@ -550,80 +550,6 @@ img, input {
   padding-top: 80px;
   box-sizing: border-box;
 
-  .block {
-    width: 100%;
-    display: none;
-  }
-
-  .block:nth-child(2) {
-    margin-top: 60px;
-    p {
-      color: white;
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 10px;
-      height: 26px;
-      line-height: 26px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      .hover {
-        &:hover {
-          color: $gray;
-        }
-      }
-    }
-  }
-
-  .block:nth-child(3) {
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-
-    & > * {
-      font-size: 14px;
-      opacity: .5;
-      text-align: center;
-      color: white;
-      margin-bottom: 10px;
-      height: 20px;
-      line-height: 20px;
-    }
-
-    p:first-child {
-      opacity: .9;
-    }
-  }
-
-  .icon_box {
-    height: 35px;
-    width: 400px;
-    margin: 0 auto;
-
-    a {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      border-radius: 35px;
-      margin-right: 56.25px;
-      float: left;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        box-shadow: 0 1px 3px 0 rgba(3, 12, 32, 0.2);
-      }
-
-      img {
-        height: 35px;
-        width: 35px;
-      }
-    }
-  }
 
   /* NEW FOOTER */
   .f_bottom, .f_top {
@@ -658,6 +584,7 @@ img, input {
 
       .icon_box {
         height: 25px;
+        width: 400px;
 
         a {
           width: 25px;
@@ -665,10 +592,19 @@ img, input {
           margin-right: 15px;
           opacity: .6;
 
+          display: inline-block;
+          border-radius: 35px;
+          float: left;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
           &:hover {
             cursor: pointer;
             opacity: 1;
             transform: scale(1.1);
+            box-shadow: 0 1px 3px 0 rgba(3, 12, 32, 0.2);
           }
 
           img {

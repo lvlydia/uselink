@@ -1,7 +1,6 @@
 title1: 個人資料
 title2: 提幣記錄
 title3: 退出申請
-
 confirm: 確認
 
 #个人资料
@@ -17,6 +16,32 @@ id-info:
   confrim: 確認新密碼
   account: 賬戶
   NoDelegateName: 普通用戶
+
+  inputOldPwd: 輸入舊密碼
+  inputNewPwd: 輸入新密碼
+  inputNewPwdAgain: 再次輸入新密碼
+  signCode: 驗證碼
+  msgCode: 短信驗證
+  userInfoBottomTitle: 超級節點候選人
+  tipTitle: 成為超級節點候選人的用途：
+  tipP1: 1.成為超級節點候選人,可參與超級節點的競選。
+  tipP2: 2.全網用戶通過使用擁有的 UL 代幣,能夠對所有候選節點進行投票;擁有投票數排名前 101 的候選節點會被選中進行Uselink區塊鍊主網區塊記賬並打包出塊。
+  tipP3: 3.前101 個超節點，會獲取分紅收益作為出塊獎勵。
+  step1: 第一步
+  step2: 第二步
+  step1Title: 向該地址轉賬10000UL作為抵押金,退出超級節點後可申請退還
+  nextStep: 下一步
+  inputSuperNodeName: 請輸入超級節點名
+  inputAddress: 請輸入提幣地址
+  submit: 提交成為節點候選人
+  empty: 暫無記錄
+  auditFailed: 審核未通過
+  notPassReason: 審核未通過原因
+  problem: 如有問題請聯繫客服
+  submitAgain: 重新申請
+  saveBtn: 保存
+  reviewTitle: 申請已提交，正在審核中...
+  exitSuperNode: 退出超級節點
 
 
 account-info:
@@ -38,14 +63,15 @@ account-info:
 
 #提币记录
 record:
-  address: 提幣地址:
-  sum: 未發放數量:
+  address: 提幣地址
+  sum: 未發放數量
   time: 時間
   vote: 票數
   reward: 獎勵
   share: 個人分紅
   isno: 是否發放獎勵
   operation: 操作
+  details: 詳情
 
 
 #退出申请

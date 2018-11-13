@@ -51,12 +51,13 @@ $(() => {
 
     //开发IP地址
     //dev_ip 本地ip  run_host 线上接口地址  dev_host  测试接口地址
-    let dev_ip = 'http://192.168.0.153:8080', run_host = 'https://mgm.uselink.cc', dev_host = 'http://192.168.0.57:9002';
+    let dev_ip = 'http://192.168.0.153:8080', run_host = 'https://mgm.uselink.cc',
+        dev_host = 'http://192.168.0.57:9002';
 
 
     //cms接口地址
     // window.cms_host='https://cms.uselink.cc/cms';
-    window.cms_host='http://192.168.0.158:9001/cms';
+    window.cms_host = 'http://192.168.0.158:9001/cms';
 
 
     //设置语言
@@ -91,6 +92,17 @@ $(() => {
     // 页面跳转
     window.href = url => {
         window.location.href = url_list[url];
+    };
+
+    //时间转换
+    window.getTime=time=>{
+        let year=time.getFullYear();
+        let month=time.getMonth()<10?'0'+time.getMonth():time.getMonth();
+        let date=time.getDate()<10?'0'+time.getDate():time.getDate();
+        let hours=time.getHours()<10?'0'+time.getHours():time.getHours();
+        let minute=time.getMinutes()<10?'0'+time.getMinutes():time.getMinutes();
+
+        return year+'/'+month+'/'+date+' '+hours+':'+minute;
     };
 
 
@@ -199,22 +211,38 @@ $(() => {
             'dividend_rate_error': 'Dividend ratio error',
             'save_success': "Successfully saved",
             // 'submit_win_title': 'Application Information',
-            'submit_success':'Submitted successfully',
+            'submit_success': 'Submitted successfully',
 
-            'submitted':'Has been submitted',
-            'unauthorized':'unauthorized',
-            'did_not_pass':'Did not pass',
-            'waiting_for_processing':'Waiting for processing',
-            'verification_passed':'Verification passed',
+            'submitted': 'Has been submitted',
+            'unauthorized': 'unauthorized',
+            'did_not_pass': 'Did not pass',
+            'waiting_for_processing': 'Waiting for processing',
+            'verification_passed': 'Verification passed',
 
-            'node_name_cant_null':'Supernode name cannot be empty',
-            'exit':'exit',
-            'exit_transfer':'Exit the transfer',
-            'exit_success':'Exit the success',
-            'none':'none',
-            'detail':'detail',
-            'success':'success',
-            'empty':'no content yet',
+            'node_name_cant_null': 'Supernode name cannot be empty',
+            'exit': 'exit',
+            'exit_transfer': 'Exit the transfer',
+            'exit_success': 'Exit the success',
+            'none': 'none',
+            'detail': 'detail',
+            'success': 'success',
+            'empty': 'no content yet',
+
+            //提币详情
+            'init':'init',
+            'notSure':'N',
+            'sure':'Y',
+            'noAddress':'N',
+            'error1':'N',
+            'error2':'N',
+
+            //提币记录
+            'time':'time',
+            'vote':'votes',
+            'reward':'reward',
+            'share_':'Personal dividend',
+            'isno':'Whether to issue rewards',
+            'operation':'operating',
 
 
         },
@@ -249,22 +277,38 @@ $(() => {
             'withdrawAddress_empty': '提币地址不能为空',
             'dividend_rate_error': '分红比例错误',
             'save_success': "保存成功",
-            'submit_success':'提交成功',
+            'submit_success': '提交成功',
 
-            'submitted':'已提交',
-            'unauthorized':'未认证',
-            'did_not_pass':'未通过',
-            'waiting_for_processing':'待处理',
-            'verification_passed':'审核通过',
+            'submitted': '已提交',
+            'unauthorized': '未认证',
+            'did_not_pass': '未通过',
+            'waiting_for_processing': '待处理',
+            'verification_passed': '审核通过',
 
-            'node_name_cant_null':'超级节点名不能为空',
-            'exit':'退出',
-            'exit_transfer':'退出转账',
-            'exit_success':'退出成功',
-            'none':'无',
-            'detail':'详情',
-            'success':'成功',
-            'empty':'暂无内容',
+            'node_name_cant_null': '超级节点名不能为空',
+            'exit': '退出',
+            'exit_transfer': '退出转账',
+            'exit_success': '退出成功',
+            'none': '无',
+            'detail': '详情',
+            'success': '成功',
+            'empty': '暂无内容',
+
+            //提币详情
+            'init':'初始化',
+            'notSure':'N',
+            'sure':'Y',
+            'noAddress':'N',
+            'error1':'N',
+            'error2':'N',
+
+            //提币记录
+            'time':'时间',
+            'vote':'票数',
+            'reward':'奖励',
+            'share_':'个人分红',
+            'isno':'是否发放奖励',
+            'operation':'操作',
 
         },
 
@@ -298,22 +342,38 @@ $(() => {
             'withdrawAddress_empty': '提幣地址不能為空',
             'dividend_rate_error': '分紅比例錯誤',
             'save_success': "保存成功",
-            'submit_success':'提交成功',
+            'submit_success': '提交成功',
 
-            'submitted':'已提交',
-            'unauthorized':'未認證',
-            'did_not_pass':'未通過',
-            'waiting_for_processing':'待處理',
-            'verification_passed':'審核通過',
+            'submitted': '已提交',
+            'unauthorized': '未認證',
+            'did_not_pass': '未通過',
+            'waiting_for_processing': '待處理',
+            'verification_passed': '審核通過',
 
-            'node_name_cant_null':'超級節點名不能為空',
-            'exit':'退出',
-            'exit_transfer':'退出轉賬',
-            'exit_success':'退出成功',
-            'none':'無',
-            'detail':'詳情',
-            'success':'成功',
-            'empty':'暫無內容',
+            'node_name_cant_null': '超級節點名不能為空',
+            'exit': '退出',
+            'exit_transfer': '退出轉賬',
+            'exit_success': '退出成功',
+            'none': '無',
+            'detail': '詳情',
+            'success': '成功',
+            'empty': '暫無內容',
+
+            //提币详情
+            'init':'初始化',
+            'notSure':'N',
+            'sure':'Y',
+            'noAddress':'N',
+            'error1':'N',
+            'error2':'N',
+
+            //提币记录
+            'time':'時間',
+            'vote':'票數',
+            'reward':'獎勵',
+            'share_':'個人分紅',
+            'isno':'是否發放獎勵',
+            'operation':'操作',
 
         },
 
@@ -347,22 +407,38 @@ $(() => {
             'withdrawAddress_empty': '추출 토큰 주소는 비워 둘 수 없습니다',
             'dividend_rate_error': '배당비례 점검오류',
             'save_success': "성공적으로 저장되었습니다",
-            'submit_success':'제출 완료',
+            'submit_success': '제출 완료',
 
-            'submitted':'제출 완료',
-            'unauthorized':'인증 없음',
-            'did_not_pass':'통과 할 수 없다',
-            'waiting_for_processing':'처리 대기 중',
-            'verification_passed':'제출 완료',
+            'submitted': '제출 완료',
+            'unauthorized': '인증 없음',
+            'did_not_pass': '통과 할 수 없다',
+            'waiting_for_processing': '처리 대기 중',
+            'verification_passed': '제출 완료',
 
-            'node_name_cant_null':'슈퍼 노드 이름은 비워 둘 수 없습니다.',
-            'exit':'로그 아웃',
-            'exit_transfer':'출구 전송',
-            'exit_success':'성공적으로 종료',
-            'none':'아니요',
-            'detail':'세부 정보',
-            'success':'성공',
-            'empty':'내용 없음',
+            'node_name_cant_null': '슈퍼 노드 이름은 비워 둘 수 없습니다.',
+            'exit': '로그 아웃',
+            'exit_transfer': '출구 전송',
+            'exit_success': '성공적으로 종료',
+            'none': '아니요',
+            'detail': '세부 정보',
+            'success': '성공',
+            'empty': '내용 없음',
+
+            //提币详情
+            'init':'초기화',
+            'notSure':'N',
+            'sure':'Y',
+            'noAddress':'N',
+            'error1':'N',
+            'error2':'N',
+
+            //提币记录
+            'time':'시간',
+            'vote':'투표 수',
+            'reward':'보상',
+            'share_':'개인 배당',
+            'isno':'보상을 발행할지 여부',
+            'operation':'수술',
 
         }
     };
@@ -375,9 +451,9 @@ $(() => {
 
 
     //promise ajax 简写
-    window.ajax_ = (url, data, headers,hosts) => {
+    window.ajax_ = (url, data, headers, hosts) => {
         return new Promise((resolve, reject) => {
-            if(hosts){
+            if (hosts) {
                 //自定义接口地址
                 $.ajax({
                     type: "post",
@@ -402,7 +478,7 @@ $(() => {
                         }
                     },
                 });
-            }else {
+            } else {
                 $.ajax({
                     type: "post",
                     contentType: 'application/json; charset=utf-8',
@@ -510,7 +586,7 @@ $(() => {
         logout();
     });
 
-    function logout(){
+    function logout() {
         ajax_('/loginOut', {}, 1).then(data => {
             window.localStorage.removeItem('token');
             href('login');
@@ -572,7 +648,7 @@ $(() => {
                 for (let q of list) {
                     //AU 那行加一条分界线
                     $('.select_list').append(`
-                        <li class="hover select_country" data-icon="${q.nationFlag}" data-num="${q.nationNumber}" data-country="${language === 'zh' ? q.nationNameZh : q.nationAbbreviate}" data-id="${q.nationId}" style="${q.nationAbbreviate==='AU'?'border-top: 1px solid #ddd;':''}">                         
+                        <li class="hover select_country" data-icon="${q.nationFlag}" data-num="${q.nationNumber}" data-country="${language === 'zh' ? q.nationNameZh : q.nationAbbreviate}" data-id="${q.nationId}" style="${q.nationAbbreviate === 'AU' ? 'border-top: 1px solid #ddd;' : ''}">                         
                              <a href="javascript:void(0);">
                                  <img src="${q.nationFlag}">
                                  <span>+${q.nationNumber}</span>
@@ -696,7 +772,7 @@ $(() => {
     //显示或关闭语言列表
     $('.change_language_btn').click(e => {
         let obj = e.currentTarget.children[1];
-        let fadeIn='fadeInUp_';
+        let fadeIn = 'fadeInUp_';
         list_animate($(obj), 'fadeInUp_', 'fadeOutDown_');
 
         $('.menu_box').animate({}, () => {
@@ -758,10 +834,10 @@ $(() => {
 
     //change language
     $('.language_item').click(e => {
-        let lang_val = e.target.dataset.val;
+        let lang_val;
+        e.target.dataset.val ? lang_val = e.target.dataset.val : lang_val = e.currentTarget.dataset.val;
         window.location.href = url.replace(language, lang_val);
     });
-
 
 
     /*===================================*

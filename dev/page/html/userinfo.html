@@ -114,8 +114,7 @@
 
                                             <div class="right">
                                                 <span class="info_delegateName"></span>
-                                                <input class="userInfoDelegateName" type="text"
-                                                       placeholder="{|userinfo.id-info.inputSuperNodeName|}">
+                                                <input class="userInfoDelegateName form1_input" data-type="delegateName" type="text" placeholder="{|userinfo.id-info.inputSuperNodeName|}">
                                             </div>
                                         </li>
 
@@ -131,10 +130,10 @@
                                             -->
 
                                             <div class="right">
-                                                <span   class="hasWithDrawAddress address"></span>
-                                                <a      class="hasWithDrawAddress changeWithDrawAddress" href="javascript:void(0);">{|userinfo.id-info.btn-change|}</a>
+                                                <span class="hasWithDrawAddress address"></span>
+                                                <a class="hasWithDrawAddress changeWithDrawAddress" href="javascript:void(0);">{|userinfo.id-info.btn-change|}</a>
 
-                                                <input  class="userInfoAddress" type="text" placeholder="{|userinfo.id-info.inputAddress|}">
+                                                <input class="userInfoAddress form1_input" data-type="withDrawAddress" type="text" placeholder="{|userinfo.id-info.inputAddress|}">
                                             </div>
                                         </li>
 
@@ -149,9 +148,7 @@
 
                                                     <div class="share_t_m">
                                                         <div class="left">
-                                                            <input class="shareNum" value="50" placeholder=""
-                                                                   type="text" maxlength="2"
-                                                                   onkeyup="this.value=this.value.replace(/\D/g,'').substring(0,2)">
+                                                            <input class="shareNum form1_input" data-type="shareNum" value="50" placeholder="" type="text" maxlength="2" onkeyup="this.value=this.value.replace(/\D/g,'').substring(0,2)">
                                                         </div>
 
                                                         <div class="right">%</div>
@@ -170,7 +167,7 @@
                                             <div class="left">{|userinfo.id-info.signCode|}</div>
 
                                             <div class="right">
-                                                <input type="text" placeholder="{|userinfo.account-info.img-code|}">
+                                                <input class="form1_input" data-type="signCode" type="text" placeholder="{|userinfo.account-info.img-code|}">
 
                                                 <span class="pic-code hover"></span>
                                             </div>
@@ -181,7 +178,7 @@
                                             <div class="left">{|userinfo.id-info.msgCode|}</div>
 
                                             <div class="right">
-                                                <input class="input_userInfoMsg" type="text" placeholder="{|userinfo.account-info.phone-code|}">
+                                                <input class="form1_input" data-type="msgCode" type="text" placeholder="{|userinfo.account-info.phone-code|}">
 
                                                 <span class="mes-code btn-download hover"
                                                       data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
@@ -197,7 +194,9 @@
                         </div>
 
                         <!--审核中-->
-                        <div class="page review">审核中</div>
+                        <div class="page review">
+                            <div class="reviewTitle">{|userinfo.id-info.reviewTitle|}</div>
+                        </div>
 
                         <!--未通过-->
                         <div class="page notPass">
@@ -221,7 +220,10 @@
                                     <div class="left">{|userinfo.account-info.address|}</div>
 
                                     <div class="right">
-                                        <input type="text" placeholder="{|userinfo.id-info.inputAddress|}">
+                                        <span class="hasWithDrawAddress address"></span>
+                                        <a class="hasWithDrawAddress changeWithDrawAddress" href="javascript:void(0);">{|userinfo.id-info.btn-change|}</a>
+
+                                        <input class="userInfoAddress form1_input" data-type="withDrawAddress" type="text" placeholder="{|userinfo.id-info.inputAddress|}">
                                     </div>
                                 </li>
 
@@ -236,7 +238,7 @@
 
                                             <div class="share_t_m">
                                                 <div class="left">
-                                                    <input class="shareNum" value="50" placeholder=""
+                                                    <input class="shareNum form1_input" data-type="shareNum" value="50" placeholder=""
                                                            type="text" maxlength="2"
                                                            onkeyup="this.value=this.value.replace(/\D/g,'').substring(0,2)">
                                                 </div>
@@ -257,7 +259,7 @@
                                     <div class="left">{|userinfo.id-info.signCode|}</div>
 
                                     <div class="right">
-                                        <input type="text" placeholder="{|userinfo.account-info.img-code|}">
+                                        <input class="form1_input" data-type="signCode" type="text" placeholder="{|userinfo.account-info.img-code|}">
 
                                         <span class="pic-code hover"></span>
                                     </div>
@@ -268,9 +270,9 @@
                                     <div class="left">{|userinfo.id-info.msgCode|}</div>
 
                                     <div class="right">
-                                        <input type="text" placeholder="{|userinfo.account-info.phone-code|}">
+                                        <input class="form1_input" data-type="msgCode" type="text" placeholder="{|userinfo.account-info.phone-code|}">
 
-                                        <span class="mes-code btn-download hover"
+                                        <span class="mes-code hover"
                                               data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
                                     </div>
                                 </li>
@@ -306,7 +308,7 @@
                             <p>{|userinfo.id-info.empty|}</p>
                         </div>
                         
-                        <div class="table">
+                        <div class="table table_pc">
                             <ul class="th">
                                 <li>{|userinfo.record.time|}</li>
 
@@ -321,183 +323,126 @@
                                 <li>{|userinfo.record.operation|}</li>
                             </ul>
 
-                            <ul class="content">
-                                <li>
-                                    <div class="time">22</div>
+                            <ul class="content"></ul>
+                        </div>
 
-                                    <div class="vote">33</div>
-
-                                    <div class="reward">44</div>
-
-                                    <div class="share">55</div>
-
-                                    <div class="whether">66</div>
-
-                                    <div>
-                                        <a class="details" href="JavaScript:void(0);">{|userinfo.record.details|}</a>
-                                    </div>
-
-                                </li>
-                            </ul>
-
-                            <div class="row paging">
-                                <div class="pagesbox">
-                                    <div class="first_page left"><</div>
-
-                                    <div class="other_page"></div>
-
-                                    <div class="last_page right">></div>
-                                </div>
-
-                            </div>
+                        <div class="table table_mobile">
+                            <ul class="content"></ul>
                         </div>
                     </div>
                 </div>
-
-                <!--<table class="am-table addtable pc-up-table">-->
-                    <!--<thead>-->
-                    <!--<tr class="tr">-->
-                        <!--<th class="changeth">-->
-                            <!--{|userinfo.record.address|}-->
-                            <!--<span class="address"></span>-->
-                        <!--</th>-->
-                        <!--<th class="changeth">-->
-                            <!--{|userinfo.record.sum|}-->
-                            <!--<span class="extract_token_num"></span>-->
-                        <!--</th>-->
-                    <!--</tr>-->
-
-                    <!--</thead>-->
-                <!--</table>-->
-
-                <!--<div>-->
-
-                    <!--<div class="recode">-->
-                        <!--<table class="am-table addtable" id="extract_token_bottom">-->
-                            <!--<thead>-->
-                            <!--<tr class="tr">-->
-                                <!--<th>{|userinfo.record.time|}</th>-->
-                                <!--<th>{|userinfo.record.vote|}</th>-->
-                                <!--<th>{|userinfo.record.reward|}</th>-->
-                                <!--<th>{|userinfo.record.share|}</th>-->
-                                <!--<th>{|userinfo.record.isno|}</th>-->
-                                <!--<th>{|userinfo.record.operation|}</th>-->
-                            <!--</tr>-->
-                            <!--</thead>-->
-
-
-                            <!--<tbody id="extract_token_body"></tbody>-->
-                        <!--</table>-->
-
-                        <!--<div class="row paging">-->
-                            <!--<div class="pagesbox">-->
-                                <!--<div class="first_page left"><</div>-->
-
-                                <!--<div class="other_page"></div>-->
-
-                                <!--<div class="last_page right">></div>-->
-                            <!--</div>-->
-
-                        <!--</div>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-
             </div>
 
 
             <!--退出申请-->
-            <div class="item page1" style="display: none;">
+            <div class="item page3">
 
                 <!--表-->
                 <div id="exit_form">
-                    <ul>
-                        <li class="clear">
-                            <label class="left">{|userinfo.id-info.phone|}</label>
-                            <div class="right info_phone"></div>
-                        </li>
+                    <div class="exit_t">
+                        <h3>
+                            <span>{|userinfo.id-info.exitSuperNode|}</span>
 
-                        <li class="clear">
-                            <label class="left">{|userinfo.account-info.delegname|}</label>
-                            <div class="right info_delegateName"></div>
-                        </li>
+                            <span class="line"></span>
+                        </h3>
 
-                        <li class="clear">
-                            <label class="left">{|userinfo.account-info.address|}</label>
-                            <div class="right address"></div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <input type="password" class="modify-input"
-                                       id="password_input_exit" placeholder="请输入密码">
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <input class="modify-input code_input" id="signcode_input_exit"
-                                       placeholder="请输入图片验证码">
-                                <span class="pic-code send_apply" id="send_apply_exit"><img
-                                        src=""></span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <input class="modify-input code_input" id="smscode_input_exit"
-                                       placeholder="请输入短信验证码">
-                                <span class="mes-code btn-download" id="send_msg_exit"
-                                      data-text="发送验证码">发送验证码</span>
-                            </div>
-                        </li>
-                    </ul>
-
-
-                    <!--退出申请-->
-                    <div class="btn-wrap">
-                        <div id="exit_tip"></div>
-                        <span class="btn-login"
-                              id="submit_exit_btn">{|userinfo.apply.btn-submit|}</span>
+                        <hr>
                     </div>
 
+                    <div class="exit_b">
+                        <ul class="form">
+                            <!--超级节点名-->
+                            <li class="noLine">
+                                <div class="left">{|userinfo.account-info.delegname|}</div>
+
+                                <div class="right">
+                                    <span class="info_delegateName"></span>
+                                </div>
+                            </li>
+
+                            <!--提币地址-->
+                            <li class="noLine">
+                                <div class="left">{|userinfo.account-info.address|}</div>
+
+                                <div class="right">
+                                    <span class="hasWithDrawAddress address"></span>
+                                </div>
+                            </li>
+
+                            <!--密码-->
+                            <li>
+                                <div class="left">{|userinfo.apply.password|}</div>
+
+                                <div class="right">
+                                    <input class="form3_input" data-type="pwd" type="password">
+                                </div>
+                            </li>
+
+                            <!--验证码-->
+                            <li class="send">
+                                <div class="left">{|userinfo.id-info.signCode|}</div>
+
+                                <div class="right">
+                                    <input class="form3_input" data-type="signCode" type="text" placeholder="{|userinfo.account-info.img-code|}">
+
+                                    <span class="exitSignCode hover"></span>
+                                </div>
+                            </li>
+
+                            <!--短信验证-->
+                            <li class="send">
+                                <div class="left">{|userinfo.id-info.msgCode|}</div>
+
+                                <div class="right">
+                                    <input class="form3_input" data-type="msgCode" type="text" placeholder="{|userinfo.account-info.phone-code|}">
+
+                                    <span class="mes-code btn-download hover"
+                                          data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!--提交按钮-->
+                        <div class="exitTip"></div>
+                        <a class="submit" id="exitSuperNodeSubmit" href="javascript:void(0);">{|userinfo.apply.btn-submit|}</a>
+                    </div>
                 </div>
 
                 <!--信息-->
                 <div id="exit_info" style="display: none">
                     <ul>
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.delegname|}</label>
+                            <div class="left">{|userinfo.exit.delegname|}:</div>
                             <div class="right info_delegateName"></div>
                         </li>
 
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.phone|}</label>
+                            <div class="left">{|userinfo.exit.phone|}:</div>
                             <div class="right info_phone"></div>
                         </li>
 
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.status|}</label>
+                            <div class="left">{|userinfo.exit.status|}:</div>
                             <div class="right" id="exit_status"></div>
                         </li>
 
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.adress|}</label>
+                            <div class="left">{|userinfo.exit.adress|}:</div>
                             <div class="right address"></div>
                         </li>
 
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.num|}</label>
+                            <div class="left">{|userinfo.exit.num|}:</div>
                             <div class="right" id="rebackCount"></div>
                         </li>
 
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.time|}</label>
+                            <div class="left">{|userinfo.exit.time|}:</div>
                             <div class="right" id="createTime"></div>
                         </li>
 
                         <li class="clear">
-                            <label class="left">{|userinfo.exit.ID|}</label>
+                            <div class="left">{|userinfo.exit.ID|}:</div>
                             <div class="right" id="rebackTrxId"></div>
                         </li>
                     </ul>
@@ -513,6 +458,8 @@
 <!--修改密码弹窗-->
 <div class="change_pwd_win">
     <div class="card">
+        <div class="close" id="change_pwd_win_close"></div>
+
         <div class="card_title">
             <h3><span>{|userinfo.id-info.btn-change|}{|userinfo.id-info.password|}</span><span></span></h3>
             <hr>
@@ -521,12 +468,21 @@
         <div class="card_content">
             <ul class="form">
 
+                <!--节点名-->
+                <li class="delegateName">
+                    <div class="left">{|userinfo.account-info.delegname|}</div>
+
+                    <div class="right">
+                        <input class="userInfoDelegateName form2_input" data-type="delegateName" type="text" placeholder="{|userinfo.id-info.inputSuperNodeName|}">
+                    </div>
+                </li>
+
                 <!--旧密码-->
                 <li>
                     <div class="left">{|userinfo.id-info.inputOldPwd|}</div>
 
                     <div class="right">
-                        <input type="password">
+                        <input class="form2_input" data-type="oldPwd" type="password">
                     </div>
                 </li>
 
@@ -535,7 +491,16 @@
                     <div class="left">{|userinfo.id-info.inputNewPwd|}</div>
 
                     <div class="right">
-                        <input type="password">
+                        <input class="form2_input" data-type="newPwd" type="password">
+                    </div>
+                </li>
+
+                <!--确认新密码-->
+                <li>
+                    <div class="left">{|userinfo.id-info.inputNewPwdAgain|}</div>
+
+                    <div class="right">
+                        <input class="form2_input" data-type="newPwdAgain" type="password">
                     </div>
                 </li>
 
@@ -553,9 +518,9 @@
                     <div class="left">{|userinfo.id-info.signCode|}</div>
 
                     <div class="right">
-                        <input type="text" placeholder="{|userinfo.account-info.img-code|}">
+                        <input class="form2_input" data-type="signCode" type="text" placeholder="{|userinfo.account-info.img-code|}">
 
-                        <span class="pic-code hover" id="send_apply"></span>
+                        <span class="hover" id="send_apply"></span>
                     </div>
                 </li>
 
@@ -564,7 +529,7 @@
                     <div class="left">{|userinfo.id-info.msgCode|}</div>
 
                     <div class="right">
-                        <input type="text" placeholder="{|userinfo.account-info.phone-code|}">
+                        <input class="form2_input" data-type="msgCode" type="text" placeholder="{|userinfo.account-info.phone-code|}">
 
                         <span class="mes-code btn-download hover" id="send_msg"
                               data-text="{|userinfo.account-info.send|}">{|userinfo.account-info.send|}</span>
@@ -572,10 +537,12 @@
                 </li>
             </ul>
 
-            <span class="tip"></span>
+            <span class="win_tip"></span>
             <a class="change_pwd_affirm" href="javascript:void(0);">{|userinfo.confirm|}</a>
         </div>
     </div>
+
+    <div class="bg"></div>
 </div>
 
 

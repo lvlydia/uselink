@@ -1,4 +1,8 @@
 $(() => {
+    //默认一屏高度 new
+    $('#share_details').css({'min-height': $(window).height() - $('.footer').height()});
+
+
     let url_arr = url.split('?')[1].split('&');
     let payId, voteNum, income, reward;
 
@@ -28,22 +32,29 @@ $(() => {
 
     ajax_('/withdrawDetail', {
         payId: parseInt(payId),
-        page:1,
-        rows:1,
-    },1).then(data => {
-        let info=data.rows[0];
+        page: 1,
+        rows: 1,
+    }, 1).then(data => {
+        let info = data.rows[0];
+        let box = $('.content');
 
-        $('#body').append(`
-                <tr>
-                   <td>${new Date(info.createTime)}</td>
-                   <td>${info.voteNum}</td>
-                   <td>${info.amount}</td>
-                   <td>${info.fee}</td>
-                   <td>${info.status===1?'初始化':info.status===2?'交易未确定':info.status===3?'交易已确定':info.status===4?'代理节点未绑定提现地址':info.status===5?'提币失败,需要重新打款':info.status===6?'异常待核实':''}</td>
-                </tr>
-        `);
+        box.empty();
+        let time = new Date(info.createTime), year = time.getFullYear();
+        let month = time.getMonth() < 10 ? '0' + time.getMonth() : time.getMonth();
+        let date = time.getDate() < 10 ? '0' + time.getDate() : time.getDate();
+        let hours = time.getHours() < 10 ? '0' + time.getHours() : time.getHours();
+        let minute = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes();
 
-        l(info);
+        let newT = year + '/' + month + '/' + date + ' ' + hours + ':' + minute;
+
+        box.append(`<li>
+                           <div class="time">${newT}</div>
+                           <div class="vote">${info.voteNum}</div>
+                           <div class="reward">${info.amount}</div>
+                           <div class="share">${info.fee}</div>
+                           <div class="whether">${info.status === 1 ? lang('init') : info.status === 2 ? lang('notSure') : info.status === 3 ? lang('sure') : info.status === 4 ? lang('surnoAddresse') : info.status === 5 ? lang('error1') : info.status === 6 ? lang('error2') : ''}</div>
+                       </li>`);
+
     }).catch(data => {
         if (data.retCode === 400) {
             href('login');
