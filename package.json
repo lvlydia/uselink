@@ -4,7 +4,7 @@
   "description": "除静态资源外无需修改其内容 ## dev 可以进行修改的开发文件 <br> <br> <br> ### dev/scss (里面的scss文件会被编译并且合并为一个index.min.css) 按个人需求进行编辑即可 <br> ### dev/js  需要合并的js加 ‘_m’（merge）后缀，不需要合并的js加 ‘_s’（single）后缀;不需要合并的js需要手动将其加入到特定页面内 <br> ### dev/lang  里面的 zh、en文件夹内分别是中英文的互译内容，可根据需求随意修改 <br> ### dev/page 里面的 html、template分别是html页面文件与共用（头部、导航、尾部等）的模板文件 <br> ### node_modules 可根据需求增删改 <br> ### run/common 内部为一些公共的css与js文件 <br> ### run/css 处理后的css文件，可删除 <br> ### run/en 编译生成的英文网页 <br> ### run/zh 编译生成的中文网页 <br> ### run/fonts 公共字体文件，不可删除 <br> ### run/img 静态图片资源，不可删除 <br> ### run/js 编译处理后的js文件，有合并过的，有未合并过的 <br> ### .gitignore git 忽略文件 <br> ### index.html 网站入口，通过此文件交转至不同语言首页",
   "main": "gulpfile.js",
   "dependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.0",
     "babel-preset-es2015": "^6.24.1",
     "del": "^3.0.0",
