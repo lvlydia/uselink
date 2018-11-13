@@ -1,7 +1,8 @@
+@import "scss_color_m";
 #ask_answer{
   .con-wrap{
     margin-top: 90px;
-    margin-bottom: 500px;
+    margin-bottom: 200px;
     //background: antiquewhite;
     //padding-left: 100px;
   }
@@ -24,30 +25,128 @@
     font-size: 20px;
     color:#6464FF;
   }
+
   .menu1{
-    background:linear-gradient(to right, #7B5BFE, #96AAF9);
+    background: linear-gradient(to right, $purple, $purple, $purple, $light_blue, $light_blue, $light_blue);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
     text-align:left;
     padding:8px 0;
     font-weight:bold;
-    font-size: 24px;
+    font-size: 20px;
     height:60px;
     line-height: 60px;
+    cursor: pointer;
+  }
+  .menu1 img {
+    margin-right: 5px;
+  }
+  .b_title{
+    background: linear-gradient(to right, $purple, $purple, $purple, $light_blue, $light_blue, $light_blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 600;
+    font-size: 40px;
+    min-height: 40px;
+    margin-bottom: 20px;
+    text-align: center ;
+  }
+  hr{
+    background: linear-gradient(to right, $purple, $purple, $purple, $light_blue, $light_blue, $light_blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   .box {
     width:100%;
+    margin-left: 20px;
   }
   .title {
+    text-decoration:underline;
+    cursor: pointer;
     line-height:50px;
     text-align:left;
-    color:#A0A0A0;
     height:40px;
     font-size:18px;
+    color: #333;
   }
   .one {
-    height:100px;
-    margin-left: 30px;
+    box-shadow:2px 1px 5px 0 rgba(72, 32, 173, 0.15);
+    background:#f7f7f7;
+    border-radius: 5px;
+    padding: 30px ;
+    //min-height:70px;
+    margin-left: 20px;
+    //background: pink;
+    margin-top: 10px;
+    color:#3c3c3c;
+    font-size:14px;
+    img{
+      display: block;
+      margin: 40px auto;
+
+    }
+  }
+  @media (max-width: 599px){
+    #content{
+      margin-left: 0px;
+    }
+    .con-wrap{
+      margin-top: 90px;
+      margin-bottom: 500px;
+      //background: antiquewhite;
+      //padding-left: 100px;
+    }
+    //搜索框
+    .input-wrap{
+      position: relative;
+    }
+    input{
+      border:1px solid #6464FF;
+      height:60px;
+      width:100%;
+      border-radius:30px;
+      margin-bottom:50px;
+      padding-left: 60px;
+    }
+    .big{
+      position: absolute;
+      top:20px;
+      left:23px;
+      font-size: 20px;
+      color:#6464FF;
+    }
+    .menu1{
+      background:linear-gradient(to right, #7B5BFE, #96AAF9);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-align:left;
+      padding:8px 0;
+      font-weight:bold;
+      font-size: 16px;
+      height:40px;
+      line-height: 40px;
+    }
+    .box {
+      width:100%;
+      margin-left: 0px;
+    }
+    .title {
+      line-height:50px;
+      text-align:left;
+      height:40px;
+      font-size:14px;
+    }
+    .one {
+      //min-height:70px;
+      margin-left:0px;
+      //background: pink;
+      margin-top: 10px;
+      color:#3c3c3c;
+      font-size: 12px;
+    }
   }
 
 }

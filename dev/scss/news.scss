@@ -39,7 +39,9 @@
       .hover:nth-child(2) {
         margin-left: 15px;
       }
-
+      .hover:nth-child(3) {
+        margin-left: 15px;
+      }
       .hover:first-child {
 
         &::after {
@@ -52,7 +54,18 @@
           background-color: $dark_gray;
         }
       }
+      .hover:nth-child(2) {
 
+        &::after {
+          content: " ";
+          position: absolute;
+          right: -15px;
+          width: 1px;
+          height: 12px;
+          margin-top: 4px;
+          background-color: $dark_gray;
+        }
+      }
       .active {
         color: $purple;
         font-weight: bolder;

@@ -1,12 +1,14 @@
 $(() => {
-    let arr = ['news', 'activity'];
-
+    // let arr = ['news', 'activity'];
+    let arr = [];
 
     ajax_('/channels', {
         'lang': language
     }, 0, cms_host).then(data => {
         //放入tab
         data.forEach(el => {
+            arr.push(el.channelType);
+            console.log(arr);
             $(".tab_box").append(`
                 <div class="hover tab" data-type="${el.channelType}" id="${el.channelType}_tab">${el.channelName}</div>
             `);
@@ -17,26 +19,51 @@ $(() => {
         let box = $('.tab_content');
 
 
-        if(url.includes('type=')&&url.split('type=')[1]==='activity'){
+        // if(url.includes('type=')&&url.split('type=')[1]==='activity'){
+        //     let box = $('.tab_content');
+        //     box.eq(1).show();
+        //     let tab = $('.tab');
+        //     tab.eq(1).addClass('active');
+        //
+        //
+        //     //获取咨询
+        //     get_list(arr[1]);
+        // }else {
+        //
+        //     //默认显示咨询
+        //     box.eq(0).show();
+        //     tab.eq(0).addClass('active');
+        //
+        //
+        //     //获取咨询
+        //     get_list(arr[0]);
+        // }
+        if(url.includes('type=') && url.split('type=')[2]==='news'){
+            let box = $('.tab_content');
+            box.eq(2).show();
+            let tab = $('.tab');
+            tab.eq(2).addClass('active');
+            get_list(arr[2]);
+
+        }else if(url.includes('type=') && url.split('type=')[1]==='activity') {
             let box = $('.tab_content');
             box.eq(1).show();
             let tab = $('.tab');
             tab.eq(1).addClass('active');
-
-
-            //获取咨询
             get_list(arr[1]);
-        }else {
 
+        }else if(url.includes('type=') && url.split('type=')[0]==='announcement'){
             //默认显示咨询
             box.eq(0).show();
             tab.eq(0).addClass('active');
-
-
             //获取咨询
             get_list(arr[0]);
-        }
 
+        }else{
+            box.eq(0).show();
+            tab.eq(0).addClass('active');
+            get_list(arr[0]);
+        }
 
         //点击tab进行切换
         tab.click(e => {
