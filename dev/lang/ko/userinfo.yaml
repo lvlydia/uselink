@@ -1,7 +1,6 @@
 title1: 개인정보
 title2: 코인 찾은 내역
 title3: 신청 나가기
-
 confirm: 확인
 
 #个人资料
@@ -18,6 +17,32 @@ id-info:
   account: 계정
   NoDelegateName: 보통 사용자
 
+  inputOldPwd: 이전 암호 입력
+  inputNewPwd: 새 암호 입력
+  inputNewPwdAgain: 새 암호를 다시 입력하십시오
+  signCode: 인증 코드
+  msgCode: SMS 확인
+  userInfoBottomTitle: 슈퍼 노드 후보
+  tipTitle: 수퍼 노드 후보로 사용：
+  tipP1: 1.슈퍼 노드 후보가 되십시오,수퍼 노드 선거에 참여할 수 있습니다.
+  tipP2: 2.모든 네트워크 사용자는 자체 UL 토큰을 사용합니다,모든 후보 노드에 대해 투표 할 수있는 기능;상위 101 표를 가진 후보 노드는 Uselink 블록 체인 메인 네트워크 블록 어카운팅을 위해 선택되고 블록에서 패키징됩니다.
+  tipP3: 3.처음 101 개의 수퍼 노드는 배당 수익을 블록 보상으로받습니다.
+  step1: 첫 번째 단계
+  step2: 두 번째 단계
+  step1Title: 이 주소로 10000UL을 예금으로 이체하십시오,수퍼 노드 종료 후 환불 가능
+  nextStep: 다음 단계
+  inputSuperNodeName: 수퍼 노드 이름을 입력하십시오
+  inputAddress: 동전 주소를 입력하십시오
+  submit: 노드 후보로 제출
+  empty: 아직 기록이 없습니다
+  auditFailed: 감사가 실패했습니다
+  notPassReason: 리뷰를 통과하지 못한 이유
+  problem: 질문이 있으시면 고객 서비스에 문의하십시오
+  submitAgain: 다시 적용
+  saveBtn: 저장
+  reviewTitle: 신청서 제출，검토 중...
+  exitSuperNode: 수퍼 노드 종료
+
 
 account-info:
   title: 계정 정보
@@ -32,18 +57,21 @@ account-info:
   btn-submit: 후보 슈퍼노드로 제출하기
   bind_address: 바인딩
   bind_address_tip: 올바른 주소를 입력하십시오！
+  submit_win_title: 신청 정보
+  bind_super_node_name: 슈퍼 노드 이름 바인딩
 
 
 #提币记录
 record:
-  address: 코인 찾을 주소:
-  sum: 미 배분 수량:
+  address: 코인 찾을 주소
+  sum: 미 배분 수량
   time: 시간
   vote: 표수
   reward: 보너스
   share: 개인배당
   isno: 보너스를 배분하겠습니까?
   operation: 실행
+  details: 세부 정보
 
 
 #退出申请

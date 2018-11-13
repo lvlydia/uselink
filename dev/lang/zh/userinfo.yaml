@@ -19,6 +19,7 @@ id-info:
 
   inputOldPwd: 输入旧密码
   inputNewPwd: 输入新密码
+  inputNewPwdAgain: 再次输入新密码
   signCode: 验证码
   msgCode: 短信验证
   userInfoBottomTitle: 超级节点候选人
@@ -39,6 +40,8 @@ id-info:
   problem: 如有问题请联系客服
   submitAgain: 重新申请
   saveBtn: 保存
+  reviewTitle: 申请已提交，正在审核中...
+  exitSuperNode: 退出超级节点
 
 
 account-info:
@@ -57,18 +60,16 @@ account-info:
   submit_win_title: 申请信息
   bind_super_node_name: 绑定超级节点名
 
-
 #提币记录
 record:
-  address: 提币地址:
-  sum: 未发放数量:
+  address: 提币地址
+  sum: 未发放数量
   time: 时间
   vote: 票数
   reward: 奖励
   share: 个人分红
   isno: 是否发放奖励
   operation: 操作
-
   details: 详情
 
 

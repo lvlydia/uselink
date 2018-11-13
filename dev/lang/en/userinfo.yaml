@@ -1,7 +1,6 @@
 title1: Personal Info
 title2: Withdraw History
 title3: Exit application
-
 confirm: confirm
 
 #个人资料
@@ -17,6 +16,32 @@ id-info:
   confrim: confirm new password
   account: account
   NoDelegateName: general user
+
+  inputOldPwd: old password
+  inputNewPwd: new password
+  inputNewPwdAgain: new password again
+  signCode: Verification code
+  msgCode: SMS verification
+  userInfoBottomTitle: Super node candidate
+  tipTitle: Why become super node candidate：
+  tipP1: 1.become super node candidate,can participate in the election of the super node.
+  tipP2: 2.All network users use their own UL tokens,ability to vote on all candidate nodes;The candidate nodes with the top 101 votes will be selected for the Uselink blockchain main network block accounting and packaged out of the block.
+  tipP3: 3.The first 101 super nodes will receive dividend income as a block reward.
+  step1: First step
+  step2: Second step
+  step1Title: Transfer 10000UL as a deposit to this address,can be refunded after exiting the super node
+  nextStep: Next step
+  inputSuperNodeName: Super node name
+  inputAddress: Withdraw address
+  submit: Submit as a node candidate
+  empty: No records
+  auditFailed: The audit failed
+  notPassReason: Reason for failure to pass the review
+  problem: If you have any questions, please contact customer service
+  submitAgain: Re-apply
+  saveBtn: Save
+  reviewTitle: Application submitted，Under review...
+  exitSuperNode: Exit super node
 
 
 account-info:
@@ -37,14 +62,15 @@ account-info:
 
 #提币记录
 record:
-  address: withdraw address :
-  sum: unreleased amount:
+  address: withdraw address
+  sum: unreleased amount
   time: time
   vote: vote number
   reward: reward
   share: my income
   isno: whether release reward
   operation: operation
+  details: details
 
 
 #退出申请
@@ -56,7 +82,6 @@ apply:
   tip-up: Will be returned after application
   tip-under: To the coin address
   btn-submit: submit application
-
 
 #退出申请显示页面
 exit:
