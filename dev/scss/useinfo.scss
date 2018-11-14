@@ -660,6 +660,7 @@
                 width: 400px;
                 margin: 0 auto;
                 margin-bottom: 23px;
+                margin-top: 50px;
 
                 li {
                   width: 100%;
@@ -1115,6 +1116,7 @@
               width: 400px;
               margin: 0 auto;
               margin-bottom: 23px;
+              margin-top: 50px;
 
               li {
                 width: 100%;
@@ -1126,6 +1128,7 @@
                   width: 100px;
                   text-align: right;
                   font-size: 14px;
+                  font-weight: bolder;
                 }
 
                 & > .right {
@@ -1189,9 +1192,22 @@
               }
 
               .noLine {
+                margin-bottom: 30px;
+
+                & > .left {
+                  width: 100px;
+                  text-align: right;
+                  font-size: 14px;
+                  font-weight: normal;
+                }
+
                 .right {
                   border: none;
                 }
+              }
+
+              .noLine:first-child{
+                margin-bottom: 0;
               }
 
               li[class='share'] {

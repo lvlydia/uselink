@@ -7,7 +7,11 @@ $(() => {
 
 
     //全局页面加入弹窗
-    $('body').append(`<div class="_pop_win_"></div>`);
+    $('body').append(`
+                        <div class="_pop_win_">
+                            <div class="card"></div>
+                        </div>
+                    `);
 
 
     //全局弹窗脚本
@@ -22,7 +26,7 @@ $(() => {
 
         let status = pop.css('display');
 
-        pop.empty().text(str);
+        pop.children().empty().text(str);
 
         if (status === 'none') {
             show();
@@ -49,15 +53,12 @@ $(() => {
     };
 
 
-    //开发IP地址
-    //dev_ip 本地ip  run_host 线上接口地址  dev_host  测试接口地址
+    /*开发IP地址
+    dev_ip 本地ip  run_host 线上接口地址  dev_host  测试接口地址
+    */
     let dev_ip = 'http://192.168.0.153:8080', run_host = 'https://mgm.uselink.cc',
-        dev_host = 'http://192.168.0.57:9002';
-
-
-    //cms接口地址
-    // window.cms_host='https://cms.uselink.cc/cms';
-    window.cms_host = 'http://192.168.0.158:9001/cms';
+        dev_host = 'http://192.168.0.57:9002', dev_cms = 'http://192.168.0.158:9001/cms',
+        run_cms = 'https://cms.uselink.cc/cms';
 
 
     //设置语言
@@ -94,15 +95,24 @@ $(() => {
         window.location.href = url_list[url];
     };
 
-    //时间转换
-    window.getTime=time=>{
-        let year=time.getFullYear();
-        let month=time.getMonth()<10?'0'+time.getMonth():time.getMonth();
-        let date=time.getDate()<10?'0'+time.getDate():time.getDate();
-        let hours=time.getHours()<10?'0'+time.getHours():time.getHours();
-        let minute=time.getMinutes()<10?'0'+time.getMinutes():time.getMinutes();
+    //页面重新加载
+    window.reload = time => {
+        setTimeout(function () {
 
-        return year+'/'+month+'/'+date+' '+hours+':'+minute;
+            location.reload()
+
+        }, time);
+    };
+
+    //时间转换
+    window.getTime = time => {
+        let year = time.getFullYear();
+        let month = time.getMonth() < 10 ? '0' + time.getMonth() : time.getMonth();
+        let date = time.getDate() < 10 ? '0' + time.getDate() : time.getDate();
+        let hours = time.getHours() < 10 ? '0' + time.getHours() : time.getHours();
+        let minute = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes();
+
+        return year + '/' + month + '/' + date + ' ' + hours + ':' + minute;
     };
 
 
@@ -117,9 +127,9 @@ $(() => {
     window.language = url_arr[url_len - 2];
 
 
-    if (language === 'en') {
-        $('.en_hide').hide()
-    }
+    // if (language === 'en') {
+    //     $('.en_hide').hide()
+    // }
 
 
     window.language_list = language_list;
@@ -145,8 +155,10 @@ $(() => {
     // 设置开发接口地址与上线正式接口地址
     if (dev_type() === 'dev') {
         window.host = dev_host;
+        window.cms_host = dev_cms;
     } else {
         window.host = run_host;
+        window.cms_host = run_cms;
     }
 
 
@@ -229,20 +241,23 @@ $(() => {
             'empty': 'no content yet',
 
             //提币详情
-            'init':'init',
-            'notSure':'N',
-            'sure':'Y',
-            'noAddress':'N',
-            'error1':'N',
-            'error2':'N',
+            'init': 'init',
+            'notSure': 'N',
+            'sure': 'Y',
+            'noAddress': 'N',
+            'error1': 'N',
+            'error2': 'N',
 
             //提币记录
-            'time':'time',
-            'vote':'votes',
-            'reward':'reward',
-            'share_':'Personal dividend',
-            'isno':'Whether to issue rewards',
-            'operation':'operating',
+            'time': 'time',
+            'vote': 'votes',
+            'reward': 'reward',
+            'share_': 'Personal dividend',
+            'isno': 'Whether to issue rewards',
+            'operation': 'operating',
+
+            //退出基本信息
+            'verification': 'under review',
 
 
         },
@@ -295,20 +310,23 @@ $(() => {
             'empty': '暂无内容',
 
             //提币详情
-            'init':'初始化',
-            'notSure':'N',
-            'sure':'Y',
-            'noAddress':'N',
-            'error1':'N',
-            'error2':'N',
+            'init': '初始化',
+            'notSure': 'N',
+            'sure': 'Y',
+            'noAddress': 'N',
+            'error1': 'N',
+            'error2': 'N',
 
             //提币记录
-            'time':'时间',
-            'vote':'票数',
-            'reward':'奖励',
-            'share_':'个人分红',
-            'isno':'是否发放奖励',
-            'operation':'操作',
+            'time': '时间',
+            'vote': '票数',
+            'reward': '奖励',
+            'share_': '个人分红',
+            'isno': '是否发放奖励',
+            'operation': '操作',
+
+            //退出基本信息
+            'verification': '审核中',
 
         },
 
@@ -360,20 +378,24 @@ $(() => {
             'empty': '暫無內容',
 
             //提币详情
-            'init':'初始化',
-            'notSure':'N',
-            'sure':'Y',
-            'noAddress':'N',
-            'error1':'N',
-            'error2':'N',
+            'init': '初始化',
+            'notSure': 'N',
+            'sure': 'Y',
+            'noAddress': 'N',
+            'error1': 'N',
+            'error2': 'N',
 
             //提币记录
-            'time':'時間',
-            'vote':'票數',
-            'reward':'獎勵',
-            'share_':'個人分紅',
-            'isno':'是否發放獎勵',
-            'operation':'操作',
+            'time': '時間',
+            'vote': '票數',
+            'reward': '獎勵',
+            'share_': '個人分紅',
+            'isno': '是否發放獎勵',
+            'operation': '操作',
+
+            //退出基本信息
+            'verification': '審核中',
+
 
         },
 
@@ -425,20 +447,23 @@ $(() => {
             'empty': '내용 없음',
 
             //提币详情
-            'init':'초기화',
-            'notSure':'N',
-            'sure':'Y',
-            'noAddress':'N',
-            'error1':'N',
-            'error2':'N',
+            'init': '초기화',
+            'notSure': 'N',
+            'sure': 'Y',
+            'noAddress': 'N',
+            'error1': 'N',
+            'error2': 'N',
 
             //提币记录
-            'time':'시간',
-            'vote':'투표 수',
-            'reward':'보상',
-            'share_':'개인 배당',
-            'isno':'보상을 발행할지 여부',
-            'operation':'수술',
+            'time': '시간',
+            'vote': '투표 수',
+            'reward': '보상',
+            'share_': '개인 배당',
+            'isno': '보상을 발행할지 여부',
+            'operation': '수술',
+
+            //退出基本信息
+            'verification': '검토 중',
 
         }
     };
@@ -635,6 +660,8 @@ $(() => {
                     form.pictureId = res.headers.pictureId[0];
                 }
             }
+        }).catch(() => {
+            pop(lang('network_error'));
         });
     };
 
@@ -692,14 +719,16 @@ $(() => {
                         </span>
                         
                         <span>+${num} ${country}</span>
-                `).attr('data-num', num);
+                    `).attr('data-num', num);
 
                     form.phone_select_num = parseInt(num);
                     form.phone_select_id = parseInt(id);
                 })
             } else {
-                err('network_error')
+                pop(lang('network_error'));
             }
+        }).catch(() => {
+            pop(lang('network_error'));
         });
     };
 
@@ -772,7 +801,6 @@ $(() => {
     //显示或关闭语言列表
     $('.change_language_btn').click(e => {
         let obj = e.currentTarget.children[1];
-        let fadeIn = 'fadeInUp_';
         list_animate($(obj), 'fadeInUp_', 'fadeOutDown_');
 
         $('.menu_box').animate({}, () => {

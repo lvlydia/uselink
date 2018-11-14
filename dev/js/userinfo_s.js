@@ -192,6 +192,13 @@ $(() => {
         });
 
 
+        //点击第一步第二步切换
+        $('.change_step_box').children().click(e => {
+            let index = $(e.target).index();
+            $('.saveAndSubmit_b').children().removeClass('active').eq(index).addClass('active');
+            $('.change_step_box').children().removeClass('active').eq(index).addClass('active');
+        });
+
         //有提币地址的情况下点击修改按钮
         $('.changeWithDrawAddress').click(e => {
             //隐藏地址显示框与按钮
@@ -227,7 +234,7 @@ $(() => {
                         pop(lang('submit_success'), 1);
 
                         //刷新当前页
-                        location.reload();
+                        reload(4000);
 
                     }).catch(data => {
                         if (data.retCode === 400) {
@@ -293,7 +300,7 @@ $(() => {
                         pop(lang('submit_success'), 1);
 
                         //刷新当前页
-                        location.reload();
+                        reload(4000);
 
                     }).catch(data => {
                         if (data.retCode === 400) {
@@ -357,10 +364,13 @@ $(() => {
                 //通过
                 case 2:
 
-                    l(1 === isAuth);
 
                     //未退出已认证或退出成功已认证
-                    if ((data.quitInfo && data.quitInfo.status !== -3)||(!data.quitInfo&&1===isAuth)) {
+                    l(data.quitInfo);
+                    // l(data.quitInfo && data.quitInfo.status !== -3);
+                    // l(!data.quitInfo && 1 === isAuth);
+
+                    if ((data.quitInfo && data.quitInfo.status !== -3) || (!data.quitInfo && 1 === isAuth)) {
 
                         //显示保存信息页面 new
                         $('.submitted').show(0);
@@ -375,7 +385,7 @@ $(() => {
                     }
 
                     $('.tab').last().css({
-                        display:"flex",
+                        display: "flex",
                     });
 
 
@@ -397,13 +407,13 @@ $(() => {
 
             switch (status) {
                 case -1:
-                    text = lang('exit');
+                    text = lang('verification');
                     break;
                 case -2:
-                    text = lang('exit_transfer');
+                    text = lang('verification');
                     break;
                 case -3:
-                    text = lang('exit_success');
+                    text = lang('verification_passed');
                     break;
             }
 
@@ -508,6 +518,11 @@ $(() => {
 
         get_new_graphic_code($('#send_apply'), changePwdForm);
 
+        $('#send_apply').click(e => {
+            l('hey');
+            get_new_graphic_code($('#send_apply'), changePwdForm);
+        });
+
 
         //修改密码表单录入
         $('.form2_input').bind('input propertychange', e => {
@@ -574,7 +589,7 @@ $(() => {
                             pop(lang('submit_success'), 1);
 
                             //刷新当前页
-                            location.reload();
+                            reload(4000);
 
                         }).catch(data => {
                             if (data.retCode === 400) {
@@ -707,7 +722,7 @@ $(() => {
                     pop(lang('submit_success'), 1);
 
                     //刷新当前页
-                    location.reload();
+                    reload(4000);
 
                 }).catch(data => {
                     if (data.retCode === 400) {
