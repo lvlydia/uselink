@@ -67,15 +67,14 @@ $(() => {
             shareNum.val(parseInt(val) + 10);
             form.shareRate = (parseInt(val) + 10) / 100;
             form.shareNum = (parseInt(val) + 10) / 100;
-            l(form.shareRate);
+            // l(form.shareRate);
         }
 
         if (type === -1 && parseInt(val) - 10 > 0) {
             shareNum.val(parseInt(val) - 10);
             form.shareRate = (parseInt(val) - 10) / 100;
             form.shareNum = (parseInt(val) - 10) / 100;
-            l(form.shareRate);
-
+            // l(form.shareRate);
         }
 
     }
@@ -118,7 +117,7 @@ $(() => {
         let q = $(e.target);
         let val = q.val();
         let type = q.data('type');
-        l(val);
+        // l(val);
         switch (type) {
             case 'delegateName':
                 form.delegateName = val;
@@ -234,7 +233,7 @@ $(() => {
                         pop(lang('submit_success'), 1);
 
                         //刷新当前页
-                        reload(4000);
+                        reload(2000);
 
                     }).catch(data => {
                         if (data.retCode === 400) {
@@ -290,7 +289,7 @@ $(() => {
             if (check_form()) {
 
                 //验证提币地址
-                l(form);
+                // l(form);
                 if (form.withdrawAddress) {
 
                     //form添加shareNum 不知道是什么
@@ -300,7 +299,7 @@ $(() => {
                         pop(lang('submit_success'), 1);
 
                         //刷新当前页
-                        reload(4000);
+                        reload(2000);
 
                     }).catch(data => {
                         if (data.retCode === 400) {
@@ -366,7 +365,7 @@ $(() => {
 
 
                     //未退出已认证或退出成功已认证
-                    l(data.quitInfo);
+                    // l(data.quitInfo);
                     // l(data.quitInfo && data.quitInfo.status !== -3);
                     // l(!data.quitInfo && 1 === isAuth);
 
@@ -517,9 +516,12 @@ $(() => {
 
 
         get_new_graphic_code($('#send_apply'), changePwdForm);
+        l('changePwdForm');
+        l(changePwdForm);
+        l('changePwdForm');
 
         $('#send_apply').click(e => {
-            l('hey');
+            // l('hey');
             get_new_graphic_code($('#send_apply'), changePwdForm);
         });
 
@@ -529,8 +531,8 @@ $(() => {
             let q = $(e.target);
             let val = q.val();
             let type = q.data('type');
-            l(val);
-            l(type);
+            // l(val);
+            // l(type);
             switch (type) {
                 case 'delegateName':
                     changePwdForm.delegateName = val;
@@ -552,17 +554,15 @@ $(() => {
                     break;
             }
 
-            l(changePwdForm);
+            // l(changePwdForm);
 
         });
-
-        // TODO:添加yaml多语言
 
         //点击修改密码弹窗内的确认按钮
         $('.change_pwd_affirm').click(e => {
             //验证信息是否完整
             let len = 8, num = 0;
-            l(changePwdForm);
+            // l(changePwdForm);
             Object.keys(changePwdForm).forEach(el => {
                 if (changePwdForm[el]) {
                     num++;
@@ -589,7 +589,7 @@ $(() => {
                             pop(lang('submit_success'), 1);
 
                             //刷新当前页
-                            reload(4000);
+                            reload(2000);
 
                         }).catch(data => {
                             if (data.retCode === 400) {
@@ -706,7 +706,7 @@ $(() => {
                     num++;
                 }
             });
-            l(num);
+            // l(num);
 
             if (num >= len) {
                 //清空提示
@@ -722,7 +722,7 @@ $(() => {
                     pop(lang('submit_success'), 1);
 
                     //刷新当前页
-                    reload(4000);
+                    reload(2000);
 
                 }).catch(data => {
                     if (data.retCode === 400) {
@@ -746,7 +746,7 @@ $(() => {
             } else {
                 $('.extract_token_num').empty().text(lang('none'))
             }
-            l(data);
+            // l(data);
         }).catch(data => {
             if (data.retCode === 400) {
                 href('login');

@@ -26,14 +26,13 @@ $(() => {
 
         let status = pop.css('display');
 
+        l(status);
+
         pop.children().empty().text(str);
 
         if (status === 'none') {
             show();
-            setTimeout(hide, 3000)
-        } else {
-            hide();
-            setTimeout(show, 3000)
+            setTimeout(hide, 3000);
         }
 
         function show() {
@@ -644,9 +643,14 @@ $(() => {
     //获取图形验证码
     window.get_new_graphic_code = (box, form) => {
         ajax_('/getImage', {}).then(data => {
+            l(box);
+            l(form);
+            l(data);
+            l('((((((((((((((');
             if (data.image) {
                 let res = data.image;
                 let dataUrl = 'data:image/jpg;base64,' + res.body;
+                l(dataUrl);
                 let img = new Image();
                 window.pictureId = res.headers.pictureId[0];
 

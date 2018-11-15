@@ -13,4 +13,6 @@ npm install\
     gulp-babel\
     @babel/core\
     gulp-zip\
+    gulp-htmlmin\
+    @babel/preset-env\
     
