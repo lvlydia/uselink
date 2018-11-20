@@ -51,13 +51,13 @@ $(() => {
 
     //开发IP地址
     //dev_ip 本地ip  run_host 线上接口地址  dev_host  测试接口地址
-    let dev_ip = 'http://192.168.0.153:8080', run_host = 'https://mgm.uselink.cc',
+    let dev_ip = 'http://192.168.0.60:8080', run_host = 'https://mgm.uselink.cc',
         dev_host = 'http://192.168.0.57:9002';
 
 
     //cms接口地址
-    // window.cms_host='https://cms.uselink.cc/cms';
-    window.cms_host = 'http://192.168.0.158:9001/cms';
+    window.cms_host='https://cms.uselink.cc/cms';
+    // window.cms_host = 'http://192.168.0.158:9001/cms';
 
 
     //设置语言
