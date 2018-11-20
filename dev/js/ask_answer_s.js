@@ -1,5 +1,4 @@
 $(() => {
-
     function nodeToString ( node ) {
         var tmpNode = document.createElement( "div" );
         tmpNode.appendChild( node.cloneNode( true ) );
@@ -80,8 +79,8 @@ $(() => {
             });
         });
     }).catch(data => {
-        l(data);
-    })
+        pop(lang('network_error'));
+    });
 
     // 比较两个对象是否相同
     function isObject (o1, o2) {

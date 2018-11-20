@@ -13,10 +13,10 @@
 }
 
 /*========= BUTTON =========*/
-.send_waite{
-  background: $gray!important;
-  color: #999!important;
-  border: none!important;
+.send_waite {
+  background: $gray !important;
+  color: #999 !important;
+  border: none !important;
 }
 
 .btn_bc {
@@ -79,41 +79,66 @@
   }
 }
 
-
 /*    GLOBAL POP WINDOW    */
 
-._pop_win_{
+._pop_win_ {
   display: none;
   opacity: 0;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
   position: fixed;
-  left: 50%;
-  transform: translate(-50%,0);
-  color: white;
-  padding: 0 10px;
+  left: 0;
+  top: 0;
   z-index: 3;
-  min-width: 240px;
-  height: auto;
-  top: 70px;
-  border-radius: 3px;
-  line-height: 25px;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
   transition: 300ms ease-out;
+
+  .card {
+    width: auto;
+    height: auto;
+    min-width: 264px;
+    min-height: 122px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    line-height: 122px;
+    padding: 0 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+
+    &::after {
+      display: inline-block;
+      content: " ";
+      width: 30px;
+      height: 30px;
+      margin-left: 13px;
+      background-size: 100%;
+    }
+  }
 }
 
-._red_{
-  background-color: darkred;
-  border: 1px solid #aa0000;
+._red_ {
+  .card {
+    &::after {
+      background: url("../img/error_icon.png") no-repeat center;
+    }
+  }
 }
 
-._green_{
-  background-color: #008b4e;
-  border: 1px solid #00aa14;
+._green_ {
+  .card {
+    &::after {
+      background: url("../img/success_icon.png") no-repeat center;
+    }
+  }
 }
-
-
 
 *, ::after, ::before {
   box-sizing: border-box;
@@ -470,7 +495,7 @@ img, input {
 
         i {
           margin-left: 5px;
-          font-family: element-icons,sans-serif !important;
+          font-family: element-icons, sans-serif !important;
           speak: none;
           font-style: normal;
           font-weight: 400;
@@ -494,7 +519,7 @@ img, input {
           color: $hover_purple;
         }
 
-        .pc_userinfo_menu{
+        .pc_userinfo_menu {
           opacity: 0;
           display: none;
           position: absolute;
@@ -549,7 +574,6 @@ img, input {
   z-index: 5;
   padding-top: 80px;
   box-sizing: border-box;
-
 
   /* NEW FOOTER */
   .f_bottom, .f_top {
@@ -712,7 +736,6 @@ img, input {
     text-align: left;
     padding: 0 5px;
     position: relative;
-
 
     .select_default {
       position: relative;

@@ -1,69 +1,92 @@
 $(() => {
-    // let arr = ['news', 'activity'];
     let arr = [];
 
     ajax_('/channels', {
         'lang': language
     }, 0, cms_host).then(data => {
+        l(data);
         //放入tab
         data.forEach(el => {
             arr.push(el.channelType);
-            console.log(arr);
+
+            //生成tab
             $(".tab_box").append(`
                 <div class="hover tab" data-type="${el.channelType}" id="${el.channelType}_tab">${el.channelName}</div>
             `);
+
+            //生成content
+            $('.container').append(`
+                        <div id="${el.channelType}" class="tab_content row">
+                            <div class="loading">
+                                <div class="loading_circle"></div>
+                            </div>
+                        </div>
+            `)
         });
 
 
         let tab = $('.tab');
-        let box = $('.tab_content');
+        let content = $('.tab_content');
 
-
-        // if(url.includes('type=')&&url.split('type=')[1]==='activity'){
-        //     let box = $('.tab_content');
-        //     box.eq(1).show();
-        //     let tab = $('.tab');
-        //     tab.eq(1).addClass('active');
-        //
-        //
-        //     //获取咨询
-        //     get_list(arr[1]);
-        // }else {
-        //
-        //     //默认显示咨询
-        //     box.eq(0).show();
-        //     tab.eq(0).addClass('active');
-        //
-        //
-        //     //获取咨询
-        //     get_list(arr[0]);
-        // }
-        if(url.includes('type=') && url.split('type=')[2]==='news'){
-            let box = $('.tab_content');
-            box.eq(2).show();
-            let tab = $('.tab');
-            tab.eq(2).addClass('active');
-            get_list(arr[2]);
-
-        }else if(url.includes('type=') && url.split('type=')[1]==='activity') {
-            let box = $('.tab_content');
-            box.eq(1).show();
-            let tab = $('.tab');
-            tab.eq(1).addClass('active');
-            get_list(arr[1]);
-
-        }else if(url.includes('type=') && url.split('type=')[0]==='announcement'){
-            //默认显示咨询
-            box.eq(0).show();
-            tab.eq(0).addClass('active');
-            //获取咨询
-            get_list(arr[0]);
-
-        }else{
-            box.eq(0).show();
-            tab.eq(0).addClass('active');
+        function def() {
+            $('#' + arr[0] + '_tab').addClass('active');
+            $('#' + arr[0]).show();
             get_list(arr[0]);
         }
+
+        //是否是app打开
+        if (url.includes('type=')) {
+            let urlArr = url.split('?')[1].split('&'), type = undefined;
+
+            for (let q of urlArr) {
+                if (q.includes('type')) {
+                    type = q.split('=')[1];
+                }
+            }
+
+            if (type) {
+
+                $('.tab').removeClass('active');
+                $('#' + type + '_tab').addClass('active');
+
+                //隐藏并显示对应内容
+                content.hide();
+                $('#' + type).show();
+
+                get_list(type);
+
+            } else {
+                def()
+            }
+        } else {
+            def()
+        }
+
+
+        // if (url.includes('type=') && url.split('type=')[2] === 'news') {
+        //     content.eq(2).show();
+        //     let tab = $('.tab');
+        //     tab.eq(2).addClass('active');
+        //     get_list(arr[2]);
+        //
+        // } else if (url.includes('type=') && url.split('type=')[1] === 'activity') {
+        //     content.eq(1).show();
+        //     let tab = $('.tab');
+        //     tab.eq(1).addClass('active');
+        //     get_list(arr[1]);
+        //
+        // } else if (url.includes('type=') && url.split('type=')[0] === 'announcement') {
+        //     //默认显示咨询
+        //     content.eq(0).show();
+        //     tab.eq(0).addClass('active');
+        //     //获取咨询
+        //     get_list(arr[0]);
+        //
+        // } else {
+        //     content.eq(0).show();
+        //     tab.eq(0).addClass('active');
+        //     get_list(arr[0]);
+        // }
 
         //点击tab进行切换
         tab.click(e => {
@@ -74,8 +97,8 @@ $(() => {
             $(e.target).addClass('active');
 
             //隐藏并显示对应内容
-            box.hide();
-            box.eq(index).show();
+            content.hide();
+            content.eq(index).show();
 
             get_list(type);
         })
@@ -89,9 +112,10 @@ $(() => {
             'lang': language,
             'channelType': type,
         }, 0, cms_host).then(data => {
+            l(data.length);
             l(data);
-            $("#" + type).empty();
             $('.loading').hide(0);
+            $("#" + type).empty();
             if (data.length > 0) {
                 $('#' + type).find('.empty').hide(0);
 

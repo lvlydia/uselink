@@ -1,16 +1,16 @@
 $(() => {
     if (url.includes('id=') && url.split('id=')[1]) {
-        let url_arr=url.split('?id='),id;
+        let url_arr = url.split('?id='), id;
 
-        if(url_arr[1].includes('&')){
+        if (url_arr[1].includes('&')) {
             id = url_arr[1].split('&')[0];
-        }else {
+        } else {
             id = url.split('id=')[1];
         }
 
         ajax_('/article', {
             'uuid': id,
-            'lang':language,
+            'lang': language,
         }, 0, cms_host).then(data => {
             $('.loading').hide(0);
 
@@ -31,6 +31,14 @@ $(() => {
                 <img src="../img/news_details_title_bg.png" class="content_title_bg">
             `);
 
+            let titleImg = data.titleImg;
+            //如果传过来不显示title img则换成一条线
+            if (titleImg&&titleImg===false) {
+                $('.content_title_bg').after(`
+                    <hr class="line">
+                `).remove();
+            }
+
             //删除hr
             $('.box').find('hr').remove();
 
@@ -42,8 +50,8 @@ $(() => {
             pop(lang('network_error'));
 
             //如果没有该语言文章则返回500
-            if(data.retCode===500){
-                window.location.href = '../'+language+'/news.html';
+            if (data.retCode === 500) {
+                window.location.href = '../' + language + '/news.html';
             }
         });
     } else {
