@@ -1,48 +1,53 @@
 lang: en
 
+
 title: Uselink
 
-keyword: Uselink Super Node
 
-description: Uselink Locked Address for Super Node Candidate
+keyword: Uselink Super-node
 
-author: DONOPO TEAM
 
-empty: Empty
+description: Uselink, a public blockchain that supports original multi-asset with a decentralized transaction system, was developed by a top international team, focusing on the in-depth R&D and application of the underlying foundation chain of blockchain. By realizing the anchoring of original multi-asset to other public blockchains, USE-LINK can realize decentralized exchange in the future, integrate blockchain resources and realize value intercommunication.
+
 
 # 导航
 header:
   menu:
-    home: Home
-    voted: Vote
-    browser:  Block Explorer
-    book:  White Paper
+    home: Homepage
+    voted: Voting
+    browser: Blockchain browser
+    book: White paper
     new: News
-    wallet:  Wallet
+    wallet: Wallet
     login: Login
+
 
 change-btn: English
 
+
 footer:
   menu:
-    number: Concerned about the public number:
-    num-info:  Uselink public chain
-    qq: QQ exchange group:
-    contact: Contact customer service QQ:
-    email: Email:
-    website: website:http://www.uselink.cc
-    contacts: contact us
+    number: Public accounts followed:
+    num-info: Uselink public blockchains
+#    qq: QQ exchange group:
+#    contact: Contact customer service QQ:
+    email: E-mail:
+    website: Official website: http://www.uselink.cc
+    contacts: Contact Us
     support: Help
     support-info: Q&A
 
     wChat: WeChat Consulting
 
+
 wallet:
-  app-down: App Download
-  pc-down: PC Download
+  app-down: App download
+  pc-down: PC download
+
 
 nav:
   userinfo: user info
   logout: logout
+
 
 video_tip: Your browser does not support the HTML5 video tag. Try updating your browser or using a different one.

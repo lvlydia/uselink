@@ -359,7 +359,7 @@
                   padding-top: 50px;
 
                   .form {
-                    width: 400px;
+                    width: 500px;
                     margin: 0 auto;
                     margin-bottom: 23px;
 
@@ -370,13 +370,13 @@
                       margin-bottom: 12px;
 
                       & > .left {
-                        width: 100px;
+                        width: 120px;
                         text-align: right;
                         font-size: 14px;
                       }
 
                       & > .right {
-                        width: calc(100% - 130px);
+                        width: calc(100% - 140px);
                         border-bottom: 1px solid #ededed;
                         height: 40px;
                         text-align: left;
@@ -414,7 +414,7 @@
 
                         .changeWithDrawAddress {
                           position: absolute;
-                          right: -80px;
+                          right: 0;
                           width: auto;
                           padding: 0 20px;
                           height: 24px;
@@ -657,7 +657,7 @@
             .submitted {
 
               .form {
-                width: 400px;
+                width: 500px;
                 margin: 0 auto;
                 margin-bottom: 23px;
                 margin-top: 50px;
@@ -670,13 +670,13 @@
                   position: relative;
 
                   & > .left {
-                    width: 100px;
+                    width: 120px;
                     text-align: right;
                     font-size: 14px;
                   }
 
                   & > .right {
-                    width: calc(100% - 130px);
+                    width: calc(100% - 140px);
                     border-bottom: 1px solid #ededed;
                     height: 40px;
                     text-align: left;
@@ -717,7 +717,7 @@
                       float: right;
                       padding: 0 20px;
                       position: absolute;
-                      right: -80px;
+                      right: 0;
                       //min-width: 60px;
                       height: 24px;
                       line-height: 24px;
@@ -829,8 +829,8 @@
                   }
 
                   .shareTip {
-                    width: calc(100% - 130px);
-                    height: 13px;
+                    width: calc(100% - 140px);
+                    min-height: 13px;
                     clear: both;
                     color: $yellow;
                     font-size: 12px;
@@ -1113,7 +1113,7 @@
           .exit_b {
 
             .form {
-              width: 400px;
+              width: 500px;
               margin: 0 auto;
               margin-bottom: 23px;
               margin-top: 50px;
@@ -1125,14 +1125,14 @@
                 margin-bottom: 12px;
 
                 & > .left {
-                  width: 100px;
+                  width: 120px;
                   text-align: right;
                   font-size: 14px;
                   font-weight: bolder;
                 }
 
                 & > .right {
-                  width: calc(100% - 130px);
+                  width: calc(100% - 140px);
                   border-bottom: 1px solid #ededed;
                   height: 40px;
                   text-align: left;
@@ -1195,9 +1195,6 @@
                 margin-bottom: 30px;
 
                 & > .left {
-                  width: 100px;
-                  text-align: right;
-                  font-size: 14px;
                   font-weight: normal;
                 }
 
@@ -1650,6 +1647,10 @@
         border-radius: 44px;
       }
     }
+
+    //.card_content[lang='ko']{
+    //  padding: 0 30px;
+    //}
   }
 
   .bg {
@@ -1660,6 +1661,47 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .6);
     z-index: 1;
+  }
+}
+
+@media (max-width: 1920px) {
+  //手机号与密码
+  #userInfo[lang='en'] .box > .right .page1 .userInfo_top > .right > .left, #userInfo[lang='en'] .box > .right .page1 .userInfo_top > .right > .right {
+    float: inherit !important;
+    clear: both;
+    height: 40%;
+    margin: 0;
+    min-width: 200px;
+    line-height: 50px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  //手机号
+  #userInfo[lang='en'] .box > .right .page1 .userInfo_top > .right > .left {
+    margin-top: 12.5px;
+  }
+
+  //密码与修改密码按钮
+  #userInfo[lang='en'] .box > .right .page1 .userInfo_top > .right > .right {
+    margin-bottom: 12.5px;
+  }
+
+  //密码
+  #userInfo[lang='en'] .box > .right .page1 .userInfo_top > .right > .right .left {
+    height: 100%;
+    line-height: inherit;
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+  }
+
+  //修改密码按钮
+  #userInfo[lang='en'] .box > .right .page1 .userInfo_top > .right > .right .change_pwd {
+    margin: 0;
+    text-align: center;
   }
 }
 
@@ -2019,7 +2061,6 @@
     min-height: auto;
   }
 
-  //TODO:其他登陆后状态移动端适配
   #userInfo .box > .right .page3 #exit_form .exit_b .form {
     width: 100%;
   }

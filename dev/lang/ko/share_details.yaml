@@ -2,9 +2,9 @@ vote: 총 투표 수
 reward: 이 상
 share: 개인 배당
 
-table:
-  time: 시간
-  vote: 유권자
-  number: 투표 수
-  share: 배당금 수
-  status: 지불 상태
+#table:
+#  time: 시간
+#  vote: 유권자
+#  number: 투표 수
+#  share: 배당금 수
+#  status: 지불 상태

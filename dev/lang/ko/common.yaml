@@ -1,14 +1,14 @@
 lang: ko
 
+
 title: Uselink
+
 
 keyword: Uselink 슈퍼노드
 
-description: Uselink Locked Address for Super Node Candidate
 
-author: DONOPO TEAM
+description: Uselink탈중심화 거래 시스템을 소유한 원생다자산의 공유체인이다. 이는 전 세계 최고의 팀이 개발하였으며 블록 체인의 기초 체인 개발과 응용에 전념하였다. 원생다자산의 실현을 통하여 Uselink는 미래에 탈중심화거래소를 만들어 블록체인 자원을 통합 조정하여 가치교환을 실현한다
 
-empty: 비움
 
 # 导航
 header:
@@ -21,21 +21,24 @@ header:
     wallet: 지갑
     login: 로그인
 
-change-btn: 중문
+
+change-btn: 한글
+
 
 footer:
   menu:
     number: 공식 계정 팔로우:
     num-info: Uselink 공유체인:
-    qq: QQ커뮤니티:
-    contact: QQ고객센터:
+#    qq: QQ커뮤니티:
+#    contact: QQ고객센터:
     email: 메일함:
     website: 공식 사이트: http://www.uselink.cc
     contacts: 고객센터
-    support: 도움말
+    support: 도움
     support-info: 질의 응답
 
     wChat: WeChat 고객 서비스
+
 
 wallet:
   app-down: App다운로드
@@ -46,4 +49,5 @@ nav:
   userinfo: 개인 정보
   logout: 로그 아웃
 
-video_tip: 브라우저가 HTML5 동영상 태그를 지원하지 않습니다. 브라우저를 업데이트하거나 다른 브라우저를 사용해보십시오.
+
+video_tip: 브라우저가 HTML5 동영상 태그를 지원하지 않습니다. 브라우저를 업데이트하거나 다른 브라우저를 사용해보십시오

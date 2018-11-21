@@ -5,15 +5,15 @@ confirm: 確認
 
 #个人资料
 id-info:
-  title: 身份信息
+#  title: 身份信息
   phone: 手機號
-  status: 認證狀態
+#  status: 認證狀態
   status_val: 未認證
-  why: 未通過原因
+#  why: 未通過原因
   password: 密碼
   btn-change: 修改
-  set-password: 設置新密碼
-  confrim: 確認新密碼
+#  set-password: 設置新密碼
+#  confrim: 確認新密碼
   account: 賬戶
   NoDelegateName: 普通用戶
 
@@ -45,7 +45,7 @@ id-info:
 
 
 account-info:
-  title: 賬戶信息
+#  title: 賬戶信息
   delegname: 超級節點名稱
   address: 提幣地址
   share: 分紅比例
@@ -53,17 +53,17 @@ account-info:
   img-code: 請輸入圖片驗證碼
   phone-code: 請輸入短信驗證碼
   send: 發送驗證碼
-  btn-info: 保存信息
-  btn-submit: 提交為候選節點按鈕
-  bind_address: 綁定
-  bind_address_tip: 務必確保輸入地址正確！
-  submit_win_title: 申請信息
-  bind_super_node_name: 綁定超級節點名
+#  btn-info: 保存信息
+#  btn-submit: 提交為候選節點按鈕
+#  bind_address: 綁定
+#  bind_address_tip: 務必確保輸入地址正確！
+#  submit_win_title: 申請信息
+#  bind_super_node_name: 綁定超級節點名
 
 
 #提币记录
 record:
-  address: 提幣地址
+#  address: 提幣地址
   sum: 未發放數量
   time: 時間
   vote: 票數
@@ -71,25 +71,26 @@ record:
   share: 個人分紅
   isno: 是否發放獎勵
   operation: 操作
-  details: 詳情
+#  details: 詳情
 
 
 #退出申请
 apply:
   password: 請輸入密碼
-  img-code: 請輸入圖片驗證碼
-  phone-code: 請輸入短信驗證碼
-  send: 發送驗證碼
-  tip-up: 申請後將退回
-  tip-under: 到提幣地址
+#  img-code: 請輸入圖片驗證碼
+#  phone-code: 請輸入短信驗證碼
+#  send: 發送驗證碼
+#  tip-up: 申請後將退回
+#  tip-under: 到提幣地址
   btn-submit: 提交申請
+
 
 #退出申请显示页面
 exit:
   delegname: 超級節點名稱
   phone: 手機號
   status: 審核狀態
-  adress: 退幣地址
+  address: 退幣地址
   num: 退幣數量
   time: 申請時間
   ID: 交易ID

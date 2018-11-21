@@ -2,9 +2,9 @@ vote: 总票数
 reward: 本次奖励
 share: 个人分红
 
-table:
-  time: 时间
-  amount: 提币金额
-  number: 投票数
-  poundage: 提币手续费
-  status: 打款状态
+#table:
+#  time: 时间
+#  amount: 提币金额
+#  number: 投票数
+#  poundage: 提币手续费
+#  status: 打款状态

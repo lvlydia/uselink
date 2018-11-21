@@ -5,31 +5,31 @@ confirm: 확인
 
 #个人资料
 id-info:
-  title: 신분정보
-  phone: 휴대폰 번호
-  status: 인증 상태
-  status_val: 인증되지 않음
-  why: 미통과 원인
+#  title: 신분정보
+  phone: 휴대 전화 번호
+#  status: 인증 상태
+  status_val: 인증하지 않음
+#  why: 미통과 원인
   password: 비밀번호
   btn-change: 수정
-  set-password: 새 비밀번호 설정
-  confrim: 새 비밀번호 확인
+#  set-password: 새 비밀번호 설정
+#  confrim: 새 비밀번호 확인
   account: 계정
   NoDelegateName: 보통 사용자
 
   inputOldPwd: 이전 암호 입력
   inputNewPwd: 새 암호 입력
-  inputNewPwdAgain: 새 암호를 다시 입력하십시오
+  inputNewPwdAgain: 새 암호 확인
   signCode: 인증 코드
   msgCode: SMS 확인
   userInfoBottomTitle: 슈퍼 노드 후보
-  tipTitle: 수퍼 노드 후보로 사용：
-  tipP1: 1.슈퍼 노드 후보가 되십시오,수퍼 노드 선거에 참여할 수 있습니다.
-  tipP2: 2.모든 네트워크 사용자는 자체 UL 토큰을 사용합니다,모든 후보 노드에 대해 투표 할 수있는 기능;상위 101 표를 가진 후보 노드는 Uselink 블록 체인 메인 네트워크 블록 어카운팅을 위해 선택되고 블록에서 패키징됩니다.
-  tipP3: 3.처음 101 개의 수퍼 노드는 배당 수익을 블록 보상으로받습니다.
+  tipTitle: 수퍼 노드 후보로 사용:
+  tipP1: 1. 수퍼 노드 후보자가되어 슈퍼 노드 선거에 참여하십시오
+  tipP2: 2. 모든 네트워크 사용자는 소유 된 UL 토큰을 사용하여 모든 후보 노드에 투표 할 수 있습니다.상위 101 표를 가진 후보 노드는 Uselink 블록 체인 메인 네트워크 블록 어카운팅을 위해 선택되어 패키징됩니다
+  tipP3: 3. 첫 번째 101 수퍼 노드는 배당 수익을 블록 보상으로받습니다
   step1: 첫 번째 단계
   step2: 두 번째 단계
-  step1Title: 이 주소로 10000UL을 예금으로 이체하십시오,수퍼 노드 종료 후 환불 가능
+  step1Title: 주소로 10000UL을 예금으로 이체하십시오. 수퍼 노드를 종료 한 후 환불을 신청할 수 있습니다
   nextStep: 다음 단계
   inputSuperNodeName: 수퍼 노드 이름을 입력하십시오
   inputAddress: 동전 주소를 입력하십시오
@@ -40,56 +40,57 @@ id-info:
   problem: 질문이 있으시면 고객 서비스에 문의하십시오
   submitAgain: 다시 적용
   saveBtn: 저장
-  reviewTitle: 신청서 제출，검토 중...
+  reviewTitle: 신청서가 제출되었으며 검토 중입니다...
   exitSuperNode: 수퍼 노드 종료
 
 
 account-info:
-  title: 계정 정보
+#  title: 계정 정보
   delegname: 슈퍼노드 이름
   address: 코인 찾을 주소
   share: 배당 비례
-  share-tip: 예를 들면 비례를 70%로 설정하면 대표가 보너스의 70%를 사용자에게 나눠준다.
-  img-code: 그림 인증번호를 입력하세요.
-  phone-code: 메세지 인증번호를 입력하세요.
+  share-tip: 예를 들면 비례를 70%로 설정하면 대표가 보너스의 70%를 사용자에게 나눠준다
+  img-code: 그림 인증번호를 입력하세요
+  phone-code: 메세지 인증번호를 입력하세요
   send: 인증번호 발송
-  btn-info: 메세지 저장
-  btn-submit: 후보 슈퍼노드로 제출하기
-  bind_address: 바인딩
-  bind_address_tip: 올바른 주소를 입력하십시오！
-  submit_win_title: 신청 정보
-  bind_super_node_name: 슈퍼 노드 이름 바인딩
+#  btn-info: 메세지 저장
+#  btn-submit: 후보 슈퍼노드로 제출하기
+#  bind_address: 바인딩
+#  bind_address_tip: 올바른 주소를 입력하십시오！
+#  submit_win_title: 신청 정보
+#  bind_super_node_name: 슈퍼 노드 이름 바인딩
 
 
 #提币记录
 record:
-  address: 코인 찾을 주소
+#  address: 코인 찾을 주소
   sum: 미 배분 수량
   time: 시간
   vote: 표수
   reward: 보너스
   share: 개인배당
-  isno: 보너스를 배분하겠습니까?
+  isno: 보너스를 배분하겠습니까
   operation: 실행
-  details: 세부 정보
+#  details: 세부 정보
 
 
 #退出申请
 apply:
   password: 비밀번호를 입력하세요
-  img-code: 그림 인증번호를 입력하세요.
-  phone-code: 메세지 인증번호를 입력하세요.
-  send: 메세지 발송
-  tip-up: 신청후 나가기
-  tip-under: 코인 찾을 주소로 가기
+#  img-code: 그림 인증번호를 입력하세요
+#  phone-code: 메세지 인증번호를 입력하세요
+#  send: 메세지 발송
+#  tip-up: 신청후 나가기
+#  tip-under: 코인 찾을 주소로 가기
   btn-submit: 신청 제출
+
 
 #退出申请显示页面
 exit:
   delegname: 수퍼 노드 이름
   phone: 휴대 전화 번호
   status: 감사 상태
-  adress: 반송 주소
+  address: 반송 주소
   num: 환급 횟수
   time: 신청 시간
   ID: 거래 ID

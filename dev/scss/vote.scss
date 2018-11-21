@@ -5,7 +5,7 @@
     width: 100%;
 
     .con-bgbox {
-      padding-top: 50vw;
+      padding-top: 55vw;
       .title {
         margin: 50px auto;
         width: 600px;
@@ -135,7 +135,7 @@
             font-size: 16px;
             line-height: 16px;
             margin-bottom: 15px;
-            height: 16px;
+            min-height: 16px;
           }
         }
 
@@ -169,15 +169,19 @@
           box-shadow: 1px 1px 1px $purple;
         }
         .other_page {
-          width: 270px;
+          max-width: 270px;
+          width: auto;
+          overflow: hidden;
+          float: left;
 
           div {
             padding: 0 12px;
             margin-left: 10px;
-            margin-right: 5px;
+            margin-right: 10px;
             float: left;
             background-color: #fff;
             color: $purple;
+            cursor: pointer;
           }
 
           .active {
@@ -219,13 +223,13 @@
       }
     }
   }
-  @media (min-width: 599px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     .bgbox {
       width: 100%;
       position: relative;
       color: pink;
       .con-bgbox {
-        padding-top: 500px;
+        padding-top: 600px;
         .title {
           margin: 0 auto;
           width: 400px;
@@ -285,10 +289,14 @@
             }
           }
         }
+
+        .vote_btn {
+          font-size: 14px!important;
+        }
       }
     }
   }
-  @media (max-width: 599px) {
+  @media (max-width: 768px) {
     .bgbox {
       width: 100%;
       color: pink;
@@ -335,6 +343,24 @@
 
           & > div {
             margin-bottom: 50px;
+            height: auto;
+
+            & > div {
+              height: 100%;
+              position: relative;
+              padding-bottom: 35px;
+
+              a {
+                position: absolute;
+                bottom: 0;
+                margin: 0 !important;
+                width: auto;
+                min-width: 150px;
+                left: 50%;
+                font-size: 14px !important;
+                transform: translate(-50%, 0);
+              }
+            }
           }
 
           .circle {
@@ -379,14 +405,13 @@
 
             p {
               font-size: 16px;
-              line-height: 16px;
+              line-height: 1.4;
               margin-bottom: 15px;
-              height: 16px;
+              min-height: 16px;
             }
           }
 
           .vote_btn {
-            font-size: 20px;
             color: white;
             height: 35px;
             line-height: 35px;
@@ -424,6 +449,7 @@
               float: left;
               background-color: #fff;
               color: $purple;
+              cursor: pointer;
             }
 
             .active {

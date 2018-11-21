@@ -8,8 +8,8 @@ $(() => {
     }
 
 
-    ajax_('/getFaqArticleList', {
-        'lang': language
+    ajax_("/getFaqArticleList", {
+        "lang": language
     }, 0, cms_host).then(data => {
         // console.log(data);
         Object.keys(data).forEach(el => {

@@ -19,7 +19,6 @@ $(() => {
                  <div class="author">${data.articleAuther}
                     <span class="time">${data.createTimeStr}</span>
                  </div>
-                 <hr>
                  <div class="content">${data.articleContent}</div>
             `);
 
@@ -32,15 +31,14 @@ $(() => {
             `);
 
             let titleImg = data.titleImg;
+
             //如果传过来不显示title img则换成一条线
-            if (titleImg&&titleImg===false) {
+            if (!titleImg) {
                 $('.content_title_bg').after(`
-                    <hr class="line">
+                    <hr>
                 `).remove();
             }
 
-            //删除hr
-            $('.box').find('hr').remove();
 
             //facebook分享设置
             // $('meta[property="og:image"]').attr('content',data.articlePicture);

@@ -1,77 +1,77 @@
 banner:
-  title: Locked Address for Super Node Candidate
+  title: Super-node candidate's official hedge transfer address
   address: ULMVq1auVBgtjyQDJbCKvjt7aJvdEfrNuwZ
-  text: Developed by an international team,Uselink is a public chain with decentralized exchange that supports original multi-asset, which focus on in-depth R&D and application of the underlying chain of blockchain. Uselink is aiming to realize decentralized exchange, blockchain resources integration in order to exchange value in the near future by “anchoring” other public chain.
+  text: Uselink, a public blockchain that supports original multi-asset with a decentralized transaction system, was developed by a top international team, focusing on the in-depth R&D and application of the underlying foundation chain of blockchain. By realizing the anchoring of original multi-asset to other public blockchains, USE-LINK can realize decentralized exchange in the future, integrate blockchain resources and realize value intercommunication.
   video_url: http://oss.Uselink.cc/videos/ueslink-video-en-us.mp4
 
 #机制创新 性能领先
 main:
-  title1: INNOVATIVE MECHANISM, LEADING PERFORMANCE
-  delegateName: SUPERNODE
-  delegate-info: Uselink uses the same DPOS solution as EOS network, which greatly resolve the issue of delay and low throughput. As these nodes use decentralized consensus to certain extent to maintain decentralized distributed ledger, other users can enjoy the service of entire blockchain network. Uselink will select 101 super nodes, which is 5 time more than EOS, to ensure a better stability of entire network.
-  btn-more: know more
+  title1: Innovative Mechanism  Leading Performance
+  delegateName: Super-node
+#  delegate-info: Uselink uses the same DPOS solution as EOS network, which greatly resolve the issue of delay and low throughput. As these nodes use decentralized consensus to certain extent to maintain decentralized distributed ledger, other users can enjoy the service of entire blockchain network. Uselink will select 101 super nodes, which is 5 time more than EOS, to ensure a better stability of entire network.
+  btn-more: More
 
-  voted: VOTE AND MINE
+  voted: Division of voting and mining
   vote-onfo: Other users can have an impact on the replacement of super nodes by voting to super nodes. After receiving block producing reward, selected super node will reward the voter by giving profit distribution, which can make entire community more united and prospers.
-  btn-voted: vote now
+  btn-voted: Immediate vote
 
-  performance: PERFORMANCE AND ITS ADVANTAGE
-  perfor-info: The Uselink supports original multi-assets which can issue new on-chain token without contract. Compare with contract assets, original multi-asset can perform better because it does not require complex operation in virtual machine, nor initializing operation environment of virtual machine. Meanwhile, users don’t need to operate more than assets, so original assets transaction can be safely carried out even user’s computer technology level is not high.
+  performance: Performance and advantages
+  perfor-info: The Uselink chain supports original multi-asset, and new chain tokens can be issued without a contract. Compared with the contract assets, the native multi-assets do not need to perform complex calculations in the virtual machine, and do not need to initialize the operating environment of the virtual machine, which optimizes the performance. At the same time, users will not have the access to operations other than assets, even if the user's computer skills are low, they can still safely use the original assets for transactions.
 
-cooperation: Uselink Cooperation agency
+cooperation: Uselink's partners
 
 download:
-  instructions: Uselink client is developed by Uselink team and it supports multi-platform.You can choose the one suits you the most to download.
-  btn-load: download
+  instructions: The Uselink client, developed by the Uselink team, supports a variety of platforms, and you can choose the most appropriate way to download or access
+  btn-load: Download immediately
 
 #多元生态 更多可能
 mains:
-  title2: MORE ECOSYSTEM, MORE POSSIBILITY
-  one: SHARED TRANSACTION PLATFORM
-  one-info: Committed to build a brand new sharing platform of smart contract, in order to provide secure, convenient and professional transaction service for blockchain investors, become a global leading crypto assets trading platform.
-  two: UL UNDERLYING ASSETS APPLICATION
-  two-info: UL underlying asset is a new model for underlying assets innovation, which use encryption of blockchain technology to realize digitalized underlying assets. Users can use UL to exchange to assets, various cryptocurrencies, which helps users to purchase or trade globally, make it more efficient for financial investment.
-  three: Uselink ECOSYSTEM
-  three-info: UL chain has enormous ecological functionality and it will soon become a very successful public chain platform, which includes internet finance, digital currency and asset model, forming a complete ecosystem between blockchains. To become a true balanced closed-loop ecosystem, it does not only serves finance, cryptocurrency, assets and etc, but also applications in the Internet of Things, supply chain, artificial self-energy and entity enterprises.
+  title2: Diversified Ecology More Possibilities
+  one: Shared Trading Platform
+  one-info: UL is a new platform for sharing transactions, allowing users to share transactions, data, and resources. It provide the most secure, convenient and professional transaction services for ecological investors in the global blockchain, so as to build a world-leading digital currency and asset transaction platform.
+  two: Application of UL underlying asset
+  two-info: UL underlying asset innovates the new model development of the underlying asset, so that the underlying assets could use the encryption characteristics of the blockchain technology to realize the digitization of the underlying assets. Users will be able to use UL to redeem assets as well as various digital currencies, purchase or trade global assets more conveniently, and invest in underlying assets more efficiently.
+  three: Uselink ecological system
+  three-info: The chain has a huge range of ecological functions and will become a very successful public blockchain platform. Give consideration to the normality of Internet finance, digital currency and asset model at the same time, and realize an integrated ecosystem among blockchains. It not only serves finance, digital currency and assets, but also provides services and applications in entities landing in the fields of Internet of things, supply chain, artificial intelligence and entity  enterprises, so as to achieve a veritable overall system of ecological closed-loop balance.
 
 #团队成员
-team: Team Member
+team: Team members
 team-list:
   -
     name: Wouter
-    position: SENIOR TECHNICAL CONSULTANTS
+    position: Senior technical advisor
     img: wouter.png
-    info: Wouter graduated from Yale University with a degree in Computer Science. As a top IT engineer, Wouter was the Technical Director of Australia at Microsoft. Later, he served on multiple blockchain teams with excellent code and architecture skills. And participated in the planning of multiple blockchain projects, with rich experience in blockchain development.
+    info: Graduated from Yale University with a degree in Computer Science. A top IT engineer, served as the Regional Technical Director of Australia at Microsoft. Later worked in several blockchain teams with excellent code and architecture technologies. Also participated in the planning of several blockchain projects, with rich experience in the development of blockchain
   -
     name: William Theodore
-    position: BLOCK CHAIN INVESTMENT MANAGER
+    position: Blockchain investment manager
     img: william.png
-    info: William Theodore is a professional investment manager in the context of Global Investment and Credit Suisse's technology and banking business, and later served as director of risk management for the Americas region at Kohler Capital.William has enough trust and influence in investment institutions, venture capital funds and investors. William is a famous professional investor. In 2013, we focused on the blockchain industry and invested in multiple blockchain projects, especially in the development of blockchain infrastructure technology public chain projects. Now one of the main investors of Uselink.
+    info: William Theodore, a professional investment manager, who learned skills and banking business at Global Investment and Credit Suisse, later served as director of risk management for the Americas region at Coller Capital. He has built up sufficient trust and influence in investment institutions, venture capital funds and among investors. He is a famous professional investor. In 2013, he focused on the blockchain industry and invested in several blockchain projects, especially the development of the public blockchain projects of blockchain underlying technology. Now he is one of the main investors of USELINK
   -
     name: Simon
-    position: CTO(chief technology officer)
+    position: Chief Technology Officer
     img: simon.png
-    info: Simon focuses on the public chain infrastructure, public-chain operating system development, cryptocurrency, smart contract security, and distributed consensus algorithms. He has more than 8 years of experience in blockchain technology research and has worked in the code editing of blockchain companies in various industries around the world. He is a technical consultant for Bitcoin and Ethereum seminars, and also an early technology development for EOS projects and BTS projects. team member. After successfully developing multiple blockchain projects, he began to participate in the development of several startup projects, and led the technical team to develop more than 30 infrastructure technical architectures and smart contract systems!
+    info: Since 2011, he has been paying close attention to the blockchain development, focusing on the research works in such fields as infrastructure and operation system development of public blockchain, cryptocurrency, security in intelligent contract and distributed consensus algorithm. With 8 years' experience in algorithm of blockchain technology research, he successively took office as the master coder in blockchain industries worldwide. He is also the technical consultant for BitCoin and Ethereum seminars, and one of the team members in early technology development of EOS project and BTS project. After successfully developed some blockchain projects, he began to participate in projects of several startup compaines, and led the technical team to develop the underlying architecture and intelligent contract system in over 30 blockchains related to the blockchain industry!
   -
     name: Woodrow Dean
-    position: CHIEF LEGAL COUNSEL
+    position: Chief Legal Officer
     img: woodrow.png
-    info: ean Woodrow has a wide range of international tax and legal experience in IT/media/real estate, M&A FinTech and BF investment multinational investment companies. He is the lead attorney for the board of directors of several companies. Now he is the legal team leader of Uselink.
+    info: Dean Woodlow, British, works for transnational investment companies in IT/ media/real estate, M&A FinTech and BF investments, and has extensive experience in international taxation and law. He is the chief counsel on the board of directors of several companies, and now heads the legal team at USELINK.
   -
     name: Lucas Lee
-    position: Chief technology strategist
+    position: Chief Technical Strategist
     img: lucas.png
-    info: Lucas Lee formed a PCA blockchain laboratory PCA laboratory developed for the financial sector. He developed and supported many technical blockchain projects and was a contributor to several blockchain open source projects.
+    info: Lucas Lee founded the PCA blockchain laboratory, developed a technology-based blockchain project on finance, and contributed many open source projects in blockchain.
 
 more:
   super_node: |
-    Uselink will select super node as the same as selecting agent, here are the benefits of selecting super nodes:
+    Uselink also supports the super-node campaign by means of an election agent. And the benefits of the campaign node are as follows:
 
 
-    1.Become an accountant (bookkeeper) ， get block-produce-reward which is direct reward.
-    2.Take part in management of Uselink community, get indirect reward by having an impact on community development.
-    3.Every agent is recognized by entire network and get maximum exposure, agent will get first- hand community resources.
+    1. Be a bookkeeper, gets block rewards, which is the most immediate benefit.
+    2. Participate in the governance of Uselink community and gain indirect benefits by directly influencing community development
+    3. Recognized by the entire network, each agent will gain tremendous exposure, and the community's resources will first connect with the agent
 
   vote_mine: |
-    Uselink will post all voting information regarding super nodes on official website.
-    Our Mobile wallet supports voting function, you can check your reward in the wallet as well.
+    Uselink will publish the voting information of all super-nodes in real time on the official website.
+        While the mobile wallet will offer a voting function and dividends could be checked in it.

@@ -26,14 +26,13 @@ $(() => {
 
         let status = pop.css('display');
 
+        l(status);
+
         pop.children().empty().text(str);
 
         if (status === 'none') {
             show();
-            setTimeout(hide, 3000)
-        } else {
-            hide();
-            setTimeout(show, 3000)
+            setTimeout(hide, 3000);
         }
 
         function show() {
@@ -97,6 +96,7 @@ $(() => {
         window.location.href = url_list[url];
     };
 
+
     //页面重新加载
     window.reload = time => {
         setTimeout(function () {
@@ -105,6 +105,7 @@ $(() => {
 
         }, time);
     };
+
 
     //时间转换
     window.getTime = time => {
@@ -154,6 +155,17 @@ $(() => {
     };
 
 
+    //页面滚动一定距离navbar背景色变为不透明
+    let winScrollHeight = $(document).scrollTop();
+    winScrollHeight >= 200 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
+    l(winScrollHeight);
+    $(window).scroll(e => {
+        l($(document).scrollTop());
+
+        $(document).scrollTop() >= 200 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
+    });
+
+
     // 设置开发接口地址与上线正式接口地址
     if (dev_type() === 'dev') {
         window.host = dev_host;
@@ -198,37 +210,37 @@ $(() => {
     //js多语言列表
     window.lang_list = {
         en: {
-            'incomplete': 'nnformation incompleteness',
-            'account': 'account',
-            'votes': 'votes',
-            'ranking': 'ranking',
-            'share': 'share',
-            'help_vote': 'vote for me',
-            'node_error': 'node name format error',
-            'password_format_error': 'password format error',
-            'phone_format_error': 'phone format error',
+            'incomplete': 'Incomplete information',
+            'account': 'Account',
+            'votes': 'Votes',
+            'ranking': 'Ranking',
+            'share': 'Dividend proportion',
+            'help_vote': 'Vote for me',
+            'node_error': 'Incorrect node name format',
+            'password_format_error': 'Incorrect password format',
+            'phone_format_error': 'Incorrect mobile phone number format',
 
 
-            'network_error': 'network error',
-            'info_incomplete': 'information incompleteness',
-            'password_not_same': 'two passwords are inconsistent',
-            'delegate_name_format_error': 'super node name format error',
+            'network_error': 'Network error',
+            'info_incomplete': 'Incomplete information',
+            'password_not_same': 'Inconsistent passwords',
+            'delegate_name_format_error': 'Incorrect super-node name format',
 
             //userinfo
-            'close': 'close',
-            'change_pwd': 'change password',
-            'change': 'change',
-            'bind': 'bind',
-            'bind_address': 'bind withdraw address',
-            'change_address': 'change withdraw address',
-            'withdrawAddress_empty': 'The withdraw address cannot be empty',
-            'dividend_rate_error': 'Dividend ratio error',
-            'save_success': "Successfully saved",
+            'close': 'Close',
+            'change_pwd': 'Modify the password',
+            'change': 'Modify',
+            'bind': 'Bind',
+            'bind_address': 'Bind the withdrawal address',
+            'change_address': 'Modify the withdrawal address',
+            'withdrawAddress_empty': 'The withdrawal address cannot be blank',
+            'dividend_rate_error': 'Dividend proportion verification failure',
+            'save_success': "Saved successfully",
             // 'submit_win_title': 'Application Information',
-            'submit_success': 'Submitted successfully',
+            'submit_success': 'Successfully submitted',
 
-            'submitted': 'Has been submitted',
-            'unauthorized': 'unauthorized',
+            'submitted': 'Submitted',
+            'unauthorized': 'Unauthenticated',
             'did_not_pass': 'Did not pass',
             'waiting_for_processing': 'Waiting for processing',
             'verification_passed': 'Verification passed',
@@ -238,12 +250,12 @@ $(() => {
             'exit_transfer': 'Exit the transfer',
             'exit_success': 'Exit the success',
             'none': 'none',
-            'detail': 'detail',
-            'success': 'success',
-            'empty': 'no content yet',
+            'detail': 'Detail',
+            'success': 'Success',
+            'empty': 'No content yet',
 
             //提币详情
-            'init': 'init',
+            'init': 'Init',
             'notSure': 'N',
             'sure': 'Y',
             'noAddress': 'N',
@@ -251,15 +263,15 @@ $(() => {
             'error2': 'N',
 
             //提币记录
-            'time': 'time',
-            'vote': 'votes',
-            'reward': 'reward',
-            'share_': 'Personal dividend',
-            'isno': 'Whether to issue rewards',
-            'operation': 'operating',
+            'time': 'Time',
+            'vote': 'Votes',
+            'reward': 'Award',
+            'share_': 'Individual dividend',
+            'isno': 'Reward issued or not',
+            'operation': 'Operation',
 
             //退出基本信息
-            'verification': 'under review',
+            'verification': 'Under review',
 
 
         },
@@ -408,12 +420,12 @@ $(() => {
             'account': '계정',
             'votes': '표수',
             'ranking': '순위',
-            'share': '배당비례',
-            'help_vote': '나를 위해 투표 해',
+            'share': '배당 비례',
+            'help_vote': '표 끌어 모으기',
             // Search
-            'node_error': '노드 이름의 형식이 잘못되었습니다',
+            'node_error': '노드 이름 형식 오류',
             'password_format_error': '잘못된 암호 형식',
-            'phone_format_error': '전화 번호 형식 오류',
+            'phone_format_error': '휴대폰 형식 오류',
 
             //register
             'network_error': '네트워크 오류',
@@ -423,23 +435,23 @@ $(() => {
 
             //userinfo
             'close': '닫기',
-            'change_pwd': '비밀번호 변경',
-            'change': '변경',
+            'change_pwd': '비밀번호 수정',
+            'change': '수정',
             'bind': '바인딩',
-            'bind_address': '바인딩 추출 토큰 주소',
-            'change_address': '추출 토큰 주소 수정',
-            'withdrawAddress_empty': '추출 토큰 주소는 비워 둘 수 없습니다',
+            'bind_address': '바인딩 화폐 주소',
+            'change_address': '조화 주소 수정',
+            'withdrawAddress_empty': '동전 주소를 입력하십시오',
             'dividend_rate_error': '배당비례 점검오류',
             'save_success': "성공적으로 저장되었습니다",
-            'submit_success': '제출 완료',
+            'submit_success': '성공을 제출하다',
 
-            'submitted': '제출 완료',
-            'unauthorized': '인증 없음',
+            'submitted': '이미 제출',
+            'unauthorized': '인증하지 않음',
             'did_not_pass': '통과 할 수 없다',
             'waiting_for_processing': '처리 대기 중',
             'verification_passed': '제출 완료',
 
-            'node_name_cant_null': '슈퍼 노드 이름은 비워 둘 수 없습니다.',
+            'node_name_cant_null': '슈퍼 노드 이름은 비워 둘 수 없습니다',
             'exit': '로그 아웃',
             'exit_transfer': '출구 전송',
             'exit_success': '성공적으로 종료',
@@ -458,11 +470,11 @@ $(() => {
 
             //提币记录
             'time': '시간',
-            'vote': '투표 수',
-            'reward': '보상',
-            'share_': '개인 배당',
-            'isno': '보상을 발행할지 여부',
-            'operation': '수술',
+            'vote': '표수',
+            'reward': '보너스',
+            'share_': '개인배당',
+            'isno': '보너스를 배분하겠습니까',
+            'operation': '실행',
 
             //退出基本信息
             'verification': '검토 중',
@@ -646,9 +658,14 @@ $(() => {
     //获取图形验证码
     window.get_new_graphic_code = (box, form) => {
         ajax_('/getImage', {}).then(data => {
+            l(box);
+            l(form);
+            l(data);
+            l('((((((((((((((');
             if (data.image) {
                 let res = data.image;
                 let dataUrl = 'data:image/jpg;base64,' + res.body;
+                l(dataUrl);
                 let img = new Image();
                 window.pictureId = res.headers.pictureId[0];
 

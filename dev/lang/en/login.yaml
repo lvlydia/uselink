@@ -1,7 +1,7 @@
 title: Login
-number: please enter phone number
-password: please enter password
+number: Please enter the phone number
+password: Please enter the password
 btn-login: Login
-link-pwd: forget password？
-prompt: No account？
-link-register: register
+link-pwd: Forget the password?
+prompt: No account yet？
+link-register: Register

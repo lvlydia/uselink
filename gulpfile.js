@@ -14,7 +14,7 @@ const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
 const base64 = require('gulp-base64');
 const zip = require('gulp-zip');
-
+const htmlmin = require('gulp-htmlmin');
 
 let dev_scss = ['dev/scss/*.scss', '!dev/scss/*_m.scss'];
 let dev_scss_merge = ['dev/scss/*_m.scss'];
@@ -32,7 +32,12 @@ let run_css = 'run/css';
 let run_js = 'run/js';
 let run_html = 'run/';
 
-let run_zip = 'run/*';
+let dev_zip = 'run/**';
+let run_zip = 'dist';
+
+let dev_img = './dev/img/**';
+let run_img = './run/img';
+
 
 
 gulp.task('Watch', function () {
@@ -171,8 +176,8 @@ gulp.task('Scss=>compile', done => {
         }))
         .pipe(base64({
             baseDir: 'Uselink-website/run/',
-            extensions: ['svg', 'png','jpg','jpge'],
-            exclude:    [],
+            extensions: ['svg', 'png', 'jpg', 'jpge'],
+            exclude: [],
             debug: true
         }))
         .pipe(gulp.dest(run_css))
@@ -224,9 +229,24 @@ gulp.task('Html=>compile', function () {
             delimiters: '{| |}',
         }))
         // .pipe(uglify())
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true,//清除HTML注释
+            collapseBooleanAttributes: true,//省略布尔属性的值 <input checked="true"/> ==> <input />
+            removeEmptyAttributes: true,//删除所有空格作属性值 <input id="" /> ==> <input />
+            minifyJS: true,//压缩页面JS
+            minifyCSS: true,//压缩页面CSS
+            collapseInlineTagWhitespace: true,
+            caseSensitive: true,
+            decodeEntities: true,
+            keepClosingSlash: true,
+            minifyURLs: true,
+            removeRedundantAttributes: true,
+            sortAttributes: true,
+        }))
+        // .pipe(gulp.dest('dist'))
         .pipe(gulp.dest(run_html))
         .pipe(livereload());
-
 });
 
 gulp.task('Del=>js', done => {
@@ -254,16 +274,8 @@ gulp.task('Del All=>', ['Del=>js', 'Del=>css', 'Del=>html']);
 
 gulp.task('ALL=>compile', ['Js=>compile', 'Scss=>compile', 'Html=>compile']);
 
-gulp.task('ZIP',done=>{
-    let today = new Date();//获得当前日期
-    let year = today.getFullYear();//获得年份
-    let month = today.getMonth() + 1<10?'0'+(today.getMonth() + 1).toString():today.getMonth() + 1;//此方法获得的月份是从0---11，所以要加1才是当前月份
-    let day = today.getDate() + 1<10?'0'+(today.getDate()).toString():today.getDate();//获得当前日期
-    let hour = today.getHours() + 1<10?'0'+(today.getHours()).toString():today.getHours();//获得当前日期
-    let min = today.getMinutes() + 1<10?'0'+(today.getMinutes()).toString():today.getMinutes();//获得当前日期
-    let time = year+''+month+''+day+''+hour+''+min;//获得当前日期
-
-    gulp.src('run/**')
-    .pipe(zip('run.zip'))
-    .pipe(gulp.dest('dist'))
+gulp.task('ZIP', done => {
+    gulp.src(dev_zip)
+        .pipe(zip('run.zip'))
+        .pipe(gulp.dest(run_zip))
 });

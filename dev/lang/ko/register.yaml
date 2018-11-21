@@ -1,14 +1,14 @@
 title: 등록
-phone: 휴대폰번호를 입력하세요.
+phone: 휴대폰번호를 입력하세요
 password: 비밀번호 설정
 pwd-tip: 8-18자리 숫자,자모 조합
 confrim-pwd: 비밀번호 확인
-img-code: 그림 인증번호를 입력하세요.
-phone-code: 메세지 인증번호를 입력하세요.
+img-code: 그림 인증번호를 입력하세요
+phone-code: 메세지 인증번호를 입력하세요
 send: 인증번호 발송
 address: 코인 찾을 주소를 입력하세요.(선택 가능)
 delegname: 슈퍼노드이름을 입력하세요.
-delegname-tip: 슈퍼노드 이름의 첫자리는 소문자이고 나머지 5-63자리느 소문자와 숫자 조합이여야 한다.
+delegname-tip: 슈퍼노드 이름의 첫자리는 소문자이고 나머지 5-63자리느 소문자와 숫자 조합이여야 한다
 btn-register: 등록
 prompt: 계정이 존재함?
 link-register: 로그인

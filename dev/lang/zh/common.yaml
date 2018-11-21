@@ -1,14 +1,14 @@
 lang: zh
 
+
 title: Uselink
+
 
 keyword: Uselink 超级节点
 
-description: Uselink Locked Address for Super Node Candidate
 
-author: DONOPO TEAM
+description: Uselink是一条支持原生多资产且拥有去中心化交易系统的公有链，由全球顶尖团队开发，专注于区块链底层基础链的深度研发和应用。通过实 现原生多资产对其他公链的锚定, USE-LINK在将来能实现去中心化交易所，整合区块链资源，实现价值互通。
 
-empty: 空
 
 # 导航
 header:
@@ -21,14 +21,16 @@ header:
    wallet: 钱包
    login: 登录
 
+
 change-btn: 简体中文
+
 
 footer:
  menu:
    number: 关注公众号:
    num-info: Uselink公有链
-   qq: QQ交流群:
-   contact: 联系客服QQ:
+#   qq: QQ交流群:
+#   contact: 联系客服QQ:
    email: 邮箱:
    website: 官网:http://www.uselink.cc
    contacts: 联系我们
@@ -37,12 +39,15 @@ footer:
 
    wChat: 微信客服
 
+
 wallet:
   app-down: App下载
   pc-down: PC下载
 
+
 nav:
   userinfo: 个人信息
   logout: 退出登录
+
 
 video_tip: 你的浏览器不支持HTML5视频标签。尝试更新你的浏览器或使用不同的浏览器。

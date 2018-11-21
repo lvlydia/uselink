@@ -1,16 +1,16 @@
 title: Register
-phone: please enter phone number
-password: set password
-pwd-tip: 8-18 digits of number or letter
-confrim-pwd: confirm password
-img-code: please type the characters
-phone-code: please enter SMS code
-send: send code
-address: enter withdraw address（optional）
-delegname: Please enter the name of the super node (cannot be modified after confirmation)
-delegname-tip: The first letter in lowercase letter, 5~63 lowercase letters and numbers.
-btn-register: register
-prompt: already own an account?
+phone: Please enter the phone number
+password: Please set up a password
+pwd-tip: 8~18 digits and letters
+confrim-pwd: Confirm the password
+img-code: Graphic verification code
+phone-code: SMS verification code
+send: Send code
+address: Withdrawal address (optional)
+delegname: Super-node (cannot be modified)
+delegname-tip: The super-node name starts with lowercase letters, and the rest is composed of 5-63 lowercase letters and numbers
+btn-register: Register
+prompt: Have an account?
 link-register: Login
 
 default_select_text: US

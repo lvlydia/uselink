@@ -5,15 +5,15 @@ confirm: 确定
 
 #个人资料
 id-info:
-  title: 身份信息
+#  title: 身份信息
   phone: 手机号
-  status: 认证状态
+#  status: 认证状态
   status_val: 未认证
-  why: 未通过原因
+#  why: 未通过原因
   password: 密码
   btn-change: 修改
-  set-password: 设置新密码
-  confrim: 确认新密码
+#  set-password: 设置新密码
+#  confrim: 确认新密码
   account: 账户
   NoDelegateName: 普通用户
 
@@ -24,12 +24,12 @@ id-info:
   msgCode: 短信验证
   userInfoBottomTitle: 超级节点候选人
   tipTitle: 成为超级节点候选人的用途：
-  tipP1: 1.成为超级节点候选人,可参与超级节点的竞选。
-  tipP2: 2.全网用户通过使用拥有的 UL 代币,能够对所有候选节点进行投票;拥有投票数排名前 101 的候选节点会被选中进行Uselink区块链主网区块记账并打包出块。
-  tipP3: 3.前101 个超节点，会获取分红收益作为出块奖励。
+  tipP1: 1. 成为超级节点候选人,可参与超级节点的竞选。
+  tipP2: 2. 全网用户通过使用拥有的 UL 代币,能够对所有候选节点进行投票;拥有投票数排名前 101 的候选节点会被选中进行Uselink区块链主网区块记账并打包出块。
+  tipP3: 3. 前101个超节点，会获取分红收益作为出块奖励。
   step1: 第一步
   step2: 第二步
-  step1Title: 向该地址转账10000UL作为抵押金,退出超级节点后可申请退还
+  step1Title: 向该地址转账10,000UL作为抵押金,退出超级节点后可申请退还
   nextStep: 下一步
   inputSuperNodeName: 请输入超级节点名
   inputAddress: 请输入提币地址
@@ -45,7 +45,7 @@ id-info:
 
 
 account-info:
-  title: 账户信息
+#  title: 账户信息
   delegname: 超级节点名称
   address: 提币地址
   share: 分红比例
@@ -53,16 +53,17 @@ account-info:
   img-code: 请输入验证码
   phone-code: 请输入短信验证码
   send: 发送验证码
-  btn-info: 保存信息
-  btn-submit: 提交为候选节点按钮
-  bind_address: 绑定
-  bind_address_tip: 务必确保输入地址正确！
-  submit_win_title: 申请信息
-  bind_super_node_name: 绑定超级节点名
+#  btn-info: 保存信息
+#  btn-submit: 提交为候选节点按钮
+#  bind_address: 绑定
+#  bind_address_tip: 务必确保输入地址正确！
+#  submit_win_title: 申请信息
+#  bind_super_node_name: 绑定超级节点名
+
 
 #提币记录
 record:
-  address: 提币地址
+#  address: 提币地址
   sum: 未发放数量
   time: 时间
   vote: 票数
@@ -70,25 +71,26 @@ record:
   share: 个人分红
   isno: 是否发放奖励
   operation: 操作
-  details: 详情
+#  details: 详情
 
 
 #退出申请
 apply:
   password: 请输入密码
-  img-code: 请输入图片验证码
-  phone-code: 请输入短信验证码
-  send: 发送验证码
-  tip-up: 申请后将退回
-  tip-under: 到提币地址
+#  img-code: 请输入图片验证码
+#  phone-code: 请输入短信验证码
+#  send: 发送验证码
+#  tip-up: 申请后将退回
+#  tip-under: 到提币地址
   btn-submit: 提交申请
+
 
 #退出申请显示页面
 exit:
   delegname: 超级节点名称
   phone: 手机号
   status: 审核状态
-  adress: 退币地址
+  address: 退币地址
   num: 退币数量
   time: 申请时间
   ID: 交易ID
