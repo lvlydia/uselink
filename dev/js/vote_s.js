@@ -1,5 +1,7 @@
 $(() => {
     let lang_;
+    let keyWords = undefined;
+
     language === 'zh' ? lang_ = language : language === 'ko' ? lang_ = language : language === 'zh-TW' ? lang_ = 'zh' : lang_ = 'en';
 
     function set_bg() {
@@ -7,12 +9,13 @@ $(() => {
         let win_w = $(window).width(), bg = $('.bgbox');
 
         //mobile  mobile_voted_bg_zh.jpg mobile_voted_bg_en.jpg
-        win_w > 599 ? bg.css({
+        win_w > 768 ? bg.css({
                 "background": "url('../img/voted-web-bg_" + lang_ + ".jpg') center top",
                 "background-size": "cover"
             }) :
             bg.css({
-                "background-image": "url('../img/mobile_voted_bg_" + lang_ + "_top.png'),url('../img/mobile_voted_bg_bottom.png'),url('../img/mobile_voted_bg_middle.png')",
+                "background-image": "url('../img/mobile_voted_bg_" + lang_ + "_top.png'),url('../img/mobile_voted_bg_bottom.png')",
+                "background-color": " #4f1de4",
                 "background-repeat": "no-repeat, no-repeat, repeat-y",
                 "background-size": "100% auto",
                 "background-position": "center top, center bottom, center bottom",
@@ -95,15 +98,16 @@ $(() => {
             dataType: "json",
             data: JSON.stringify({
                 page: page,
-                rows: rows
+                rows: rows,
+                keyWords: keyWords,
             }),
             success: function (data) {
                 if (data.retCode === 200) {
                     let res = data.data;
                     let rows = res.rows;
-                    window.total = res.total;
+                    // window.total = res.total;
                     for_(vote_box, rows);
-                    resolve(total)
+                    resolve(res.total)
                 } else {
                     throw new Error('error')
                 }
@@ -131,28 +135,57 @@ $(() => {
         }
     }
 
+    //分页区间
+    function page_interval(page_num) {
+        if(page_num<=5){
+            if(page_num>1) {
+                render(1, page_num);
+                $('.paging').show();
+            }else {
+                $('.paging').hide();
+            }
+        }else {
+            render(1, 5);
+            $('.paging').show();
+        }
+    }
 
-    //获取到投票信息后
-    ajax.then((total) => {
+    //分页系统
+    function page_(total) {
+
         //向上取整获得页数
-        let page_num = Math.ceil(total / 20);
+        if(total>20){
 
-        //渲染分页器
-        render(1, 5);
+        }
+        let page_num = Math.ceil(total / 20);
+        l(page_num);
+
+        page_interval(page_num);
 
         //第一页选中状态
         $('.other_page').find('.change_page').eq(0).addClass('active');
 
         //点击第一页按钮时
-        $('.first_page').click(() => {
+        $('.first_page').unbind('click').click(() => {
             ajax_('/vote', {
                 page: 1,
-                rows: rows
+                rows: rows,
+                keyWords: keyWords,
             }).then((data) => {
                 for_(vote_box, data.rows);
             });
 
-            render(1, 5);
+            if(page_num<=5){
+                if(page_num>1) {
+                    render(1, page_num);
+                    $('.paging').show();
+                }else {
+                    $('.paging').hide();
+                }
+            }else {
+                render(1, 5);
+                $('.paging').show();
+            }
 
             for (let el of $('.change_page')) {
                 let active_num = $(el)[0].dataset.num;
@@ -163,18 +196,29 @@ $(() => {
         });
 
         //点击最后一页按钮时
-        $('.last_page').click(() => {
+        $('.last_page').unbind('click').click(() => {
             ajax_('/vote', {
                 page: page_num,
-                rows: rows
+                rows: rows,
+                keyWords: keyWords,
             }).then((data) => {
                 for_(vote_box, data.rows);
             });
 
             //最后一页选中状态
-            $('.change_page').eq(4).addClass('active');
+            $('.change_page').last().addClass('active');
 
-            render(page_num - 4, page_num);
+            if(page_num<=5){
+                if(page_num>1) {
+                    render(1, page_num);
+                    $('.paging').show();
+                }else {
+                    $('.paging').hide();
+                }
+            }else {
+                render(page_num-4, page_num);
+                $('.paging').show();
+            }
 
 
             for (let el of $('.change_page')) {
@@ -186,11 +230,11 @@ $(() => {
         });
 
         //点击页面跳转按钮时
-        $('.other_page').on('click', '.change_page', e => {
+        $('.other_page').unbind('click').on('click', '.change_page', e => {
             let num = e.target.dataset.num;
 
             //如果总页数大于5
-            if (!page_num <= 5) {
+            if (!(page_num <= 5)) {
                 //点击页数右侧两个大于总页数
                 if (parseInt(num) + 2 >= page_num) {
                     //从总页数向左进行渲染
@@ -203,7 +247,10 @@ $(() => {
                     //将点击的页数居中
                     render(num - 2, parseInt(num) + 2);
                 }
+            }else {
+                $('.change_page').removeClass('active');
             }
+
 
             for (let el of $('.change_page')) {
                 let active_num = $(el)[0].dataset.num;
@@ -214,24 +261,47 @@ $(() => {
 
             ajax_('/vote', {
                 page: num,
-                rows: rows
+                rows: rows,
+                keyWords: keyWords,
             }).then((data) => {
                 for_(vote_box, data.rows);
             })
         });
+    }
 
-        //搜索节点
-        $('#search_node_input').bind('input propertychange', e => {
-            let search_value = $('#search_node_input').val();
 
-            search_value = search_value === '' ? null : search_value;
-            ajax_('/vote', {
-                keyWords: search_value,
-                page: 1,
-                rows: rows
-            }).then((data) => {
-                for_(vote_box, data.rows);
-            });
+    //获取到投票信息后
+    ajax.then(total => {
+        page_(total);
+    });
+
+
+    //搜索节点
+    $('#search_node_input').bind('input propertychange', e => {
+        keyWords = $('#search_node_input').val() === '' ? undefined : $('#search_node_input').val();
+        $.ajax({
+            type: "post",
+            contentType: 'application/json; charset=utf-8',
+            url: host + '/vote',
+            dataType: "json",
+            data: JSON.stringify({
+                page: page,
+                rows: rows,
+                keyWords: keyWords,
+            }),
+            success: function (data) {
+                if (data.retCode === 200) {
+                    let res = data.data;
+                    let rows = res.rows;
+                    for_(vote_box, rows);
+                    page_(res.total);
+                } else {
+                    throw new Error('error')
+                }
+            },
+            error: function () {
+                reject('error')
+            }
         });
     });
 

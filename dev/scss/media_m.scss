@@ -183,6 +183,12 @@
     }
   }
 
+  .menu_box[lang='en']{
+    a {
+      letter-spacing: 3px;
+    }
+  }
+
   *:not(a) {
     cursor: default !important;
   }
