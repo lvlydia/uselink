@@ -1,4 +1,4 @@
-title: Register
+title: Sign up
 phone: Please enter the phone number
 password: Please set up a password
 pwd-tip: 8~18 digits and letters
@@ -11,7 +11,7 @@ delegname: Super-node (cannot be modified)
 delegname-tip: The super-node name starts with lowercase letters, and the rest is composed of 5-63 lowercase letters and numbers
 btn-register: Register
 prompt: Have an account?
-link-register: Login
+link-register: Log in
 
 default_select_text: US
 default_select_num: +1

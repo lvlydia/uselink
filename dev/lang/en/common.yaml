@@ -7,19 +7,20 @@ title: Uselink
 keyword: Uselink Super-node
 
 
-description: Uselink, a public blockchain that supports original multi-asset with a decentralized transaction system, was developed by a top international team, focusing on the in-depth R&D and application of the underlying foundation chain of blockchain. By realizing the anchoring of original multi-asset to other public blockchains, USE-LINK can realize decentralized exchange in the future, integrate blockchain resources and realize value intercommunication.
+description: Uselink, a public blockchain that supports original multi-asset with a decentralized transaction system, was developed by a top international team, focusing on the in-depth R&D and application of the underlying foundation chain of blockchain. By realizing the anchoring of original multi-asset to other public blockchains, Uselink can realize decentralized exchange in the future, integrate blockchain resources and realize value intercommunication.
 
 
 # 导航
 header:
   menu:
-    home: Homepage
+    home: Home
     voted: Voting
     browser: Blockchain browser
     book: White paper
     new: News
     wallet: Wallet
-    login: Login
+    login: Log in
+    register: Sign up
 
 
 change-btn: English
@@ -47,7 +48,7 @@ wallet:
 
 nav:
   userinfo: user info
-  logout: logout
+  logout: log out
 
 
 video_tip: Your browser does not support the HTML5 video tag. Try updating your browser or using a different one.

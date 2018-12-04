@@ -114,6 +114,7 @@ $(() => {
         }, 0, cms_host).then(data => {
             l(data.length);
             l(data);
+            console.log(data);
             $('.loading').hide(0);
             $("#" + type).empty();
             if (data.length > 0) {

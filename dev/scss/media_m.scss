@@ -1,21 +1,31 @@
 @media (max-width: 1024px) {
   .nav {
-    background-color: rebeccapurple;
+    //background-color: rebeccapurple;
     .main {
       width: auto;
       min-width: 100%;
       box-sizing: border-box;
     }
   }
-
+  .nav .main .main_right .login_btn .login{
+    border:none;
+  }
   .nav .main .main_right .user_info_btn{
     float:left;
     margin-right: 10px;
   }
+//todo:新加了定位
+//  position: absolute;
+//  top:10px;
+//  right: 10px;
 
   .nav_mobile {
+    //background: #9fcdff;
     display: inherit;
     width: auto;
+    position: absolute;
+    top:10px;
+    right: 10px;
 
     & > div {
       height: 60px;
@@ -33,9 +43,9 @@
       margin-right: 15px;
 
       a {
-        width: 60px !important;
-        height: 20px !important;
-        line-height: 20px !important;
+        width: 80px !important;
+        height: 22px !important;
+        line-height: 22px !important;
         border-radius: 20px !important;
         margin-top: 20px !important;
         font-size: 14px;
@@ -102,15 +112,15 @@
 
     .f_top {
       .contact_us, .service_support {
-        .icon_box {
-          width: 185px;
-          margin: 0 auto;
-          margin-top: 15px;
-
-          a:last-child {
-            margin-right: 0;
-          }
-        }
+        //.icon_box {
+        //  width: 185px;
+        //  margin: 0 auto;
+        //  margin-top: 15px;
+        //
+        //  a:last-child {
+        //    margin-right: 0;
+        //  }
+        //}
 
         .text_box {
           text-align: center;
@@ -153,7 +163,8 @@
     top: 60px;
     left: 0;
     //height: 200px;
-    background-image: linear-gradient(90deg, $purple, $light_blue);
+    //background-image: linear-gradient(90deg, $purple, $light_blue);
+    background: linear-gradient(0, rgba(106,80,250,1), rgba(101,81,241,1));
     padding: 30px;
     padding-top: 20px;
     box-shadow: 0 1px 3px 0 rgba(3, 12, 32, 0.2);
@@ -217,16 +228,21 @@
 
 @media (max-width: 599px){
   .change_language_btn{
+    display: inline-block;
     font-size: 12px;
+    .triangle{
+      font-size: 10px;
+    }
+
   }
 
   .nav .main .main_right .user_info_btn{
     float:left;
-    font-size: 12px;
+    font-size: 14px;
     height: 20px;
     line-height: 20px;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin-top: 23px;
+    margin-right: 0px;
   }
 
   .nav .main .logo{
@@ -251,19 +267,19 @@
 
     }
 
-    .login_btn {
-      float: left !important;
-      margin-right: 15px;
-
-      a {
-        width: 60px !important;
-        height: 20px !important;
-        line-height: 20px !important;
-        border-radius: 20px !important;
-        margin-top: 20px !important;
-        font-size: 14px;
-      }
-    }
+    //.login_btn {
+    //  float: left !important;
+    //  margin-right: 15px;
+    //
+    //  a {
+    //    width: 60px !important;
+    //    height: 20px !important;
+    //    line-height: 20px !important;
+    //    border-radius: 20px !important;
+    //    margin-top: 20px !important;
+    //    font-size: 14px;
+    //  }
+    //}
 
     .nav_mobile_right {
       float: right;

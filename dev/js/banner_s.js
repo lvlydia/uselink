@@ -1,50 +1,66 @@
-$(() => {
 
+$(() => {
     //设置banner高度
     let height = 500 / (900 / w);
     if (w < 1024) {
         $('.banner_true').height(height);
     }
-
     let img_status = 0;
     $('.am-slider').flexslider();
 
     ajax_('/bannerList', {
         'lang': language
     }, 0, cms_host).then(data => {
-        l(data);
+
         data.forEach(el => {
-
             let img = new Image();
+            img.src = w > 599 ? el.bannerPicture : el.mobilePicture;
 
-            img.src = el.articlePicture;
 
             img.onload = () => {
                 img_status = img_status + 1;
+                console.log(img.height);
 
                 if (img_status === data.length) {
-
-                    data.forEach(el => {
-                        $('.am-slider').flexslider('addSlide', `
+                    if (w > 599) {
+                        data.forEach(el => {
+                            $('.am-slider').flexslider('addSlide', `
                             <li class="banner_btn hover" data-content="${el.articleContent ? 1 : 0}" data-url="${el.articleUrl}" data-uuid="${el.uuid}">
-                                <div style="cursor: pointer">
-                                    <img src="${el.articlePicture}"/>
+                                <div class="bannerBox" style="cursor: pointer;background-image:url(${el.bannerPicture})">
+                                   
                                 </div>
                             </li>
                         `);
-                    });
+                        });
+
+                    } else {
+                        data.forEach(el => {
+                            $('.am-slider').flexslider('addSlide', `
+                            <li class="banner_btn hover" data-content="${el.articleContent ? 1 : 0}" data-url="${el.articleUrl}" data-uuid="${el.uuid}">
+                                <div  class="bannerBoxs" style="cursor: pointer;background-image:url(${el.mobilePicture})">
+                                   
+                                </div>
+                            </li>
+                        `);
+                        });
+
+                    }
 
 
                     $('.am-slider').flexslider('removeSlide', 0);
 
 
                     $('.banner_btn').click(e => {
-                        let url = e.target.dataset.url;
-                        let uuid = e.target.dataset.uuid;
-                        let content = e.target.dataset.content;
+                        let target = e.target.dataset;
+                        let currentTarget = e.currentTarget.dataset;
 
-                        l('0'===content);
-                        l(!url);
+                        let url = target.url === undefined ? currentTarget.url : target.url;
+                        let uuid = target.uuid === undefined ? currentTarget.uuid : target.uuid;
+                        let content = target.content === undefined ? currentTarget.content : target.content;
+
+                        // l(url);
+                        // l(uuid);
+                        // l(content);
 
                         if('0'===content&&!url){
 
@@ -62,39 +78,4 @@ $(() => {
         pop(lang('network_error'));
     })
 
-
-    // $.ajax({
-    //     type: "post",
-    //     url:  hosts + "/bannerList",
-    //     data: {
-    //         'lang':language
-    //     },
-    //     async: false,
-    //     contentType: "application/x-www-form-urlencoded",
-    //     success:function (result) {
-    //         console.log(result.data);
-    //         console.log(window.language);
-    //         let datas = result.data;
-    //         let bodyHtml=[];
-    //         // for (let j = 0; j < 2; j++) {
-    //         for (let i = 0; i < datas.length; i++) {
-    //             let addHtml = `<li><div class="banner_imgss" id="` + datas[i].uuid + `" style="cursor: pointer">
-    //                                    <img style="width:100%;height:600px" src="` + datas[i].articlePicture + `"/>
-    //                                </div>
-    //                            </li>`;
-    //             bodyHtml.join("");
-    //             bodyHtml.push(addHtml);
-    //         }
-    //         // }
-    //         $(".am-slides").append(bodyHtml);
-    //         bannerClick();
-    //     }
-    // });
-    //
-    // function bannerClick() {
-    //     $(".banner_imgss").on("click", function () {
-    //         sessionStorage.uuid = this.id;
-    //         window.open("news_details.html");
-    //     });
-    // }
 });

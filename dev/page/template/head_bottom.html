@@ -1,32 +1,28 @@
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_o1sso6b1vk.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_8wmlis4tmk8.css">
 </head>
 <body>
-<nav class="nav">
+<nav class="nav" id="nav">
     <div class="main">
         <img src="../img/logo_white.png" alt="Uselink Logo" class="logo hover" onclick="window.location.href='index.html'">
 
         <img src="../img/logo_iphoneSE.png" alt="Uselink Logo" class="logo_iphoneSE hover hide" onclick="window.location.href='index.html'">
 
         <nav class="main_right nav_pc">
-            <a href="index.html">{|common.header.menu.home|}</a>
-            <a href="vote.html" class="strong">{|common.header.menu.voted|}</a>
-            <a href="http://block.uselink.cc" target="_blank">{|common.header.menu.browser|}</a>
-            <a href="JavaScript:void(0);" target="_blank" class="white_paper">{|common.header.menu.book|}</a>
-            <a href="news.html">{|common.header.menu.new|}</a>
-            <a href="wallet.html">{|common.header.menu.wallet|}</a>
+            <a  href="index.html" class="index">{|common.header.menu.home|}</a>
+            <a  href="vote.html"  class="vote strong">{|common.header.menu.voted|}</a>
+            <a  href="http://block.uselink.cc" target="_blank">{|common.header.menu.browser|}</a>
+            <a  href="JavaScript:void(0);" target="_blank" class="white_paper">{|common.header.menu.book|}</a>
+            <a  href="news.html" class="news">{|common.header.menu.new|}</a>
+            <a  href="wallet.html" class="wallet">{|common.header.menu.wallet|}</a>
 
-
-            <div class="change_language_btn">
-                <span>{|common.change-btn|}<i></i></span>
-
-                <ul class="pc_language_menu"></ul>
-            </div>
-
+            <!--登录按钮-->
             <div class="login_btn hide">
                 <a href="login.html" class="login">{|common.header.menu.login|}</a>
             </div>
-
+            <!--显示电话号码按钮-->
             <div class="user_info_btn hide">
-                <span id="phone"><i></i></span>
+                <span  id="phone"><i></i></span>
 
                 <ul class="pc_userinfo_menu">
                     <li>
@@ -38,37 +34,47 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+            <!--注册按钮-->
+            <div class="login_btn hide">
+                <a href="register.html" class="register">{|common.header.menu.register|}</a>
+            </div>
+            <!--切换语言按钮-->
+            <div class="change_language_btn">
+                <span>{|common.change-btn|}<i class="iconfont icon-choose triangle"></i></span>
 
+                <ul class="pc_language_menu"></ul>
+            </div>
+
+        </nav>
+       <div class="clear"></div>
 
 
         <!--手机导航-->
         <nav class="main_right nav_mobile">
-            <div class="nav_mobile_left">
-                <div class="change_language_btn">
-                    <span>{|common.change-btn|}<i></i></span>
-
-                    <ul class="pc_language_menu"></ul>
-
-                </div>
-            </div>
-
+            <!--登录按钮-->
             <div class="login_btn show">
                 <a href="login.html" class="login">{|common.header.menu.login|}</a>
             </div>
-
             <div class="user_info_btn hide">
-                <span id="mobile_phone"><i></i></span>
+                <span id="mobile_phone"><span class="iconfont icon-yonghu usericon" style="font-size: 15px;"></span><i></i></span>
 
                 <ul class="pc_userinfo_menu">
                     <li>
-                        <a href="userinfo.html" class="user_info" data-val="${el.val}">{|common.nav.userinfo|}</a>
+                        <a href="userinfo.html" class="user_info"  id="mob-useinfo" data-val="${el.val}"></a>
                     </li>
 
                     <li>
                         <a href="javascript:void(0);" id="mobile_logout" data-val="${el.val}">{|common.nav.logout|}</a>
                     </li>
                 </ul>
+            </div>
+            <div class="nav_mobile_left">
+                <div class="change_language_btn">
+                    <span>{|common.change-btn|}<i class="iconfont icon-choose triangle"></i></span>
+
+                    <ul class="pc_language_menu"></ul>
+
+                </div>
             </div>
 
             <div class="nav_mobile_right">

@@ -1,186 +1,370 @@
 {%include "head_top.html"%}
 <link rel="stylesheet" href="../common/css/amazeui.min.css">
 <link rel="stylesheet" href="../css/index.min.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_p72b14ttla.css">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_k0do9un4au9.css">
 {%include "head_link.html"%}
 <script src="../js/index.min.js"></script>
 <script src="../js/banner.min.js"></script>
 {%include "head_bottom.html"%}
+<!--轮播图-->
+<!--<div class="banner_true">-->
+    <!--<div class="banner_true_box">-->
+        <!--<div class="am-slider am-slider-default" id="demo-slider-0">-->
+            <!--<ul class="am-slides">-->
+                <!--<li>-->
+                    <!--<div style="cursor: pointer">-->
+                        <!--<img class="fadeIn default_banner" src="../img/img_default_large.jpg"/>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--轮播图开始-->
 
-<div class="banner_true">
-    <div class="banner_true_box">
-        <div class="am-slider am-slider-default" id="demo-slider-0">
-            <ul class="am-slides">
-                <li>
-                    <div style="cursor: pointer">
-                        <img class="fadeIn default_banner" src="../img/img_default_large.jpg"/>
+<div class="container-fluid m-0 p-0 top-banner">
+    <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}' >
+        <ul class="am-slides">
+            <li>
+                <div class="default_box" style="cursor: pointer">
+                    <!--<img class="fadeIn default_banner" src="../img/img_default_large.jpg"/>-->
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--轮播图结束-->
+
+<section id="index">
+    <!--上线公告-->
+    <div class="container announcement">
+        <div class="row">
+            <div class="col-md-12 text-md-center boxss">
+                <ul class="box-uls">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--开创底层公链全新时代-->
+    <div class="container big-title">
+        <div class="slogan">{|index.slogan|}</div>
+        <div class="arrow_box">
+            USE BLOCK CHAIN
+            LINK CREATES VALUE FUTURE
+        </div>
+    </div>
+    <!--视频-->
+    <div class="videos container-fluid m-0 p-0">
+        <div class="img_box">
+            <img  id="layer_btn" src="../img/under.png" alt="">
+            <div class="container video-text">
+                <div class="row">
+                    <div class="commentary ">{|index.banner.text|}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="masking">
+            <div id="btns"><span class="iconfont icon-guanbi1 close_btn"></span></div>
+            <div class="layer">
+                <div class="banner_box_video">
+                    <video class="video" controls  preload="none" poster="../img/video_poster.png" data-setup="{}"
+                           width="100%" height="700">
+                        <source src="{|index.banner.video_url|}" type="video/mp4" />
+                        {|common.video_tip|}
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--原生多资产多链式公有链平台-->
+    <div class="male_chain container">
+        <p class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s"> —- {|index.add_title|} —-</p>
+    </div>
+    <!--第一部分-->
+    <div class="container one-box pc-box">
+        <div class="row">
+            <div class="col-md-6  slideInLeft fadeInUp addtran" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="delegateName_box  box1">
+                    <div class="name-p name1">{|index.main.delegateName|}</div>
+                    <div class="details details1">{|index.main.delegate-info|}</div>
+                    <div class="details-hide  hide1">{|index.more.super_node|}</div>
+                </div>
+            </div>
+            <div class="col-md-6 slideInRight fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="img-box">
+                    <img src="../img/pc_index_block4_icon3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--手机显示-->
+    <div class="container one-box  mob-box">
+        <div class="row">
+            <div class="col-md-6 slideInRight fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="img-box">
+                    <img src="../img/pc_index_block4_icon3.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6  slideInLeft fadeInUp addtran" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="delegateName_box box1">
+                    <div class="name-p name1">{|index.main.delegateName|}</div>
+                    <div class="details details1">{|index.main.delegate-info|}</div>
+                    <div class="details-hide hide1">{|index.more.super_node|}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--btn-->
+    <div class="container fadeInUp fadeInDown" data-wow-delay="0.1s" data-wow-duration=".8s">
+        <div class="row">
+            <div class="btn_box">
+                <a href="userinfo.html">{|index.add_btn|}</a>
+                <img class="white_arrow" src="../img/white_arrow.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--第二部分-->
+    <div class="container two-box">
+        <div class="row">
+            <div class="col-md-6 slideInLeft fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="img-box">
+                    <img src="../img/pc_index_block4_icon1.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6  slideInRight fadeInUp addtran" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="delegateName_box box2">
+                    <p class="name-p name2">{|index.main.performance|}</p>
+                    <div class="details details2">{|index.main.perfor-info|}</div>
+                    <p class="details-hide hide2">{|index.more.vote_mine|}</p>
+                </div>
+                <div class="vote_btnbox">
+                    <a href="vote.html">{|index.main.btn-voted|}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--第三部分-->
+    <div class="container three-box pc-three">
+        <div class="row">
+            <div class="col-md-6 slideInLeft  fadeInUp addtran" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="delegateName_box">
+                    <p class="name-p">{|index.main.voted|}</p>
+                    <div class="details">{|index.main.vote-onfo|}</div>
+                </div>
+            </div>
+            <div class="col-md-6  slideInRight fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="img-box">
+                    <img src="../img/pc_index_block4_icon2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--手机显示-->
+    <div class="container three-box mob-three">
+        <div class="row">
+            <div class="col-md-6  slideInRight fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="img-box">
+                    <img src="../img/pc_index_block4_icon2.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 slideInLeft  fadeInUp addtran" data-wow-delay="0.1s" data-wow-duration=".8s">
+                <div class="delegateName_box">
+                    <p class="name-p">{|index.main.voted|}</p>
+                    <div class="details">{|index.main.vote-onfo|}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--立即下载大底图-->
+    <div class="block3">
+        <div class="container box">
+            <p class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.download.instructions|}</p>
+            <div class="icons_box">
+                <img src="../img/icons.png" alt="">
+            </div>
+            <a href="wallet.html" class="btn_white fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">{|index.download.btn-load|}</a>
+        </div>
+        <div class="block_img">
+          <img src="../img/pc_index_download_bg_{|common.lang|}.png">
+        </div>
+    </div>
+
+<!--///////////////////////////以前的开始/////////////////////////////////-->
+    <!--<div class="innovation" >-->
+        <!--<div class="box">-->
+            <!--<div class="innovation_bottom">-->
+                <!--<div class="card fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">-->
+
+                    <!--<div class="card_bottom">-->
+                        <!--<h3>{|index.main.delegateName|}</h3>-->
+
+
+                        <!--<div class="text">-->
+                            <!--<p>{|index.main.vote-onfo|}</p>-->
+
+                            <!--<a href="javascript:void(0)" class="btn_bc more_btn" data-text="{|index.more.super_node|}">{|index.main.btn-more|}</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="card fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">-->
+
+
+                    <!--<div class="card_bottom">-->
+                        <!--<h3>{|index.main.performance|}</h3>-->
+
+
+                        <!--<div class="text">-->
+                            <!--<p>{|index.main.vote-onfo|}</p>-->
+
+                            <!--<a href="vote.html" class="btn_bc">{|index.main.btn-voted|}</a>-->
+                            <!--<a href="javascript:void(0)" class="btn_bd more_btn" data-text="{|index.more.vote_mine|}">{|index.main.btn-more|}</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="card fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">-->
+
+
+                    <!--<div class="card_bottom">-->
+                        <!--<h3>{|index.main.voted|}</h3>-->
+
+
+                        <!--<div class="text">-->
+                            <!--<p>{|index.main.perfor-info|}</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--///////////////////////////以前的结束//////////////////////////////////-->
+
+
+
+    <!--<div class="block4">-->
+        <!--<div class="box">-->
+            <!--<h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.mains.title2|}</h2>-->
+
+            <!--<div class="block4_bottom">-->
+                <!--<div class="card transition fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">-->
+                    <!--<img src="../img/pc_index_block4_icon1.png" alt="icon">-->
+
+                    <!--<h3>{|index.mains.one|}</h3>-->
+
+                    <!--<p>{|index.mains.one-info|}</p>-->
+                <!--</div>-->
+
+                <!--<div class="card transition fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">-->
+                    <!--<img src="../img/pc_index_block4_icon2.png" alt="icon">-->
+
+                    <!--<h3>{|index.mains.two|}</h3>-->
+
+                    <!--<p>{|index.mains.two-info|}</p>-->
+                <!--</div>-->
+
+                <!--<div class="card transition fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">-->
+                    <!--<img src="../img/pc_index_block4_icon3.png" alt="icon">-->
+
+                    <!--<h3>{|index.mains.three|}</h3>-->
+
+                    <!--<p>{|index.mains.three-info|}</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--团队成员-->
+    <div class="male_chain container">
+        <p class="fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s"> —— &nbsp; &nbsp;{|index.team|}&nbsp; &nbsp; ——</p>
+    </div>
+    <div class="container container-person fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
+        <div class="row row-up">
+            {|# index.team-list-top |}
+            <div class="col-md-4 col-xs-1">
+                <div class="person-show" >
+                    <div class="person">
+                        <img src="../img/person/{|img|}" alt="Clare">
                     </div>
+                    <h5 class="names">{|name|}</h5>
+                    <p class="position">{|position|}</p>
+                    <p class="infos">{|info|}</p>
+                </div>
+            </div>
+            {|/ index.team-list-top |}
+        </div>
+
+        <div class="row row-under">
+            {|# index.team-list-bottom |}
+            <div class="col-md-3  col-xs-1 m-0 p-0">
+                <div class="person-show" >
+                    <div class="person">
+                        <img src="../img/person/{|img|}" alt="Clare">
+                    </div>
+                    <h5 class="names">{|name|}</h5>
+                    <p class="position">{|position|}</p>
+                    <p class="infos">{|info|}</p>
+                </div>
+            </div>
+            {|/ index.team-list-bottom |}
+        </div>
+    </div>
+
+    <!--手机端显示: 成员轮播图开始 -->
+    <div class="container mob-team">
+        <div data-am-widget="slider" class="am-slider am-slider-a4" data-am-slider='{"directionNav":false}' >
+            <ul class="am-slides">
+                {|# index.team-list|}
+                <li>
+                    <div class="person">
+                        <img src="../img/person/{|img|}" alt="Clare">
+                    </div>
+                    <h5 class="names">{|name|}</h5>
+                    <p class="position">{|position|}</p>
+                    <p class="infos">{|info|}</p>
                 </li>
+                {|/ index.team-list|}
             </ul>
         </div>
     </div>
-</div>
-
-<section id="index">
-    <div class="announcement"></div>
-
-    <div class="address">
-
-        <div class="banner_box">
-
-            <h1 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.banner.title|}</h1>
-
-            <div class="banner_box_address">
-                <img class="fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s" src="../img/index_qrcode.png"
-                     alt="Address QRcode">
-
-                <div class="right">
-                    <p class="address fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
-                        {|index.banner.address|}</p>
-                    <p class="text fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">{|index.banner.text|}</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="line fadeInUp" data-wow-delay="0.5s" data-wow-duration=".8s"></div>
-
-        <div class="banner_box_video fadeInUp" data-wow-delay="0.6s" data-wow-duration=".8s">
-            <video controls preload="none" poster="../img/video_poster.png" data-setup="{}">
-                <source src="{|index.banner.video_url|}" type="video/mp4" />
-                {|common.video_tip|}
-            </video>
-        </div>
-
-    </div>
-
-    <div class="innovation">
-        <div class="box">
-            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s" data-lang="{|common.lang|}">
-                {|index.main.title1|}</h2>
-
-            <div class="innovation_bottom">
-                <div class="card fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
-                    <div class="card_top">
-                        <img src="../img/innovation_icon1.png" alt="">
-                    </div>
-
-                    <div class="card_bottom">
-                        <h3>{|index.main.delegateName|}</h3>
+    <!--手机端显示: 成员轮播图结束 -->
 
 
-                        <div class="text">
-                            <p>{|index.main.vote-onfo|}</p>
+    <!--<div class="block5">-->
+        <!--<div class="box">-->
+            <!--<h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.team|}</h2>-->
 
-                            <a href="javascript:void(0)" class="btn_bc more_btn" data-text="{|index.more.super_node|}">{|index.main.btn-more|}</a>
-                        </div>
-                    </div>
-                </div>
+            <!--<div class="block5_bottom">-->
 
-                <div class="card fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
-                    <div class="card_top">
-                        <img src="../img/innovation_icon2.png" alt="">
-                    </div>
+                <!--{|# index.team-list |}-->
+                <!--<div class="item fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">-->
+                    <!--<div class="icon transition">-->
+                        <!--<img src="../img/person/{|img|}" alt="Clare">-->
+                    <!--</div>-->
 
-                    <div class="card_bottom">
-                        <h3>{|index.main.performance|}</h3>
+                    <!--<h4>{|name|}</h4>-->
+                    <!--<p>{|position|}</p>-->
 
+                    <!--<div class="text">{|info|}</div>-->
+                <!--</div>-->
+                <!--{|/ index.team-list |}-->
 
-                        <div class="text">
-                            <p>{|index.main.vote-onfo|}</p>
-
-                            <a href="vote.html" class="btn_bc">{|index.main.btn-voted|}</a>
-                            <a href="javascript:void(0)" class="btn_bd more_btn" data-text="{|index.more.vote_mine|}">{|index.main.btn-more|}</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
-                    <div class="card_top">
-                        <img src="../img/innovation_icon3.png" alt="">
-                    </div>
-
-                    <div class="card_bottom">
-                        <h3>{|index.main.voted|}</h3>
-
-
-                        <div class="text">
-                            <p>{|index.main.perfor-info|}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="block3">
-        <div class="box">
-            <p class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.download.instructions|}</p>
-
-            <a href="wallet.html" class="btn_white fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">{|index.download.btn-load|}</a>
-        </div>
-
-        <img src="../img/pc_index_download_bg_{|common.lang|}.png" class="fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
-    </div>
-
-    <div class="block4">
-        <div class="box">
-            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.mains.title2|}</h2>
-
-            <div class="block4_bottom">
-                <div class="card transition fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
-                    <img src="../img/pc_index_block4_icon1.png" alt="icon">
-
-                    <h3>{|index.mains.one|}</h3>
-
-                    <p>{|index.mains.one-info|}</p>
-                </div>
-
-                <div class="card transition fadeInUp" data-wow-delay="0.3s" data-wow-duration=".8s">
-                    <img src="../img/pc_index_block4_icon2.png" alt="icon">
-
-                    <h3>{|index.mains.two|}</h3>
-
-                    <p>{|index.mains.two-info|}</p>
-                </div>
-
-                <div class="card transition fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
-                    <img src="../img/pc_index_block4_icon3.png" alt="icon">
-
-                    <h3>{|index.mains.three|}</h3>
-
-                    <p>{|index.mains.three-info|}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="block5">
-        <div class="box">
-            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.team|}</h2>
-
-            <div class="block5_bottom">
-
-                {|# index.team-list |}
-                <div class="item fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
-                    <div class="icon transition">
-                        <img src="../img/person/{|img|}" alt="Clare">
-                    </div>
-
-                    <h4>{|name|}</h4>
-                    <p>{|position|}</p>
-
-                    <div class="text">{|info|}</div>
-                </div>
-                {|/ index.team-list |}
-
-            </div>
-        </div>
-    </div>
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="cooperation">
         <div class="box">
-            <h2 class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.cooperation|}</h2>
-
+            <!--<h2 class="fadeInUp cooperationTitle" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.cooperation|}</h2>-->
+            <div class="male_chain container  cooperationTitle">
+                <p class="fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s"> —— &nbsp; &nbsp;{|index.cooperation|}&nbsp; &nbsp; ——</p>
+            </div>
             <div class="cooperation_bottom">
                 <div class="line1">
                     <img class="line1_img fadeInUp" src="../img/cooperation/logo7.png" data-wow-delay="0.2s" data-wow-duration=".8s">

@@ -5,7 +5,6 @@ $(() => {
     //获取URL
     window.url = window.location.href;
 
-
     //全局页面加入弹窗
     $('body').append(`
                         <div class="_pop_win_">
@@ -52,14 +51,12 @@ $(() => {
     };
 
 
-
     /*开发IP地址
     dev_ip 本地ip  run_host 线上接口地址  dev_host  测试接口地址
     */
-    let dev_ip = 'http://192.168.0.153:8080', run_host = 'https://mgm.uselink.cc',
+    let dev_ip = 'http://127.0.0.1:63342', run_host = 'https://mgm.uselink.cc',
         dev_host = 'http://192.168.0.57:9002', dev_cms = 'http://192.168.0.158:9001/cms',
         run_cms = 'https://cms.uselink.cc/cms';
-
 
 
     //设置语言
@@ -147,6 +144,7 @@ $(() => {
 
     //获取当前开发模式
     window.dev_type = () => {
+        l(url.includes(dev_ip));
         if (url.includes(dev_ip)) {
             return 'dev';
         } else {
@@ -157,12 +155,12 @@ $(() => {
 
     //页面滚动一定距离navbar背景色变为不透明
     let winScrollHeight = $(document).scrollTop();
-    winScrollHeight >= 200 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
+    winScrollHeight >= 10 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
     l(winScrollHeight);
     $(window).scroll(e => {
         l($(document).scrollTop());
 
-        $(document).scrollTop() >= 200 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
+        $(document).scrollTop() >= 10 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
     });
 
 
@@ -170,9 +168,11 @@ $(() => {
     if (dev_type() === 'dev') {
         window.host = dev_host;
         window.cms_host = dev_cms;
+        console.log('dev');
     } else {
         window.host = run_host;
         window.cms_host = run_cms;
+        console.log('run');
     }
 
 
@@ -592,18 +592,19 @@ $(() => {
         if (window.localStorage.getItem('token')) {
             ajax_('/getUser', {}, 1).then(data => {
                 let phone = data.userInfo.user.phone;
+                var phones = phone.substr(0,7)+"****" + phone.substr(11);
 
                 $('#phone').empty().html(`
-                    ${phone}
+                    <span class="iconfont icon-yonghu usericon" ></span>
+                    ${phones}
                     <i></i>
                 `);
 
-                $('#mobile_phone').empty().html(`
-                    ${phone}
-                    <i></i>
+                $('#mob-useinfo').empty().html(`
+                    ${phones}
                 `);
 
-                login()
+                login();
             }).catch(() => {
                 no_login()
             })
@@ -803,6 +804,20 @@ $(() => {
     $('.' + language + '_hide').hide();
 
 
+
+    // 服务协议: 中文情况下跳转中文繁体文,英文情况下跳转英文韩文;
+
+    let server_zh = 'https://spv.uselink.cc/lw/USE_service.html?version=4&walletId=1a22977b16e7df2f96ff5dbc019a927b440b2459';
+    let server_en = 'https://spv.uselink.cc/lw/USE_service_en.html?version=4&walletId=1a22977b16e7df2f96ff5dbc019a927b440b2459';
+
+    language === 'zh' || language === 'zh-TW' ? window.server_url = server_zh : window.server_url = server_en;
+
+    // 隐私政策: 中文情况下跳转中文繁体文,英文情况下跳转英文韩文;
+    let policy_zh = 'https://spv.uselink.cc/lw/USE_privacy.html?version=4&walletId=1a22977b16e7df2f96ff5dbc019a927b440b2459';
+    let policy_en = 'https://spv.uselink.cc/lw/USE_privacy_en.html?version=4&walletId=1a22977b16e7df2f96ff5dbc019a927b440b2459';
+
+    language === 'zh' || language === 'zh-TW' ? window.policy_url = policy_zh : window.policy_url = policy_en;
+
     /*===================================*
 	        NAV SCRIPT
 	*===================================*/
@@ -897,6 +912,19 @@ $(() => {
     });
 
 
+    //跳转至服务协议
+    $('.server_btn').click(e => {
+        window.open(server_url);
+    });
+
+    //跳转至隐私政策
+    $('.policy_btn').click(e =>{
+        window.open(policy_url);
+    })
+
+
+
+
     //关闭弹窗
     $('.pop_win_close,.pop_win_bg').click(e => {
         event.stopPropagation();
@@ -942,4 +970,27 @@ $(() => {
     $(window).resize(() => {
         $('body').css({"padding-bottom": $('.footer')[0].clientHeight});
     })
+
+
+    // 判断是否为当前页面，如果是，对应导航下加白线
+    var linkUrl = window.url;
+    var num = linkUrl.lastIndexOf("/")+1;
+    var res = linkUrl.substr(num);
+
+    if($(".index").attr("href") === res){
+        $(".index").addClass("borders");
+    };
+
+    if($(".vote").attr("href") === res){
+        $(".vote").addClass("borders");
+    };
+
+    if($(".news").attr("href") === res){
+        $(".news").addClass("borders");
+    };
+
+    if($(".wallet").attr("href") === res){
+        $(".wallet").addClass("borders");
+    };
+
 });

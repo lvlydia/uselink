@@ -1,14 +1,22 @@
+#新加文字
+slogan: Create infrastructure public chain
+add_title: Original multiple assets public chain platform.
+add_btn: Register as a super-node candidate
+server: Terms of use
+policy: Privacy Policy
+
+
 banner:
   title: Super-node candidate's official hedge transfer address
   address: ULMVq1auVBgtjyQDJbCKvjt7aJvdEfrNuwZ
-  text: Uselink, a public blockchain that supports original multi-asset with a decentralized transaction system, was developed by a top international team, focusing on the in-depth R&D and application of the underlying foundation chain of blockchain. By realizing the anchoring of original multi-asset to other public blockchains, USE-LINK can realize decentralized exchange in the future, integrate blockchain resources and realize value intercommunication.
+  text: Uselink, a public blockchain that supports original multi-asset with a decentralized transaction system, was developed by a top international team, focusing on the in-depth R&D and application of the underlying foundation chain of blockchain. By realizing the anchoring of original multi-asset to other public blockchains, Uselink can realize decentralized exchange in the future, integrate blockchain resources and realize value intercommunication.
   video_url: http://oss.Uselink.cc/videos/ueslink-video-en-us.mp4
 
 #机制创新 性能领先
 main:
   title1: Innovative Mechanism  Leading Performance
   delegateName: Super-node
-#  delegate-info: Uselink uses the same DPOS solution as EOS network, which greatly resolve the issue of delay and low throughput. As these nodes use decentralized consensus to certain extent to maintain decentralized distributed ledger, other users can enjoy the service of entire blockchain network. Uselink will select 101 super nodes, which is 5 time more than EOS, to ensure a better stability of entire network.
+  delegate-info: Uselink uses the same DPOS solution as EOS network, which greatly resolve the issue of delay and low throughput. As these nodes use decentralized consensus to certain extent to maintain decentralized distributed ledger, other users can enjoy the service of entire blockchain network. Uselink will select 101 super nodes, which is 5 time more than EOS, to ensure a better stability of entire network.
   btn-more: More
 
   voted: Division of voting and mining
@@ -36,32 +44,86 @@ mains:
 
 #团队成员
 team: Team members
-team-list:
-  -
-    name: Wouter
-    position: Senior technical advisor
-    img: wouter.png
-    info: Graduated from Yale University with a degree in Computer Science. A top IT engineer, served as the Regional Technical Director of Australia at Microsoft. Later worked in several blockchain teams with excellent code and architecture technologies. Also participated in the planning of several blockchain projects, with rich experience in the development of blockchain
-  -
-    name: William Theodore
-    position: Blockchain investment manager
-    img: william.png
-    info: William Theodore, a professional investment manager, who learned skills and banking business at Global Investment and Credit Suisse, later served as director of risk management for the Americas region at Coller Capital. He has built up sufficient trust and influence in investment institutions, venture capital funds and among investors. He is a famous professional investor. In 2013, he focused on the blockchain industry and invested in several blockchain projects, especially the development of the public blockchain projects of blockchain underlying technology. Now he is one of the main investors of USELINK
+
+team-list-top:
   -
     name: Simon
-    position: Chief Technology Officer
+    position: CTO(chief technology officer)
     img: simon.png
-    info: Since 2011, he has been paying close attention to the blockchain development, focusing on the research works in such fields as infrastructure and operation system development of public blockchain, cryptocurrency, security in intelligent contract and distributed consensus algorithm. With 8 years' experience in algorithm of blockchain technology research, he successively took office as the master coder in blockchain industries worldwide. He is also the technical consultant for BitCoin and Ethereum seminars, and one of the team members in early technology development of EOS project and BTS project. After successfully developed some blockchain projects, he began to participate in projects of several startup compaines, and led the technical team to develop the underlying architecture and intelligent contract system in over 30 blockchains related to the blockchain industry!
+    info: Simon focuses on the public chain infrastructure, public-chain operating system development, cryptocurrency, smart contract security, and distributed consensus algorithms. He has more than 8 years of experience in blockchain technology research and has worked in the code editing of blockchain companies in various industries around the world. He is a technical consultant for Bitcoin and Ethereum seminars, and also an early technology development for EOS projects and BTS projects. team member. After successfully developing multiple blockchain projects, he began to participate in the development of several startup projects, and led the technical team to develop more than 30 infrastructure technical architectures and smart contract systems!
+  -
+    name: Eddie
+    position: Original sponsor and global business officer
+    img: eddie.png
+    info: Eddie is original founder and Global Business Officer of Uselink, president of operation for the Singapore CT Foundation, former Vice President of the Investment Authority in Cape Town, South Africa, and a graduate of the University of Cape Town with a Master degree, As an overall solution expert in IT technology and sales field, he also is a block chain developer with perspective on block chain, enterprise application framework and product design.
+  -
+    name: Winson
+    position: Co-Founder
+    img: winson.png
+    info: Kong Ling, one of the co-founders of Uselink, Deputy Dean of Uselink Asia Pacific Business School, Operations officer of Uselink Asia Pacific Community, Dean of JLL Business School, senior executive of several capital institutions, and executive director of the three exchanges, famous angel investor, is the famous block chain training instructor with 9 years training experience. Has participated in the establishment of Huaying Capital and invested in many projects. He is also a block chain senior educator, establishing block chain education platform with China Electronic Commerce Association (a block chain technology union).
+
+team-list-bottom:
+  -
+    name: Wouter
+    position: SENIOR TECHNICAL CONSULTANTS
+    img: wouter.png
+    info: Wouter graduated from Yale University with a degree in Computer Science. As a top IT engineer, Wouter was the Technical Director of Australia at Microsoft. Later, he served on multiple blockchain teams with excellent code and architecture skills. And participated in the planning of multiple blockchain projects, with rich experience in blockchain development.
+  -
+    name: William Theodore
+    position: BLOCK CHAIN INVESTMENT MANAGER
+    img: william.png
+    info: William Theodore is a professional investment manager in the context of Global Investment and Credit Suisse's technology and banking business, and later served as director of risk management for the Americas region at Kohler Capital.William has enough trust and influence in investment institutions, venture capital funds and investors. William is a famous professional investor. In 2013, we focused on the blockchain industry and invested in multiple blockchain projects, especially in the development of blockchain infrastructure technology public chain projects. Now one of the main investors of Uselink.
   -
     name: Woodrow Dean
-    position: Chief Legal Officer
+    position: CHIEF LEGAL COUNSEL
     img: woodrow.png
-    info: Dean Woodlow, British, works for transnational investment companies in IT/ media/real estate, M&A FinTech and BF investments, and has extensive experience in international taxation and law. He is the chief counsel on the board of directors of several companies, and now heads the legal team at USELINK.
+    info: ean Woodrow has a wide range of international tax and legal experience in IT/media/real estate, M&A FinTech and BF investment multinational investment companies. He is the lead attorney for the board of directors of several companies. Now he is the legal team leader of Uselink.
   -
     name: Lucas Lee
-    position: Chief Technical Strategist
+    position: Chief technology strategist
     img: lucas.png
-    info: Lucas Lee founded the PCA blockchain laboratory, developed a technology-based blockchain project on finance, and contributed many open source projects in blockchain.
+    info: Lucas Lee formed a PCA blockchain laboratory PCA laboratory developed for the financial sector. He developed and supported many technical blockchain projects and was a contributor to several blockchain open source projects.
+
+
+team-list:
+  -
+    name: Eddie
+    position: Original sponsor and global business officer
+    img: eddie.png
+    info: Eddie is original founder and Global Business Officer of Uselink, president of operation for the Singapore CT Foundation, former Vice President of the Investment Authority in Cape Town, South Africa, and a graduate of the University of Cape Town with a Master degree, As an overall solution expert in IT technology and sales field, he also is a block chain developer with perspective on block chain, enterprise application framework and product design.
+  -
+    name: Simon
+    position: CTO(chief technology officer)
+    img: simon.png
+    info: Simon focuses on the public chain infrastructure, public-chain operating system development, cryptocurrency, smart contract security, and distributed consensus algorithms. He has more than 8 years of experience in blockchain technology research and has worked in the code editing of blockchain companies in various industries around the world. He is a technical consultant for Bitcoin and Ethereum seminars, and also an early technology development for EOS projects and BTS projects. team member. After successfully developing multiple blockchain projects, he began to participate in the development of several startup projects, and led the technical team to develop more than 30 infrastructure technical architectures and smart contract systems!
+  -
+    name: Winson
+    position: Co-Founder
+    img: winson.png
+    info: Kong Ling, one of the co-founders of Uselink, Deputy Dean of Uselink Asia Pacific Business School, Operations officer of Uselink Asia Pacific Community, Dean of JLL Business School, senior executive of several capital institutions, and executive director of the three exchanges, famous angel investor, is the famous block chain training instructor with 9 years training experience. Has participated in the establishment of Huaying Capital and invested in many projects. He is also a block chain senior educator, establishing block chain education platform with China Electronic Commerce Association (a block chain technology union).
+  -
+    name: Wouter
+    position: SENIOR TECHNICAL CONSULTANTS
+    img: wouter.png
+    info: Wouter graduated from Yale University with a degree in Computer Science. As a top IT engineer, Wouter was the Technical Director of Australia at Microsoft. Later, he served on multiple blockchain teams with excellent code and architecture skills. And participated in the planning of multiple blockchain projects, with rich experience in blockchain development.
+  -
+    name: William Theodore
+    position: BLOCK CHAIN INVESTMENT MANAGER
+    img: william.png
+    info: William Theodore is a professional investment manager in the context of Global Investment and Credit Suisse's technology and banking business, and later served as director of risk management for the Americas region at Kohler Capital.William has enough trust and influence in investment institutions, venture capital funds and investors. William is a famous professional investor. In 2013, we focused on the blockchain industry and invested in multiple blockchain projects, especially in the development of blockchain infrastructure technology public chain projects. Now one of the main investors of Uselink.
+  -
+    name: Woodrow Dean
+    position: CHIEF LEGAL COUNSEL
+    img: woodrow.png
+    info: ean Woodrow has a wide range of international tax and legal experience in IT/media/real estate, M&A FinTech and BF investment multinational investment companies. He is the lead attorney for the board of directors of several companies. Now he is the legal team leader of Uselink.
+  -
+    name: Lucas Lee
+    position: Chief technology strategist
+    img: lucas.png
+    info: Lucas Lee formed a PCA blockchain laboratory PCA laboratory developed for the financial sector. He developed and supported many technical blockchain projects and was a contributor to several blockchain open source projects.
+
+
+
 
 more:
   super_node: |
