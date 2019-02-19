@@ -7,14 +7,16 @@ const livereload = require('gulp-livereload');
 const clean_css = require('gulp-clean-css');
 const render = require('gulp-nunjucks-render');
 const i18n = require('gulp-html-i18n');
-const autofixer = require('gulp-autoprefixer');
+const autofixer = require('gulp-autoprefixer'); //给 CSS 增加前缀。解决某些CSS属性不是标准属性，有各种浏览器前缀的情况
 const stripDebug = require('gulp-strip-debug');
 const del = require('del');
 const babel = require('gulp-babel');
-const plumber = require('gulp-plumber');
-const base64 = require('gulp-base64');
-const zip = require('gulp-zip');
-const htmlmin = require('gulp-htmlmin');
+const plumber = require('gulp-plumber');   //这个插件可以阻止 gulp 插件发生错误导致进程退出并输出错误日志。
+const base64 = require('gulp-base64');     //- 把小图片转成base64字符串
+
+const zip = require('gulp-zip');          //生成zip文件
+const htmlmin = require('gulp-htmlmin');   //html的压缩
+
 
 let dev_scss = ['dev/scss/*.scss', '!dev/scss/*_m.scss'];
 let dev_scss_merge = ['dev/scss/*_m.scss'];

@@ -30,12 +30,14 @@ $(() => {
 
     //循环放入投票item
     function for_(vote_box, rows) {
+        console.log(rows);
         //清空盒子
         vote_box.empty();
 
         for (const [index, el] of rows.entries()) {
             //定义id
             let c = 'QRcode' + index, super_icon;
+
             //是否是超级节点
             super_icon = el.status === 1 ? '<div class="super_icon"><span class="icon-collection_fill iconfont  star"></span></div>' : '<div class="super_icon" style="display: none"></div>';
 
@@ -107,7 +109,7 @@ $(() => {
                     let rows = res.rows;
                     // window.total = res.total;
                     for_(vote_box, rows);
-                    resolve(res.total)
+                    resolve(res.total);
                 } else {
                     throw new Error('error')
                 }
@@ -157,8 +159,10 @@ $(() => {
         if(total>20){
 
         }
-        let page_num = Math.ceil(total / 20);
+
+        let page_num = Math.ceil(total / 20);  // 对一个数进行上舍入。 (返回值为:大于等于 x，并且与它最接近的整数)
         l(page_num);
+
 
         page_interval(page_num);
 
@@ -276,6 +280,10 @@ $(() => {
     });
 
 
+    // ajax.then(function (total) {
+    //     page_(total);
+    // });
+
     //搜索节点
     $('#search_node_input').bind('input propertychange', e => {
         keyWords = $('#search_node_input').val() === '' ? undefined : $('#search_node_input').val();
@@ -368,6 +376,7 @@ $(() => {
                 //创建最终画布对象
                 let img = new Image();
                 img.src = canvas.toDataURL("image/png");
+
 
                 // 展示图片
                 $(".win").append(img);

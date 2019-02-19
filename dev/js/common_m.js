@@ -2,6 +2,8 @@ $(() => {
     /*===================================*
 	            GLOBAL VARIABLE
 	*===================================*/
+
+
     //获取URL
     window.url = window.location.href;
 
@@ -153,14 +155,18 @@ $(() => {
     };
 
 
-    //页面滚动一定距离navbar背景色变为不透明
+    //页面滚动一定距离navbar背景色变为不透明/ 底部按钮点击回顶部
+    $(".top-btns").hide();
     let winScrollHeight = $(document).scrollTop();
     winScrollHeight >= 10 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
-    l(winScrollHeight);
+
     $(window).scroll(e => {
         l($(document).scrollTop());
 
         $(document).scrollTop() >= 10 ? $('.nav').addClass('navActive') : $('.nav').removeClass('navActive');
+        // 底部按钮点击回顶部
+        $(document).scrollTop() >= 100 ? $(".top-btns").show() : $(".top-btns").hide();
+
     });
 
 
@@ -489,6 +495,8 @@ $(() => {
     };
 
 
+
+
     //promise ajax 简写
     window.ajax_ = (url, data, headers, hosts) => {
         return new Promise((resolve, reject) => {
@@ -556,7 +564,12 @@ $(() => {
         window.type = 'mobile';
     }
 
-
+    if(w < 599){
+        $(".top-btns").click(function () {
+            $('html, body').animate({scrollTop: 0}, '500');
+            console.log('执行了');
+        })
+    }
     //pc端隐藏menu
     $(window).resize(() => {
         if ($(window).width() > 1024) {
@@ -595,7 +608,7 @@ $(() => {
                 var phones = phone.substr(0,7)+"****" + phone.substr(11);
 
                 $('#phone').empty().html(`
-                    <span class="iconfont icon-yonghu usericon" ></span>
+                    <span class="iconfont icon-yonghu usericon"></span>
                     ${phones}
                     <i></i>
                 `);
@@ -948,6 +961,8 @@ $(() => {
 
 
     //菜单的显示与隐藏
+    let scrollheight = $(document).scrollTop();
+    console.log(scrollheight);
     $('.menu_btn').click(e => {
         list_animate($('.menu_box'), 'fadeIn', 'fadeOut');
 
@@ -963,6 +978,21 @@ $(() => {
             });
         });
     });
+
+
+    // 手机端导航菜单点击时候的滚动条向下
+    $('.menu_btn').click(function () {
+        if(scrollheight == 0){
+            $("body,html").animate({
+                "scrollTop": scrollheight+10
+            },10);
+        }else{
+            $(".nav").css("background","transparents");
+        }
+    })
+
+
+
 
     //自动设置body padding_bottom高度
     $('body').css({"padding-bottom": $('.footer')[0].clientHeight});

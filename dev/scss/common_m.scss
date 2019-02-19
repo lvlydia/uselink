@@ -513,9 +513,9 @@ img, input {
         position: relative;
         color:#fff;
          .usericon{
-           font-size: 16px;
+           font-size: 20px;
            color:#fff;
-           font-weight: 600;
+           font-weight: 400;
          }
         i {
           margin-left: 5px;
@@ -725,6 +725,10 @@ img, input {
     bottom:5px;
     color: #fff;
     font-size: 14px;
+    .CopyRight{
+      margin:0 auto;
+      text-align: center;
+    }
   }
   .footer-mob{display: none};
 @media(max-width: 767px){
@@ -771,7 +775,7 @@ img, input {
       position: absolute;
       left:50%;
       transform: translateX(-44%) translateY(-50%);
-      bottom:60px;
+      bottom:40px;
       font-size: 12px;
 
       & span{
@@ -779,13 +783,20 @@ img, input {
       }
     }
     .row-CopyRight{
-      position: absolute;
-      left:50%;
-      transform: translateX(-45%) translateY(-50%);
-      bottom:-13px;
+      //position: absolute;
+      //left:50%;
+      //transform: translateX(-45%) translateY(-50%);
+      //bottom:-13px;
       color: #fff;
       font-size: 12px;
       text-align: center;
+      width:100%;
+      margin: 0 auto;
+
+      .CopyRight{
+        margin:0 auto;
+        text-align: center;
+      }
     }
   }
 }

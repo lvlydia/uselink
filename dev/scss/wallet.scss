@@ -160,7 +160,16 @@
     }
   }
 
-
+  @media (max-width: 768px){
+    .img-box{
+      display: none;
+    }
+  }
+  @media (max-width: 599px){
+    .img-box{
+      display: none;
+    }
+  }
 
 
 

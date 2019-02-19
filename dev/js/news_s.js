@@ -61,8 +61,6 @@ $(() => {
         } else {
             def()
         }
-
-
         // if (url.includes('type=') && url.split('type=')[2] === 'news') {
         //     content.eq(2).show();
         //     let tab = $('.tab');
@@ -139,7 +137,7 @@ $(() => {
 
                                     <span class="createTimeStr">${el.createTimeStr}</span>
 
-                                    <span class="viewTimes">${el.viewTimes}</span>
+                                    <span class="viewTimes"><span class="iconfont  icon-yanjing" style="margin-right: 10px;"></span>${el.viewTimes}</span>
                                 </p>
                             </div>
                         </div>

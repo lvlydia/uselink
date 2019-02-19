@@ -2,12 +2,12 @@
 <link rel="stylesheet" href="../common/css/amazeui.min.css">
 <link rel="stylesheet" href="../css/index.min.css">
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_p72b14ttla.css">
-<link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_k0do9un4au9.css">
 {%include "head_link.html"%}
 <script src="../js/index.min.js"></script>
 <script src="../js/banner.min.js"></script>
 {%include "head_bottom.html"%}
+
 <!--轮播图-->
 <!--<div class="banner_true">-->
     <!--<div class="banner_true_box">-->
@@ -23,7 +23,6 @@
     <!--</div>-->
 <!--</div>-->
 <!--轮播图开始-->
-
 <div class="container-fluid m-0 p-0 top-banner">
     <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}' >
         <ul class="am-slides">
@@ -42,7 +41,7 @@
     <div class="container announcement">
         <div class="row">
             <div class="col-md-12 text-md-center boxss">
-                <ul class="box-uls">
+                <ul class="box-uls" style="padding-left: 0px;">
                 </ul>
             </div>
         </div>
@@ -73,9 +72,9 @@
             <div id="btns"><span class="iconfont icon-guanbi1 close_btn"></span></div>
             <div class="layer">
                 <div class="banner_box_video">
-                    <video class="video" controls  preload="none" poster="../img/video_poster.png" data-setup="{}"
+                    <video  id="player" class="video" controls  preload="none" poster="../img/video_poster.png" data-setup="{}"
                            width="100%" height="700">
-                        <source src="{|index.banner.video_url|}" type="video/mp4" />
+                        <source  src="{|index.banner.video_url|}" type="video/mp4" />
                         {|common.video_tip|}
                     </video>
                 </div>
@@ -83,9 +82,18 @@
         </div>
     </div>
 
+
+    <!--<div class="banner_box_video fadeInUp" data-wow-delay="0.6s" data-wow-duration=".8s">-->
+        <!--<video controls preload="none" poster="../img/video_poster.png" data-setup="{}">-->
+            <!--<source src="{|index.banner.video_url|}" type="video/mp4"/>-->
+            <!--{|common.video_tip|}-->
+        <!--</video>-->
+    <!--</div>-->
+
+
     <!--原生多资产多链式公有链平台-->
     <div class="male_chain container">
-        <p class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s"> —- {|index.add_title|} —-</p>
+        <p class="fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.add_title|}</p>
     </div>
     <!--第一部分-->
     <div class="container one-box pc-box">
@@ -282,7 +290,7 @@
     <!--</div>-->
     <!--团队成员-->
     <div class="male_chain container">
-        <p class="fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s"> —— &nbsp; &nbsp;{|index.team|}&nbsp; &nbsp; ——</p>
+        <p class="fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">{|index.team|}</p>
     </div>
     <div class="container container-person fadeInUp" data-wow-delay="0.1s" data-wow-duration=".8s">
         <div class="row row-up">
@@ -363,7 +371,7 @@
         <div class="box">
             <!--<h2 class="fadeInUp cooperationTitle" data-wow-delay="0.1s" data-wow-duration=".8s">{|index.cooperation|}</h2>-->
             <div class="male_chain container  cooperationTitle">
-                <p class="fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s"> —— &nbsp; &nbsp;{|index.cooperation|}&nbsp; &nbsp; ——</p>
+                <p class="fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">{|index.cooperation|}</p>
             </div>
             <div class="cooperation_bottom">
                 <div class="line1">
@@ -375,7 +383,7 @@
                 <div class="line2">
                     <img class="fadeInUp" src="../img/cooperation/logo4.png" data-wow-delay="0.5s" data-wow-duration=".8s">
                     <img class="fadeInUp" src="../img/cooperation/logo3.png" data-wow-delay="0.6s" data-wow-duration=".8s">
-                    <img class="fadeInUp" src="../img/cooperation/logo2.png" data-wow-delay="0.7s" data-wow-duration=".8s">
+                    <img class="fadeInUp" src="../img/cooperation/logo8.png" data-wow-delay="0.7s" data-wow-duration=".8s">
                     <img class="fadeInUp" src="../img/cooperation/logo1.png" data-wow-delay="0.8s" data-wow-duration=".8s">
                 </div>
 
@@ -400,3 +408,4 @@
 <script src="../common/js/wow.min.js"></script>
 <script src="../common/js/amazeui.min.js"></script>
 {%include "footer.html"%}
+{%include "totop.html"%}

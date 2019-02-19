@@ -3,5 +3,5 @@ number: Please enter the phone number
 password: Please enter the password
 btn-login: Log in
 link-pwd: Forget the password?
-prompt: No account yet？
+prompt:
 link-register: Sign up

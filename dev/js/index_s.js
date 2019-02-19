@@ -21,13 +21,14 @@ $(() => {
 // =========================================
     // 视频
 // =========================================
-   console.log(h);
-    $('.masking').css("height",h)
-   console.log($('.masking').height());
+    console.log(h);
+    $('.masking').css("height","100%");
 
+    var player = document.getElementById("player");
         $('#layer_btn').click(function() {
             event.preventDefault;
             $('.masking').fadeIn();
+            player.play();
             $(".video-text").hide()
         })
 
@@ -38,7 +39,9 @@ $(() => {
         });
 
         $("#btns").click(function () {
+            player.pause();
             $('.masking').hide();
+
         })
 
 // =========================================
@@ -183,6 +186,14 @@ $(() => {
         $(".details2").show();
         $(".hide2").hide();
     });
+
+// =========================================/
+    //手机端视频封面
+// =========================================
+
+     if(w < 599){
+         $("#layer_btn").attr("src","../img/mob-under.png");
+     }
 
 });
 
