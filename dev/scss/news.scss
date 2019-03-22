@@ -126,6 +126,39 @@
     }
   }
 //===============以上是banner ==================
+
+  //分页
+  .page_btn_box{
+    height:50px;
+    //background: pink;
+    margin:30px auto 100px;
+    //display: flex;
+    text-align: center;
+    .first_page_btn{
+      display: inline-block;
+    }
+    .btn{
+      background:#E9E9E9;
+      display: inline-block;
+    }
+    .active{
+      background:#6661d9;
+      color:#fff;
+    }
+    .total_page{
+      line-height: 40px;
+    }
+  }
+  .lock{
+    color:#6661d9;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .mob-token{display: none;}
+
+
+
+
   .container {
     width: 65%;
     min-width: 1024px;
@@ -133,6 +166,7 @@
     margin: auto;
     text-align: center;
     padding-top: 60px;
+    //background: pink;
 
     .tab_box {
       width: 100%;
@@ -223,7 +257,7 @@
         padding-right: 20px;
 
         &:hover {
-          box-shadow: 0 1px 3px 0 rgba(3, 12, 32, 0.2);
+          //box-shadow: 0 1px 3px 0 rgba(3, 12, 32, 0.2);
         }
 
         & > div {
@@ -262,7 +296,7 @@
             font-size: 16px;
             text-align: left;
             color: $purple_blue1;
-            margin-top: 24px;
+            margin-top: 40px;
           }
 
           .info {
@@ -778,6 +812,35 @@
     }
   }
   @media (max-width: 599px) {
+    //分页
+    .page_btn_box{
+      height:40px;
+      margin:30px auto 100px;
+      //text-align: center;
+      .first_page_btn{
+        display: inline-block;
+      }
+      .btn{
+        background:#e1e1e1;
+        display: inline-block;
+        width:auto;
+        height:30px;
+        line-height: 16px;
+        position: relative;
+      }
+      .active{
+        background:#6661d9;
+        color:#fff;
+      }
+      .total_page{
+        line-height: 40px;
+        display: none;
+      }
+      .alfont{
+        position: absolute;
+        left:7px;
+      }
+    }
     .information {
       //padding:0px 10px 10px 150px;
       position: relative;

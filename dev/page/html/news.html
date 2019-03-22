@@ -1,5 +1,6 @@
 {%include "head_top.html"%}
-<link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_we18dpwdjxd.css">
+<!--<link rel="stylesheet" href="https://at.alicdn.com/t/font_424142_we18dpwdjxd.css">-->
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1093051_glgokp4mjre.css">
 <link rel="stylesheet" href="../css/news.min.css">
 <link rel="stylesheet" href="../common/css/amazeui.min.css">
 {%include "head_link.html"%}
@@ -9,20 +10,6 @@
 <section id="app-news">
     <div class="body">
         <div role="main" class="main">
-            <!--轮播图-->
-            <!--<div class="banner_true">-->
-                <!--<div class="banner_true_box">-->
-                    <!--<div class="am-slider am-slider-default" id="demo-slider-0">-->
-                        <!--<ul class="am-slides">-->
-                            <!--<li>-->
-                                <!--<div style="cursor: pointer">-->
-                                    <!--<img class="fadeIn default_banner" src="../img/img_default_large.jpg"/>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
             <!--轮播图开始-->
             <div class="container-fluid m-0 p-0 top-banner">
                 <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}' >
@@ -38,7 +25,34 @@
             <!--轮播图结束-->
 
             <section class="container">
-                <div class="row  m-0 p-0 tab_box"></div>
+                <div class="row  m-0 p-0 tab_box">
+                    <!--js插入-->
+                </div>
+            </section>
+
+
+            <!--分页-->
+            <section class="container-fluid page-box">
+                <div class="container">
+                    <div class="row paging">
+                        <!--分页-->
+                        <div class="page_btn_box">
+                            <apan class="first_page_btn btn"><span class="iconfont icon-daoshouye alfont"></span></apan>
+                            <!--<span class="pre_page btn"> < </span>-->
+
+                            <!--js循环输出分页按钮位置-->
+                            <span class="other_page">
+
+                            </span>
+
+                            <!--<span class="next_page btn"> > </span>-->
+                            <span class="last_page_btn btn"><span class="iconfont icon-daoweiye alfont"></span></span>
+
+                            <!--<span class="total_page">共0页</span>-->
+                        </div>
+
+                    </div>
+                </div>
             </section>
 
         </div>

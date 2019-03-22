@@ -11,7 +11,7 @@ $(() => {
     ajax_("/getFaqArticleList", {
         "lang": language
     }, 0, cms_host).then(data => {
-        // console.log(data);
+        console.log(data);
         Object.keys(data).forEach(el => {
             let obj = JSON.parse(el);
             let content = document.createElement('div');

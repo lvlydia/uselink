@@ -75,12 +75,13 @@ $(() => {
         data: {
             'lang':language,
             'channelType': "announcement",
+            'pageNum':1,  //(从第几页开始)
+            'pageSize': 3 ,
         },
         contentType: 'application/x-www-form-urlencoded',
         dataType: "json",
         success:function (res) {
-            // console.log(res.data);
-            // console.log('duiddidudidi');
+            console.log(res.data);
             let data = res.data;
 
 
@@ -91,7 +92,7 @@ $(() => {
                 console.log(url);
 
                 $(".box-uls").append(` 
-                <li class="li-btns" style="cursor: pointer">
+                <li class="li-btns"  id="${uuid}"  style="cursor: pointer">
                   <span class="lefts"><span class="iconfont icon-xiaolaba icons"></span>${data[i].articleTitle}</span>
                   <span class="rights">${data[i].createTimeStr.substring(0,10)}</span>   
                 </li>
@@ -105,7 +106,8 @@ $(() => {
                 }, 5000);
 
                 // 点击公告跳转
-                $('.li-btns').click(e => {
+                $("#" + uuid).click(e => {
+                    console.log('11111');
                     url ? window.open(url) : window.location.href = 'news_details.html?id=' + uuid;
                 })
 

@@ -56,10 +56,13 @@ $(() => {
     /*开发IP地址
     dev_ip 本地ip  run_host 线上接口地址  dev_host  测试接口地址
     */
-    let dev_ip = 'http://127.0.0.1:63342', run_host = 'https://mgm.uselink.cc',
-        dev_host = 'http://192.168.0.57:9002', dev_cms = 'http://192.168.0.158:9001/cms',
+    let dev_ip = '192.168.0.170:8081', run_host = 'https://mgm.uselink.cc',
+        dev_host = 'http://192.168.0.57:9002', dev_cms = 'http://192.168.0.136:9001/cms',
         run_cms = 'https://cms.uselink.cc/cms';
 
+    // 192.168.0.136:9001
+    // 192.168.0.158:9001/cms
+    // http://127.0.0.1:63342
 
     //设置语言
     const language_list = [
@@ -139,14 +142,14 @@ $(() => {
 
     //简写打印函数
     window.l = str => {
-        console.log(str);
-        console.log('---------')
+        // console.log(str);
+        // console.log('---------')
     };
 
 
     //获取当前开发模式
     window.dev_type = () => {
-        l(url.includes(dev_ip));
+        console.log(url.includes(dev_ip));   //true
         if (url.includes(dev_ip)) {
             return 'dev';
         } else {
@@ -494,9 +497,6 @@ $(() => {
         return lang_list[language][str];
     };
 
-
-
-
     //promise ajax 简写
     window.ajax_ = (url, data, headers, hosts) => {
         return new Promise((resolve, reject) => {
@@ -552,7 +552,59 @@ $(() => {
         });
     };
 
-
+    window.ajaxAdd_ = (url, data, headers, hosts) => {
+        return new Promise((resolve, reject) => {
+            if (hosts) {
+                //自定义接口地址
+                $.ajax({
+                    type: "post",
+                    contentType: 'application/x-www-form-urlencoded',
+                    url: hosts + url,
+                    dataType: "json",
+                    async: true,
+                    data: data,
+                    success: function (res) {
+                        if (res.retCode === 200) {
+                            resolve(res);
+                        } else {
+                            reject(res)
+                        }
+                    },
+                    error: function (e) {
+                        reject(e)
+                    }, beforeSend: request => {
+                        if (headers) {
+                            request.setRequestHeader("token", window.localStorage.getItem('token'));
+                            request.setRequestHeader("language", language);
+                        }
+                    },
+                });
+            } else {
+                $.ajax({
+                    type: "post",
+                    contentType: 'application/json; charset=utf-8',
+                    url: host + url,
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    success: function (res) {
+                        if (res.retCode === 200) {
+                            resolve(res);
+                        } else {
+                            reject(res)
+                        }
+                    },
+                    error: function (e) {
+                        reject(e)
+                    }, beforeSend: request => {
+                        if (headers) {
+                            request.setRequestHeader("token", window.localStorage.getItem('token'));
+                            request.setRequestHeader("language", language);
+                        }
+                    },
+                });
+            }
+        });
+    };
     //获取窗口宽高
     window.w = $(window).width();
     window.h = $(window).height();

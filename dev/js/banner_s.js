@@ -19,7 +19,7 @@ $(() => {
 
             img.onload = () => {
                 img_status = img_status + 1;
-                console.log(img.height);
+                // console.log(img.height);
 
                 if (img_status === data.length) {
                     if (w > 599) {
