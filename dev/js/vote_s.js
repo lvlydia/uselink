@@ -160,7 +160,7 @@ $(() => {
 
         }
 
-        let page_num = Math.ceil(total / 20);  // 对一个数进行上舍入。 (返回值为:大于等于 x，并且与它最接近的整数)
+        let page_num = Math.ceil(total / 20);  // 对一个数进行上舍入。 (返回值为:大于等于 x，并且与它最接近的整数)（获取总页数）
         l(page_num);
 
 
